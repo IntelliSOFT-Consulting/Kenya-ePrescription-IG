@@ -6,8 +6,8 @@
 id: fhir.eprescription.ig
 canonical: http://example.org
 name: Kenya-ePrescription-IG
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: Kenya-ePrescription-IG
+description: Kenya-ePrescription-IG Implementation Guide for FHIR ePrescription profiles and extensions.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
