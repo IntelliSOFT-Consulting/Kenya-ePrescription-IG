@@ -52,11 +52,6 @@ Description: "Condition constraints for ePrescription workflow."
 * onsetDateTime 1..1 MS
 * onsetDateTime ^short = "When the condition started (required if onset is provided)."
 
-* onsetAge 0..1 MS
-* onsetPeriod 0..1 MS
-* onsetRange 0..1 MS
-* onsetString 0..1 MS
-
 * recordedDate 1..1 MS
 * recordedDate ^short = "Date the condition record was created."
 
