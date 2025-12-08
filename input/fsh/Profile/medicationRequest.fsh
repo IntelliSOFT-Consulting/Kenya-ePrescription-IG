@@ -6,12 +6,84 @@ Description: "Represents prescriptions in the ePrescription workflow."
 * status 1..1 MS
 * intent 1..1 MS
 * subject 1..1 MS
+* priority 0..1 MS
+* medicationCodeableConcept 0..1 MS
+* medicationCodeableConcept.coding.code 0..1 MS
+* medicationCodeableConcept.coding.system 0..1 MS
+* medicationCodeableConcept.coding.display 0..1 MS
 * subject only Reference(KenyaEPrescriptionPatient)
 * requester 1..1 MS 
 * requester only Reference(KenyaEPrescriptionPractitioner)
 * supportingInformation 0..* MS
 * authoredOn 1..1 MS
-* dosageInstruction 1..* MS
+* dosageInstruction 0..* MS
+* dosageInstruction.text 0..1 MS
+* dosageInstruction.timing 0..1 MS
+* dosageInstruction.timing ^short = "See Frequency Guide" 
+
+* dosageInstruction.route.coding.code 0..1 MS
+* dosageInstruction.route.coding.system 0..1 MS
+* dosageInstruction.route.coding.display 0..1 MS
+* dosageInstruction.doseAndRate.doseQuantity 0..1 MS
+
+* dosageInstruction.doseAndRate.doseRange.high 0..1 MS
+* dosageInstruction.doseAndRate.doseRange.high.system 0..1 MS
+* dosageInstruction.doseAndRate.doseRange.high.code 0..1 MS
+* dosageInstruction.doseAndRate.doseRange.high.value 0..1 MS
+
+* dosageInstruction.doseAndRate.doseRange.low 0..1 MS
+* dosageInstruction.doseAndRate.doseRange.low.system 0..1 MS
+* dosageInstruction.doseAndRate.doseRange.low.code 0..1 MS
+* dosageInstruction.doseAndRate.doseRange.low.value 0..1 MS
+
+// -----------------------------------------
+// Dosage Instructions
+// -----------------------------------------
+* dosageInstruction MS
+* dosageInstruction.asNeededBoolean MS
+// * dosageInstruction.asNeededFor MS
+
+// -----------------------------------------
+// Dispense Request
+// -----------------------------------------
+* dispenseRequest MS
+* dispenseRequest.validityPeriod MS
+* dispenseRequest.validityPeriod.start MS
+* dispenseRequest.validityPeriod.end MS
+
+* dispenseRequest.numberOfRepeatsAllowed MS
+
+* dispenseRequest.quantity MS
+* dispenseRequest.quantity.value MS
+* dispenseRequest.quantity.unit MS
+* dispenseRequest.quantity.system MS
+* dispenseRequest.quantity.code MS
+
+* dispenseRequest.expectedSupplyDuration MS
+
+
+* substitution MS
+* substitution.allowedBoolean MS
+* substitution.reason MS
+
+* priorPrescription MS
+* encounter MS
+* supportingInformation MS
+* recorder MS
+
+* reasonCode MS
+* reasonCode.coding MS
+* reasonCode.coding.system MS
+* reasonCode.coding.code MS
+* reasonCode.coding.display MS
+
+* reasonReference MS
+
+* note MS
+* detectedIssue MS
+* eventHistory MS
+
+
 * dispenseRequest 0..1 MS
 * performer 0..1 MS
 * performer only Reference(KenyaEPrescriptionOrganization)
