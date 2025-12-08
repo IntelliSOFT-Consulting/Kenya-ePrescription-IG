@@ -3,6 +3,14 @@ Parent: Medication
 Id: kenya-eprescription-medication
 Title: "Medication Profile for ePrescription"
 Description: "Medication constraints for ePrescription workflow."
+
+// -----------------------------------------------------
+// Metadata
+// -----------------------------------------------------
+* meta 1..1 MS
+* meta.profile 1..* MS
+* meta.profile ^short = "Profiles this resource claims to conform to."
+
 * code 1..1 MS 
 * status 1..1 MS
 

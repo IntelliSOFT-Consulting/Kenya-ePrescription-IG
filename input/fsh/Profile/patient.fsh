@@ -3,6 +3,11 @@ Parent: Patient
 Id: kenya-eprescription-patient
 Title: "Patient Profile for ePrescription"
 Description: "Constraints for patients involved in ePrescription workflows."
+
+* meta 1..1 MS
+* meta.profile 1..* MS
+* meta.profile ^short = "Profiles this resource claims to conform to."
+
 * identifier 1..* MS
 * name 1..* MS
 * telecom 0..* MS

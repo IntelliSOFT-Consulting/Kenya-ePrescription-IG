@@ -5,6 +5,10 @@ Title: "MedicationDispense Profile for ePrescription"
 Description: "Represents dispensing events in the ePrescription workflow."
 
 * id MS
+* meta 1..1 MS
+* meta.profile 1..* MS
+* meta.profile ^short = "Profiles this resource claims to conform to."
+
 * text MS
 * identifier MS
 // * basedOn MS

@@ -3,6 +3,11 @@ Parent: MedicationRequest
 Id: kenya-eprescription-medicationrequest
 Title: "MedicationRequest Profile for ePrescription"
 Description: "Represents prescriptions in the ePrescription workflow."
+
+* meta 1..1 MS
+* meta.profile 1..* MS
+* meta.profile ^short = "Profiles this resource claims to conform to."
+
 * status 1..1 MS
 * intent 1..1 MS
 * subject 1..1 MS
