@@ -3,10 +3,14 @@ Parent: Practitioner
 Id: kenya-eprescription-practitioner
 Title: "Practitioner Profile for ePrescription"
 Description: "Constraints for prescribers in the ePrescription workflow."
+
+* meta 1..1 MS
+* meta.profile 1..* MS
+* meta.profile ^short = "Profiles this resource claims to conform to."
+
 * identifier 1..* MS
 * name 1..* MS
 * qualification 0..* MS
-
 
 Instance: example-kenya-eprescription-practitioner
 InstanceOf: KenyaEPrescriptionPractitioner

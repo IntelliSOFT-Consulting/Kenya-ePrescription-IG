@@ -3,6 +3,11 @@ Parent: Organization
 Id: kenya-eprescription-organization
 Title: "Organization Profile for ePrescription"
 Description: "Constraints for organizations participating in ePrescription workflow."
+
+* meta 1..1 MS
+* meta.profile 1..* MS
+* meta.profile ^short = "Profiles this resource claims to conform to."
+
 * name 1..1 MS
 * identifier 1..* MS
 
