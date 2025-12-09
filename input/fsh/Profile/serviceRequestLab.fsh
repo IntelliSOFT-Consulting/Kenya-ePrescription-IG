@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionServiceRequestLab
 Parent: ServiceRequest
 Id: kenya-eprescription-serviceRequestLab
-Title: "A Lab Service Request Profile for ePrescription"
+Title: "ServiceRequest - lab"
 Description: "Constraints for a lab service Request in the ePrescription workflow."
 
 * meta 1..1 MS

@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionServiceProcedure
 Parent: ServiceRequest
 Id: kenya-eprescription-serviceRequestProcedure
-Title: "A Procedure/Imaging Service Request Profile for ePrescription"
+Title: "Service Request - Procedure/Imaging"
 Description: "Constraints for a procedure/Imaging lab service Request in the ePrescription workflow."
 
 * meta 1..1 MS

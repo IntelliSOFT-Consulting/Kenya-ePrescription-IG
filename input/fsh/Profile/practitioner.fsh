@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionPractitioner
 Parent: Practitioner
 Id: kenya-eprescription-practitioner
-Title: "Practitioner Profile for ePrescription"
+Title: "Practitioner - ePrescription"
 Description: "Constraints for prescribers in the ePrescription workflow."
 
 * meta 1..1 MS

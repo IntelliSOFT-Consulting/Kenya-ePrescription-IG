@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionEncounter
 Parent: Encounter
 Id: kenya-eprescription-encounter
-Title: "Encounter Profile for ePrescription"
+Title: "Encounter - ePrescription"
 Description: "Encounter constraints for ePrescription workflow."
 
 * id 1..1 MS

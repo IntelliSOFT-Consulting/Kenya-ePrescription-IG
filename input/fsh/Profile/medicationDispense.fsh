@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionMedicationDispense
 Parent: MedicationDispense
 Id: kenya-eprescription-medicationdispense
-Title: "MedicationDispense Profile for ePrescription"
+Title: "MedicationDispense - ePrescription"
 Description: "Represents dispensing events in the ePrescription workflow."
 
 * id MS
