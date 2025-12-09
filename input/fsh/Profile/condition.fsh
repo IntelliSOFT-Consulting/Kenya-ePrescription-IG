@@ -41,11 +41,11 @@ Description: "Condition constraints for ePrescription workflow."
 
 
 * subject 1..1 MS
-* subject only Reference(Patient)
+* subject only Reference(KenyaEPrescriptionPatient)
 * subject ^short = "The patient who has the condition."
 
 * encounter 1..1 MS
-* encounter only Reference(Encounter)
+* encounter only Reference(KenyaEPrescriptionEncounter)
 * encounter ^short = "Encounter during which this condition was asserted."
 
 * onset[x] 0..1 MS
@@ -57,10 +57,10 @@ Description: "Condition constraints for ePrescription workflow."
 
 
 * recorder 1..1 MS
-* recorder only Reference(Practitioner)
+* recorder only Reference(KenyaEPrescriptionPractitioner)
 * recorder ^short = "Practitioner recording the condition."
 
 
 * asserter 0..1 MS
-* asserter only Reference(Practitioner)
+* asserter only Reference(KenyaEPrescriptionPractitioner)
 * asserter ^short = "The individual who asserted the condition."

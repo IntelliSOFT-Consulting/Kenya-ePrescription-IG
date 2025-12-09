@@ -21,11 +21,8 @@ Description: "Represents dispensing events in the ePrescription workflow."
 
 * category MS
 
-// -----------------------------------------
-// Medication[x]
-// -----------------------------------------
 * medication[x] MS
-* medicationCodeableConcept.coding MS
+* medicationCodeableConcept.coding  MS
 * medicationCodeableConcept.coding.system MS
 * medicationCodeableConcept.coding.code MS
 * medicationCodeableConcept.coding.display MS
@@ -35,10 +32,10 @@ Description: "Represents dispensing events in the ePrescription workflow."
 // Subject & Context
 // -----------------------------------------
 * subject MS
-* subject only Reference(Patient)
+* subject only Reference(KenyaEPrescriptionPatient)
 
 * context 0..1 MS
-* context only Reference(Encounter)
+* context only Reference(KenyaEPrescriptionEncounter)
 * supportingInformation MS
 
 // -----------------------------------------
