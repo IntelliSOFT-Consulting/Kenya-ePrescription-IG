@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionOrganization
 Parent: Organization
 Id: kenya-eprescription-organization
-Title: "Organization Profile for ePrescription"
+Title: "Organization - ePrescription"
 Description: "Constraints for organizations participating in ePrescription workflow."
 
 * meta 1..1 MS

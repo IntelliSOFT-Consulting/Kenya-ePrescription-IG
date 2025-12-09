@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionMedication
 Parent: Medication
 Id: kenya-eprescription-medication
-Title: "Medication Profile for ePrescription"
+Title: "Medication - ePrescription"
 Description: "Medication constraints for ePrescription workflow."
 
 // -----------------------------------------------------

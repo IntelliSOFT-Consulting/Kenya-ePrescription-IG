@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionMedicationRequest
 Parent: MedicationRequest
 Id: kenya-eprescription-medicationrequest
-Title: "MedicationRequest Profile for ePrescription"
+Title: "MedicationRequest - ePrescription"
 Description: "Represents prescriptions in the ePrescription workflow."
 
 * meta 1..1 MS

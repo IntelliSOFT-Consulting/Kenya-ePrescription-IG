@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionCondition
 Parent: Condition
 Id: kenya-eprescription-condition
-Title: "Condition Profile for ePrescription"
+Title: "Condition - ePrescription"
 Description: "Condition constraints for ePrescription workflow."
 
 * meta 1..1 MS

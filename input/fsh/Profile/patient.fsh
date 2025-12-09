@@ -1,7 +1,7 @@
 Profile: KenyaEPrescriptionPatient
 Parent: Patient
 Id: kenya-eprescription-patient
-Title: "Patient Profile for ePrescription"
+Title: "Patient - ePrescription"
 Description: "Constraints for patients involved in ePrescription workflows."
 
 * meta 1..1 MS
