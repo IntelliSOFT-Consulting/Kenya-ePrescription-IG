@@ -87,3 +87,58 @@ Description: "AllergyIntolerance constraints for ePrescription workflow."
 * reaction.exposureRoute.coding.display 1..1 MS
 * reaction.exposureRoute.coding.system 1..1 MS
 * reaction.exposureRoute ^short = "The route by which the patient was exposed."
+
+
+
+Instance: ExampleKenyaEprescriptionAllergyIntolerance
+InstanceOf: KenyaEprescriptionAllergyIntolerance
+Title: "Example AllergyIntolerance - Kenya ePrescription"
+Description: "Example instance conforming to the KenyaEprescriptionAllergyIntolerance profile."
+
+* id = "example-kenya-allergyintolerance-001"
+
+* meta.profile[0] = "http://example.org/fhir/StructureDefinition/kenya-eprescription-allergyintolerance"
+
+* identifier[0].system = "http://moh.health.go.ke/allergy-id"
+* identifier[0].value = "AINT-2025-0001"
+
+* clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
+* clinicalStatus.coding[0].code = #active
+* clinicalStatus.coding[0].display = "Active"
+
+* verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
+* verificationStatus.coding[0].code = #confirmed
+* verificationStatus.coding[0].display = "Confirmed"
+
+* type = #allergy
+
+* category[0] = #medication
+
+* criticality = #high
+
+* code.coding[0].system = "http://snomed.info/sct"
+* code.coding[0].code = #372687004
+* code.coding[0].display = "Amoxicillin"
+* code.text = "Allergy to amoxicillin"
+
+* patient.reference = "Patient/kenya-eprescription-patient-001"
+
+* encounter.reference = "Encounter/kenya-eprescription-encounter-001"
+
+* onsetDateTime = "2024-11-15T09:30:00+03:00"
+
+* recordedDate = "2024-11-16T10:00:00+03:00"
+
+* reaction[0].substance.coding[0].system = "http://snomed.info/sct"
+* reaction[0].substance.coding[0].code = #372687004
+* reaction[0].substance.coding[0].display = "Amoxicillin"
+
+* reaction[0].manifestation[0].coding[0].system = "http://snomed.info/sct"
+* reaction[0].manifestation[0].coding[0].code = #271807003
+* reaction[0].manifestation[0].coding[0].display = "Skin rash"
+
+* reaction[0].severity = #moderate
+
+* reaction[0].exposureRoute.coding[0].system = "http://snomed.info/sct"
+* reaction[0].exposureRoute.coding[0].code = #26643006
+* reaction[0].exposureRoute.coding[0].display = "Oral route"

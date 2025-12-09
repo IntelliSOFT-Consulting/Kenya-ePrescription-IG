@@ -33,3 +33,31 @@ Description: "Constraints for practitioner Role in the ePrescription workflow."
 * specialty ^short = "Optional specialty of the practitioner (e.g., cardiology, oncology)."
 
 
+Instance: ExampleKenyaEPrescriptionPractitionerRole
+InstanceOf: KenyaEPrescriptionPractitionerRole
+Title: "Example PractitionerRole - ePrescription"
+Description: "Example instance of a practitioner role as used in the Kenya ePrescription workflow."
+
+* id = "prrole-12345"
+* meta.profile[+] = "http://example.org/fhir/StructureDefinition/kenya-eprescription-practitionerrole"
+
+* identifier[0].system = "http://mohkenya.org/practitionerrole-ids"
+* identifier[0].value = "PR-001"
+
+* active = true
+
+* period.start = "2024-01-01"
+* period.end = "2025-01-01"
+
+* practitioner = Reference(KenyaEPrescriptionPractitioner/example-practitioner)
+
+* code.coding[0].system = "http://snomed.info/sct"
+* code.coding[0].code = #309343006
+* code.coding[0].display = "Physician"
+
+* specialty.coding[0].system = "http://snomed.info/sct"
+* specialty.coding[0].code = #394579002
+* specialty.coding[0].display = "Cardiology"
+
+
+
