@@ -23,7 +23,7 @@ Description: "Constraints for practitioner Role in the ePrescription workflow."
 * period ^short = "Period during which the practitioner is authorized to perform these roles."
 
 * practitioner 1..1 MS
-* practitioner only Reference(Practitioner)
+* practitioner only Reference(KenyaEPrescriptionPractitioner)
 * practitioner ^short = "Practitioner able to provide services under this role."
 
 * code 1..1 MS

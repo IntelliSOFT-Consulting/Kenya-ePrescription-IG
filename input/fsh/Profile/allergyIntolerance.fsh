@@ -47,11 +47,11 @@ Description: "AllergyIntolerance constraints for ePrescription workflow."
 
 
 * patient 1..1 MS
-* patient only Reference(Patient)
+* patient only Reference(KenyaEPrescriptionPatient)
 * patient ^short = "Patient who has the allergy."
 
 * encounter 0..1 MS
-* encounter only Reference(Encounter)
+* encounter only Reference(KenyaEPrescriptionEncounter)
 * encounter ^short = "Encounter during which this allergy/intolerance was recorded."
 
 

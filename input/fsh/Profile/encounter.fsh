@@ -32,7 +32,7 @@ Description: "Encounter constraints for ePrescription workflow."
 
 
 * subject 1..1 MS
-* subject only Reference(Patient)
+* subject only Reference(KenyaEPrescriptionPatient)
 * subject ^short = "The patient or group present at the encounter."
 
 
@@ -58,11 +58,11 @@ Description: "Encounter constraints for ePrescription workflow."
 
 
 * serviceProvider 1..1 MS
-* serviceProvider only Reference(Organization)
+* serviceProvider only Reference(KenyaEPrescriptionOrganization)
 * serviceProvider ^short = "Organization primarily responsible for the Encounter."
 
 
 * participant 1..1 MS
 * participant.individual 1..1 MS
-* participant.individual only Reference(Practitioner)
+* participant.individual only Reference(KenyaEPrescriptionPractitioner)
 * participant ^short = "The practitioner involved in the encounter."
