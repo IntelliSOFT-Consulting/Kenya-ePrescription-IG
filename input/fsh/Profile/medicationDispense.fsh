@@ -11,7 +11,7 @@ Description: "Represents dispensing events in the ePrescription workflow."
 
 * text MS
 * identifier MS
-// * basedOn MS
+
 * partOf MS
 
 * status MS
@@ -28,9 +28,7 @@ Description: "Represents dispensing events in the ePrescription workflow."
 * medicationCodeableConcept.coding.display MS
 * medicationCodeableConcept.text MS
 
-// -----------------------------------------
-// Subject & Context
-// -----------------------------------------
+
 * subject MS
 * subject only Reference(KenyaEPrescriptionPatient)
 
@@ -38,24 +36,17 @@ Description: "Represents dispensing events in the ePrescription workflow."
 * context only Reference(KenyaEPrescriptionEncounter)
 * supportingInformation MS
 
-// -----------------------------------------
-// Performer
-// -----------------------------------------
+
 * performer MS
 * performer.function MS
 * performer.actor MS
 
-// -----------------------------------------
-// Location & Prescription
-// -----------------------------------------
+
 * location MS
 * location only Reference(Location)
 
 * authorizingPrescription MS
 
-// -----------------------------------------
-// Supply Details
-// -----------------------------------------
 * type MS
 * quantity MS
 * daysSupply MS
@@ -66,14 +57,9 @@ Description: "Represents dispensing events in the ePrescription workflow."
 * destination MS
 * receiver MS
 
-// -----------------------------------------
-// Notes
-// -----------------------------------------
 * note MS
 
-// -----------------------------------------
-// Dosage Instruction
-// -----------------------------------------
+
 * dosageInstruction MS
 
 // Dosage-specific Fields
@@ -87,7 +73,6 @@ Description: "Represents dispensing events in the ePrescription workflow."
 * dosageInstruction.route MS
 * dosageInstruction.method MS
 
-// Dose and Rate
 * dosageInstruction.doseAndRate MS
 * dosageInstruction.doseAndRate.type MS
 
@@ -102,44 +87,82 @@ Description: "Represents dispensing events in the ePrescription workflow."
 * dosageInstruction.maxDosePerAdministration MS
 * dosageInstruction.maxDosePerLifetime MS
 
-// -----------------------------------------
-// Substitution
-// -----------------------------------------
+
 * substitution MS
 * substitution.wasSubstituted MS
 * substitution.type MS
 * substitution.reason MS
 * substitution.responsibleParty MS
 
-// -----------------------------------------
-// Detected & History
-// -----------------------------------------
+
 * detectedIssue MS
 * eventHistory MS
 
 
 
 
-
-
-
-
-Instance: KenyaEPrescriptionMedicationDispenseExample
+Instance: ExampleKenyaEPrescriptionMedicationDispense
 InstanceOf: KenyaEPrescriptionMedicationDispense
-Title: "Example - Kenya ePrescription MedicationDispense"
-Description: "Example of a medication dispensing event in the Kenya ePrescription workflow."
+Title: "Example MedicationDispense - Kenya ePrescription"
+Description: "Example instance conforming to the KenyaEPrescriptionMedicationDispense profile."
+
+* id = "meddisp-001"
+
+* meta.profile[0] = "http://example.org/fhir/StructureDefinition/kenya-eprescription-medicationdispense"
+
+* text.status = #generated
+* text.div = "<div>Medication dispense for patient example</div>"
+
+* identifier[0].system = "http://moh.health.go.ke/meddispense"
+* identifier[0].value = "MD-2025-0001"
 
 * status = #completed
-* subject = Reference(KenyaEPrescriptionPatientExample)
-* medicationReference = Reference(KenyaEPrescriptionMedicationExample)
-* authorizingPrescription = Reference(KenyaEPrescriptionMedicationRequestExample)
-* performer[0].actor = Reference(KenyaEPrescriptionPractitionerExample)
+
+* medicationCodeableConcept.coding[0].system = "http://snomed.info/sct"
+* medicationCodeableConcept.coding[0].code = #372687004
+* medicationCodeableConcept.coding[0].display = "Amoxicillin 500mg capsule"
+* medicationCodeableConcept.text = "Amoxicillin 500mg capsule"
+
+* subject.reference = "Patient/kenya-eprescription-patient-001"
+
+* context.reference = "Encounter/kenya-eprescription-encounter-001"
+
+* performer[0].function.coding[0].system = "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"
+* performer[0].function.coding[0].code = #prf
+* performer[0].function.coding[0].display = "Performer"
+* performer[0].actor.reference = "Practitioner/kenya-eprescription-practitioner-001"
+
+* location.reference = "Location/kenya-pharmacy-001"
+
 * quantity.value = 30
-* quantity.unit = "tablet"
+* quantity.unit = "capsule"
 * quantity.system = "http://unitsofmeasure.org"
-* quantity.code = #tbl
+* quantity.code = #capsule
+
 * daysSupply.value = 10
 * daysSupply.unit = "days"
 * daysSupply.system = "http://unitsofmeasure.org"
 * daysSupply.code = #d
+
+* whenPrepared = "2025-01-12T08:00:00+03:00"
+* whenHandedOver = "2025-01-12T09:00:00+03:00"
+
+* dosageInstruction[0].sequence = 1
+* dosageInstruction[0].text = "Take 1 capsule three times a day after meals"
+* dosageInstruction[0].patientInstruction = "Take with food"
+* dosageInstruction[0].timing.repeat.frequency = 3
+* dosageInstruction[0].timing.repeat.period = 1
+* dosageInstruction[0].timing.repeat.periodUnit = #d
+* dosageInstruction[0].route.coding[0].system = "http://snomed.info/sct"
+* dosageInstruction[0].route.coding[0].code = #26643006
+* dosageInstruction[0].route.coding[0].display = "Oral route"
+
+* dosageInstruction[0].doseAndRate[0].doseQuantity.value = 1
+* dosageInstruction[0].doseAndRate[0].doseQuantity.unit = "capsule"
+* dosageInstruction[0].doseAndRate[0].doseQuantity.system = "http://unitsofmeasure.org"
+* dosageInstruction[0].doseAndRate[0].doseQuantity.code = #capsule
+
+* substitution.wasSubstituted = false
+
+* note[0].text = "Dispensed as per ePrescription instructions"
 

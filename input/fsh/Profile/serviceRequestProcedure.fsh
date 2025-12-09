@@ -55,3 +55,52 @@ Description: "Constraints for a procedure/Imaging lab service Request in the ePr
 
 * patientInstruction 0..1 MS
 * note 0..* MS
+
+
+Instance: Example-KenyaEPrescriptionServiceRequestProcedure
+InstanceOf: KenyaEPrescriptionServiceProcedure
+Title: "Example ServiceRequest - Procedure/Imaging"
+Description: "Example of a procedure/imaging ServiceRequest for the ePrescription workflow."
+
+* id = "srvreq-procedure-001"
+* meta.profile[0] = "http://example.org/fhir/StructureDefinition/kenya-eprescription-serviceRequestProcedure"
+
+* identifier[0].system = "http://moh.health.go.ke/servicerequest-ids"
+* identifier[0].value = "PROC-REQ-2025-0001"
+
+* status = #active
+* intent = #order
+
+* category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/service-category"
+* category[0].coding[0].code = #imaging
+* category[0].coding[0].display = "Imaging"
+
+* code.coding[0].system = "http://loinc.org"
+* code.coding[0].code = #36626-8
+* code.coding[0].display = "CT Chest"
+
+* subject = Reference(Example-KenyaEPrescriptionPatient)
+
+* encounter = Reference(Example-KenyaEPrescriptionEncounter)
+
+* occurrenceDateTime = "2025-02-12T10:30:00+03:00"
+
+* authoredOn = "2025-02-10T09:00:00+03:00"
+
+* requester = Reference(Example-KenyaEPrescriptionPractitioner)
+
+* performer[0] = Reference(Example-KenyaEPrescriptionOrganization)
+
+* reasonCode[0].coding[0].system = "http://snomed.info/sct"
+* reasonCode[0].coding[0].code = #267036007
+* reasonCode[0].coding[0].display = "Chest pain"
+
+* bodySite[0].coding[0].system = "http://snomed.info/sct"
+* bodySite[0].coding[0].code = #51185008
+* bodySite[0].coding[0].display = "Thoracic region"
+
+* specimen[0] = Reference(Example-Specimen)
+
+* patientInstruction = "Please avoid eating 4 hours before the scan."
+
+* note[0].text = "Urgent request due to worsening symptoms."

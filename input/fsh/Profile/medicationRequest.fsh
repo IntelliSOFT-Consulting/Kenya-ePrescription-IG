@@ -93,6 +93,77 @@ Description: "Represents prescriptions in the ePrescription workflow."
 * performer 0..1 MS
 * performer only Reference(KenyaEPrescriptionOrganization)
 
+Instance: Example-KenyaEPrescriptionMedicationRequest
+InstanceOf: KenyaEPrescriptionMedicationRequest
+Title: "Example MedicationRequest - ePrescription"
+Description: "Example of a prescription within the ePrescription workflow."
+
+* id = "medrequest-001"
+* meta.profile[0] = "http://example.org/fhir/StructureDefinition/kenya-eprescription-medicationrequest"
+
+* status = #active
+* intent = #order
+
+* subject = Reference(Example-KenyaEPrescriptionPatient)
+
+* priority = #routine
+
+* medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
+* medicationCodeableConcept.coding[0].code = #N02BE01
+* medicationCodeableConcept.coding[0].display = "Paracetamol"
+* medicationCodeableConcept.text = "Paracetamol 500mg tablets"
+
+* requester = Reference(Example-KenyaEPrescriptionPractitioner)
+
+* authoredOn = "2025-02-11T09:30:00+03:00"
+
+* dosageInstruction[0].text = "Take one tablet three times a day after meals."
+* dosageInstruction[0].timing.repeat.frequency = 3
+* dosageInstruction[0].timing.repeat.period = 1
+* dosageInstruction[0].timing.repeat.periodUnit = #d
+
+* dosageInstruction[0].route.coding[0].system = "http://snomed.info/sct"
+* dosageInstruction[0].route.coding[0].code = #26643006
+* dosageInstruction[0].route.coding[0].display = "Oral route"
+
+* dosageInstruction[0].doseAndRate.doseQuantity.value = 1
+* dosageInstruction[0].doseAndRate.doseQuantity.unit = "tablet"
+* dosageInstruction[0].doseAndRate.doseQuantity.system = "http://unitsofmeasure.org"
+* dosageInstruction[0].doseAndRate.doseQuantity.code = #tablet
+
+* dosageInstruction[0].asNeededBoolean = false
+
+
+* dispenseRequest.validityPeriod.start = "2025-02-11"
+* dispenseRequest.validityPeriod.end   = "2025-03-11"
+
+* dispenseRequest.numberOfRepeatsAllowed = 0
+
+* dispenseRequest.quantity.value = 30
+* dispenseRequest.quantity.unit = "tablet"
+* dispenseRequest.quantity.system = "http://unitsofmeasure.org"
+* dispenseRequest.quantity.code = #tablet
+
+* dispenseRequest.expectedSupplyDuration.value = 10
+* dispenseRequest.expectedSupplyDuration.unit = "days"
+* dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org"
+* dispenseRequest.expectedSupplyDuration.code = #d
+
+
+* substitution.allowedBoolean = false
+* substitution.reason[0].text = "No substitution due to patient sensitivity."
+
+* encounter = Reference(Example-KenyaEPrescriptionEncounter)
+
+* reasonCode[0].coding[0].system = "http://snomed.info/sct"
+* reasonCode[0].coding[0].code = #162415008
+* reasonCode[0].coding[0].display = "Headache"
+
+* note[0].text = "Patient reported mild headaches for two days."
+
+* performer = Reference(Example-KenyaEPrescriptionOrganization)
+
+
 
 
 Instance: example-kenya-eprescription-medicationrequest

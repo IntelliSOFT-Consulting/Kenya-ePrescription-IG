@@ -51,6 +51,9 @@ Description: "Encounter constraints for ePrescription workflow."
 * hospitalization.admitSource ^short = "From where patient was admitted."
 
 * hospitalization.reAdmission 0..1 MS
+* hospitalization.reAdmission.coding.code 1..1 MS
+* hospitalization.reAdmission.coding.system 1..1 MS
+* hospitalization.reAdmission.coding.display 1..1 MS
 * hospitalization.reAdmission ^short = "Type of hospital re-admission (if any)."
 
 * hospitalization.dischargeDisposition 0..1 MS
@@ -66,3 +69,51 @@ Description: "Encounter constraints for ePrescription workflow."
 * participant.individual 1..1 MS
 * participant.individual only Reference(KenyaEPrescriptionPractitioner)
 * participant ^short = "The practitioner involved in the encounter."
+
+
+
+
+Instance: ExampleKenyaEPrescriptionEncounter
+InstanceOf: KenyaEPrescriptionEncounter
+Title: "Example Encounter - ePrescription"
+Description: "Example instance of an Encounter for the ePrescription workflow."
+
+* id = "enc-12345"
+* meta.profile[0] = "http://example.org/fhir/StructureDefinition/kenya-eprescription-encounter"
+
+* identifier.system = "http://example.org/encounters"
+* identifier.value = "ENC-2025-0001"
+
+* status = #finished
+
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* class.code = #AMB
+* class.display = "Ambulatory"
+
+* serviceType.coding.system = "http://snomed.info/sct"
+* serviceType.coding.code = #408443003
+* serviceType.coding.display = "General medical service"
+
+* priority.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
+* priority.coding.code = #R
+* priority.coding.display = "Routine"
+
+* subject = Reference(ExampleKenyaEPrescriptionPatient)
+
+* period.start = "2025-01-11T09:10:00+03:00"
+* period.end = "2025-01-11T09:25:00+03:00"
+
+* hospitalization.origin = Reference(ExampleKenyaEPrescriptionOrganization)
+* hospitalization.admitSource.coding.system = "http://terminology.hl7.org/CodeSystem/admit-source"
+* hospitalization.admitSource.coding.code = #emd
+* hospitalization.admitSource.coding.display = "Emergency department"
+* hospitalization.reAdmission.coding.code = #R
+* hospitalization.reAdmission.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0092"
+* hospitalization.reAdmission.coding.display = "Re-admission"
+* hospitalization.dischargeDisposition.coding.system = "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+* hospitalization.dischargeDisposition.coding.code = #home
+* hospitalization.dischargeDisposition.coding.display = "Discharged to home"
+
+* serviceProvider = Reference(ExampleKenyaEPrescriptionOrganization)
+
+* participant.individual = Reference(ExampleKenyaEPrescriptionPractitioner)
