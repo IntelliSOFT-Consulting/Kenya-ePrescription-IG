@@ -9,9 +9,16 @@ Description: "Represents prescriptions in the ePrescription workflow."
 * meta.profile ^short = "Profiles this resource claims to conform to."
 
 * status 1..1 MS
+* status from MedicationRequestStatusVS
 * intent 1..1 MS
+* category 0..1 MS
+* category.coding.code 0..1 MS
+* category.coding.system 0..1 MS
+* category.coding.display 0..1 MS
+* category from https://hl7.org/fhir/R4/valueset-medicationrequest-category
 * subject 1..1 MS
 * priority 0..1 MS
+* priority from MedicationRequestPriorityVS
 * medicationCodeableConcept 0..1 MS
 * medicationCodeableConcept.coding.code 0..1 MS
 * medicationCodeableConcept.coding.system 0..1 MS
@@ -67,9 +74,9 @@ Description: "Represents prescriptions in the ePrescription workflow."
 * dispenseRequest.expectedSupplyDuration MS
 
 
-* substitution MS
-* substitution.allowedBoolean MS
-* substitution.reason MS
+* substitution 0..1 MS
+* substitution.allowedBoolean 1..1 MS
+* substitution.reason 1..1 MS
 
 * priorPrescription MS
 * encounter MS
