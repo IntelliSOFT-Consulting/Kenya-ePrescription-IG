@@ -43,6 +43,7 @@ Description: "AllergyIntolerance constraints for ePrescription workflow."
 * code.coding.code 1..1 MS
 * code.coding.system 1..1 MS
 * code.coding.display 1..1 MS
+* code from AllergyIntoleranceCodeVS (required)
 * code ^short = "The allergen or substance causing the reaction."
 
 
@@ -71,12 +72,14 @@ Description: "AllergyIntolerance constraints for ePrescription workflow."
 * reaction.substance.coding.code 1..1 MS
 * reaction.substance.coding.system 1..1 MS
 * reaction.substance.coding.display 1..1 MS
+* reaction.substance from SubstanceCodeVS (required)
 * reaction.substance ^short = "Causative agent of the reaction."
 
 * reaction.manifestation 1..* MS
 * reaction.manifestation.coding.code 1..1 MS
 * reaction.manifestation.coding.system 1..1 MS
 * reaction.manifestation.coding.display 1..1 MS
+* reaction.manifestation from ManifestationCodeVS
 * reaction.manifestation ^short = "Clinical symptoms/signs presented during the reaction."
 
 * reaction.severity 0..1 MS
