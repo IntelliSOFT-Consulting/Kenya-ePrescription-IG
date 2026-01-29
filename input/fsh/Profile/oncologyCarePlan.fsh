@@ -16,6 +16,7 @@ Description: "CarePlan profile with required elements and activity constraints."
 * title 1..1 MS
 * description 0..1 MS
 * subject 1..1 MS
+* subject only Reference(Patient)
 * encounter 1..1 MS
 * period 1..1 MS
 * author 1..1 MS

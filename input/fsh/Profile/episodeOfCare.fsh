@@ -1,6 +1,6 @@
 Profile: KenyaEpisodeOfCare
 Parent: EpisodeOfCare
-Id: kenya-episode-0of-care
+Id: kenya-episode-of-care
 Title: "Kenya Episode of Care "
 Description: "Defines the standard structure for an EpisodeOfCare in Kenya."
 
@@ -10,7 +10,9 @@ Description: "Defines the standard structure for an EpisodeOfCare in Kenya."
 * status 1..1 MS
 * type 1..1 MS
 * patient 1..1 MS
+* patient only Reference(Patient)
 * managingOrganization 0..1 MS
+* managingOrganization only Reference(Organization)
 * period 0..1 MS
 * careManager 0..1 MS
 * diagnosis 0..* MS
