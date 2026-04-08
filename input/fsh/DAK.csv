@@ -1,0 +1,291 @@
+Resource,Path,Min,Max,Field Type,Description,Available / Missing in KNHTS,Update Concept ID?,Valueset URL
+MedicationRequest,MedicationRequest.identifier,1,*,Identifier,Globally unique prescription identifier (UUID / token / QR),,,—
+MedicationRequest,MedicationRequest.status,1,1,code,"Status of the prescription (active, completed, cancelled, on-hold, entered-in-error)",Missing,Missing,http://hl7.org/fhir/ValueSet/medicationrequest-status
+MedicationRequest,MedicationRequest.statusReason,0,1,CodeableConcept,"Reason for prescription status change (e.g., cancelled by prescriber)",Missing,Missing,http://hl7.org/fhir/ValueSet/medicationrequest-status-reason
+MedicationRequest,MedicationRequest.intent,1,1,code,Must be order for ePrescription,Missing,Missing,http://hl7.org/fhir/ValueSet/medicationrequest-intent
+MedicationRequest,MedicationRequest.category,1,*,CodeableConcept,"Prescription type (community, inpatient, discharge)",Missing,Missing,http://hl7.org/fhir/ValueSet/medicationrequest-category
+MedicationRequest,MedicationRequest.priority,0,1,code,Urgency of prescription,Missing,Missing,http://hl7.org/fhir/ValueSet/request-priority
+MedicationRequest,MedicationRequest.medicationReference,0,1,Reference(Medication),Preferred: reference to Medication resource (product definition),,,—
+MedicationRequest,MedicationRequest.medicationCodeableConcept,1,1,CodeableConcept,Medicinal product prescribed (fallback if Medication not used),Missing,Missing,http://hl7.org/fhir/ValueSet/medication-codes
+MedicationRequest,MedicationRequest.subject,1,1,Reference(Patient),Patient receiving the prescription,,,—
+MedicationRequest,MedicationRequest.encounter,0,1,Reference(Encounter),Encounter during which prescription was issued,,,—
+MedicationRequest,MedicationRequest.authoredOn,1,1,dateTime,Date/time prescription was authored,,,—
+MedicationRequest,MedicationRequest.requester,1,1,Reference(Practitioner | PractitionerRole),Prescriber,,,—
+MedicationRequest,MedicationRequest.recorder,0,1,Reference(Practitioner),User who entered the prescription if different from prescriber,,,—
+MedicationRequest,MedicationRequest.reasonCode,0,*,CodeableConcept,Clinical indication for therapy,Missing,Missing,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-CODES/
+MedicationRequest,MedicationRequest.reasonReference,0,*,Reference(Condition),Condition driving the prescription,,,—
+MedicationRequest,MedicationRequest.dosageInstruction,1,*,Dosage,IHE requires at least one dosageInstruction,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.text,0,1,string,Human-readable patient instructions,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.route,1,1,CodeableConcept,Route of administration,Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/RouteOfAdministration/$expand
+MedicationRequest,MedicationRequest.dosageInstruction.method,0,1,CodeableConcept,Method of administration (if applicable),Available & Incomplete,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/RouteOfAdministration/$expand
+MedicationRequest,MedicationRequest.dosageInstruction.doseAndRate,1,*,BackboneElement,Dose and rate specification,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.doseAndRate.doseQuantity,1,1,Quantity,"Dose per administration (e.g. 500 mg, 5 ml)",,,UCUM
+MedicationRequest,MedicationRequest.dosageInstruction.timing,1,1,Timing,When the medication should be taken,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.frequency,0,1,integer,Times per period,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.period,0,1,decimal,Length of period,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.periodUnit,1,1,code,"Time unit (day, hour, week)",Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/UoM/$expand
+MedicationRequest,MedicationRequest.dosageInstruction.timing.code,0,1,CodeableConcept,"Coded frequency (e.g. BID, TID)",Missing,No,http://hl7.org/fhir/ValueSet/medicationrequest-dispenser-instructions
+MedicationRequest,MedicationRequest.dispenseRequest,1,1,BackboneElement,Mandatory for ePrescription,,,—
+MedicationRequest,MedicationRequest.dispenseRequest.quantity,1,1,Quantity,Total quantity to be dispensed,,,—
+MedicationRequest,MedicationRequest.dispenseRequest.numberOfRepeatsAllowed,0,1,integer,Refill count,,,—
+MedicationRequest,MedicationRequest.dispenseRequest.expectedSupplyDuration,0,1,Duration,Duration of supply per dispense,,,—
+MedicationRequest,MedicationRequest.dispenseRequest.validityPeriod,0,1,Period,Prescription validity/expiry window,,,—
+MedicationRequest,MedicationRequest.substitution,0,1,BackboneElement,Substitution rules,,,—
+MedicationRequest,MedicationRequest.substitution.allowedCodeableConcept,0,1,CodeableConcept,Whether generic substitution is allowed,Missing,No,http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitution
+MedicationRequest,MedicationRequest.substitution.reason,0,1,CodeableConcept,Reason substitution is restricted,Missing,No,http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason
+MedicationRequest,MedicationRequest.note,0,*,Annotation,Free‑text instructions to pharmacist or patient,,,—
+AllergyIntolerance,AllergyIntolerance.meta,1,1,Meta,Metadata about the resource,,,
+AllergyIntolerance,AllergyIntolerance.meta.profile,1,*,canonical(structure definition),Profiles this resource claims to conform to ,,,
+AllergyIntolerance,AllergyIntolerance.ImplicitRules,0,1,uri,A set of rules under which this content was created,,,
+AllergyIntolerance,AllergyIntolerance.identifier,0,*,Identifier,Unique allergy record identifier (facility or SHR-level),,,—
+AllergyIntolerance,AllergyIntolerance.clinicalStatus,1,1,CodeableConcept,"Clinical status of the allergy (active, inactive, resolved)",Missing,No,http://hl7.org/fhir/ValueSet/allergyintolerance-clinical
+AllergyIntolerance,AllergyIntolerance.verificationStatus,1,1,CodeableConcept,"Verification status (confirmed, unconfirmed, refuted)",Missing,No,http://hl7.org/fhir/ValueSet/allergyintolerance-verification
+AllergyIntolerance,AllergyIntolerance.type,0,1,code,Allergy or intolerance,Missing,No,http://hl7.org/fhir/ValueSet/allergy-intolerance-type
+AllergyIntolerance,AllergyIntolerance.category,0,*,code,"Category of allergy (food, medication, environment, biologic)",Missing,No,http://hl7.org/fhir/ValueSet/allergy-intolerance-category
+AllergyIntolerance,AllergyIntolerance.criticality,0,1,code,Estimate of potential clinical harm,Missing,No,http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality
+AllergyIntolerance,AllergyIntolerance.code,1,1,CodeableConcept,"Allergen substance (drug, food, agent)",Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/ActiveComponents/$expand
+AllergyIntolerance,AllergyIntolerance.patient,1,1,Reference(Patient),Patient with the allergy or intolerance,,,—
+AllergyIntolerance,AllergyIntolerance.encounter,0,1,Reference(Encounter),Encounter when allergy was identified,,,—
+AllergyIntolerance,AllergyIntolerance.onset[x],0,1,dateTime | Age | Period | Range | string,Onset of the allergy or intolerance,,,—
+AllergyIntolerance,AllergyIntolerance.recordedDate,0,1,dateTime,Date when the allergy was recorded,,,—
+AllergyIntolerance,AllergyIntolerance.recorder,0,1,Reference(Practitioner | Patient),Who recorded the allergy,,,—
+AllergyIntolerance,AllergyIntolerance.asserter,0,1,Reference(Patient | Practitioner),Source asserting the allergy,,,—
+AllergyIntolerance,AllergyIntolerance.lastOccurrence,0,1,dateTime,Last known occurrence of a reaction,,,—
+AllergyIntolerance,AllergyIntolerance.note,0,*,Annotation,Additional narrative notes about the allergy,,,—
+AllergyIntolerance,AllergyIntolerance.reaction,0,*,BackboneElement,Reaction details,,,—
+AllergyIntolerance,AllergyIntolerance.reaction.substance,0,1,CodeableConcept,Specific substance that caused the reaction,Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/ActiveComponents/$expand
+AllergyIntolerance,AllergyIntolerance.reaction.manifestation,1,*,CodeableConcept,Clinical manifestations of the reaction,Missing,No,http://hl7.org/fhir/ValueSet/clinical-findings
+AllergyIntolerance,AllergyIntolerance.reaction.severity,0,1,code,"Severity of the reaction (mild, moderate, severe)",Missing,No,http://hl7.org/fhir/ValueSet/reaction-event-severity
+AllergyIntolerance,AllergyIntolerance.reaction.exposureRoute,0,1,CodeableConcept,Route of exposure that caused the reaction,Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/RouteOfAdministration/$expand
+AllergyIntolerance,AllergyIntolerance.reaction.description,0,1,string,Text description of the reaction,,,—
+AllergyIntolerance,AllergyIntolerance.reaction.onset,0,1,dateTime,When the reaction occurred,,,—
+MedicationDispense,MedicationDispense.identifier,0,*,Identifier,Unique dispense identifier (pharmacy system reference),,,—
+MedicationDispense,MedicationDispense.ImplicitRules,0,1,uri,A set of rules under which this content was created,,,
+MedicationDispense,MedicationDispense.medication[x],1,1,CodeableConcept,What medication was supplied,Missing,No,http://hl7.org/fhir/ValueSet/medication-codes
+MedicationDispense,MedicationDispense.medication[x].coding,1,*,Coding,Code defined by a terminology system,Missing,Missing,
+MedicationDispense,MedicationDispense.medication[x].coding.system,1,1,uri,Identity of the terminology system,,,
+MedicationDispense,MedicationDispense.medication[x].coding.code,1,1,code,Symbol in syntax defined by the system,Missing,Missing,
+MedicationDispense,MedicationDispense.medication[x].coding.display,1,1,string,Representation defined by the system ,,,
+MedicationDispense,MedicationDispense.subject,1,1,Reference(patient),who the dispense is for ,,,
+MedicationDispense,MedicationDispense.medication[x].text,0,1,string,Plain text representation of the context,,,
+MedicationDispense,MedicationDispense.context,0,1,Reference(Encounter),Encounter/Episode associated with the event,,,
+MedicationDispense,MedicationDispense.location,1,1,Reference(Location),Where the dispense occurred,,,
+MedicationDispense,MedicationDispense.type,1,1,CodeableConcept,"Type of dispensing event performed(Trial,Fill,Completeion of trial,partial fill, emergency fill, samples, etc)",Missing,No,http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType
+MedicationDispense,MedicationDispense.status,1,1,code,"Status of dispensing (preparation, in-progress, completed, cancelled)",Missing,No,http://hl7.org/fhir/ValueSet/medicationdispense-status
+MedicationDispense,MedicationDispense.statusReasonCodeableConcept,0,1,CodeableConcept,"Reason for dispense status (e.g. out of stock, patient declined)",Missing,No,http://hl7.org/fhir/ValueSet/medicationdispense-status-reason
+MedicationDispense,MedicationDispense.medicationReference,0,1,Reference(Medication),Preferred: reference to Medication resource (product actually dispensed),,,—
+MedicationDispense,MedicationDispense.medicationCodeableConcept,1,1,CodeableConcept,Medication dispensed (fallback if Medication not referenced),Available,Yes,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/GenericProducts/
+MedicationDispense,MedicationDispense.subject,1,1,Reference(Patient),Patient receiving the medication,,,—
+MedicationDispense,MedicationDispense.authorizingPrescription,1,*,Reference(MedicationRequest),Prescription(s) being fulfilled,,,—
+MedicationDispense,MedicationDispense.quantity,1,1,Quantity,Quantity dispensed,,,—
+MedicationDispense,MedicationDispense.daysSupply,0,1,Quantity,Number of days the dispensed supply will last,,,—
+MedicationDispense,MedicationDispense.whenPrepared,0,1,dateTime,Date/time medication was prepared,,,—
+MedicationDispense,MedicationDispense.whenHandedOver,0,1,dateTime,Date/time medication was handed to patient or representative,,,—
+MedicationDispense,MedicationDispense.dosageInstruction,0,*,Dosage,How the medicine is to be used by the patient or administered by he caregiver,,,
+MedicationDispense,MedicationDispense.dosageInstruction.sequence,0,1,integer,The order of the dosage instructions,,,
+MedicationDispense,MedicationDispense.dosageInstruction.text,0,1,string,Free text dosage instructions e.g SIG,,,
+MedicationDispense,MedicationDispense.dosageInstruction.additionalInstruction,0,*,CodeableConcept,Supplement instructions or warning to the patients e.g may cause drowsiness,Missing,No,http://hl7.org/fhir/ValueSet/additional-instruction-codes
+MedicationDispense,MedicationDispense.dosageInstruction.patientInstruction,0,1,string,Patient or consumer related instruction,,,
+MedicationDispense,MedicationDispense.dosageInstruction.timing,0,1,Timing,When medication should be administered,,,
+MedicationDispense,"MedicationDispense.dosageInstruction.asNeeded[x] (Boolean,CodeableConcept)",0,1,,Take as needed for [x],,,
+MedicationDispense,MedicationDispense.dosageInstruction.site,0,1,CodeableConcept,Body site to administer to ,Missing,No,http://hl7.org/fhir/ValueSet/approach-site-codes
+MedicationDispense,MedicationDispense.route,0,1,CodeableConcept,How drug should enter body,Missing,No,http://hl7.org/fhir/ValueSet/route-codes
+MedicationDispense,MedicationDispense.destination,0,1,Reference(Location),Where the medication was supplied from,,,—
+MedicationDispense,MedicationDispense.receiver,0,*,Reference(Patient | RelatedPerson),Person who received the medication,,,—
+MedicationDispense,MedicationDispense.performer,1,*,BackboneElement,Who performed the dispense,,,—
+MedicationDispense,MedicationDispense.performer.actor,1,1,Reference(Organization | PractitionerRole),Dispensing pharmacy or authorised dispenser,,,—
+MedicationDispense,MedicationDispense.substitution,0,1,BackboneElement,Substitution details (brand ↔ generic),,,—
+MedicationDispense,MedicationDispense.substitution.wasSubstituted,1,1,boolean,Whether substitution occurred,,,—
+MedicationDispense,MedicationDispense.substitution.type,0,1,CodeableConcept,Type of substitution,Missing,No,http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitution
+MedicationDispense,MedicationDispense.substitution.reason,0,*,CodeableConcept,"Reason for substitution (formulary, availability)",Missing,No,http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason
+MedicationDispense,MedicationDispense.batch,0,1,BackboneElement,Batch / lot information for traceability,,,—
+MedicationDispense,MedicationDispense.batch.lotNumber,0,1,string,Lot or batch number,,,—
+MedicationDispense,MedicationDispense.batch.expirationDate,0,1,date,Expiry date of the dispensed product,,,—
+MedicationDispense,MedicationDispense.note,0,*,Annotation,Pharmacist notes or counselling comments,,,—
+MedicationDispense,MedicationDispense.partOf,0,*,Reference(Procedure | MedicationDispense),Link to staged or partial dispensing events,,,—
+MedicationDispense,MedicationDispense.detectedIssue,0,*,Reference(DetectedIssue),Clinical issue with action,,,
+MedicationDispense,MedicationDispense.eventHistory,0,*,Reference(Provenance),A list of relevant lifecycle events,,,
+MedicationAdministration,MedicationAdministration.identifier,0,*,Identifier,Unique administration record identifier (facility or SHR-level),,,—
+MedicationAdministration,MedicationAdministration.meta,1,1,Meta,Metadata about the resource,,,
+MedicationAdministration,MedicationAdministartion.meta.profile,1,*,canonical(StructureDefinition),Profiles this resource claims to conform to ,,,
+MedicationAdministration,MedicationAdministration.implicitRules,0,1,uri,A set of rules under which the content was created,,,
+MedicationAdministration,MedicationAdministration.category,0,1,CodeableConcept,Type of medication Administration,Missing,No,http://hl7.org/fhir/ValueSet/medication-admin-category
+MedicationAdministration,MedicationAdministration.medication[x],1,1,CodeableConcept,What was administered,Missing,No,http://hl7.org/fhir/ValueSet/medication-codes
+MedicationAdministration,MedicationAdministration.context,1,1,Reference(Encounter),Encounter or episode of care administered as part of ,,,
+MedicationAdministration,MedicationAdministration.effective[x],1,1,dateTime,Start and end time of administration,,,
+MedicationAdministration,MedicationAdministration.status,1,1,code,"Status of administration (in-progress, completed, not-done, entered-in-error)",Missing,No,http://hl7.org/fhir/ValueSet/medication-admin-status
+MedicationAdministration,MedicationAdministration.statusReason,0,*,CodeableConcept,"Reason for current status (e.g. patient refused, clinical hold)",Missing,No,http://hl7.org/fhir/ValueSet/medication-admin-status-reason
+MedicationAdministration,MedicationAdministration.medicationReference,0,1,Reference(Medication),Preferred: reference to Medication resource (product administered),,,—
+MedicationAdministration,MedicationAdministration.medicationCodeableConcept,1,1,CodeableConcept,Medication administered (fallback if Medication not referenced),Available,Yes,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/GenericProducts/
+MedicationAdministration,MedicationAdministration.subject,1,1,Reference(Patient),Patient receiving the medication,,,—
+MedicationAdministration,MedicationAdministration.encounter,0,1,Reference(Encounter),Encounter during which medication was administered,,,—
+MedicationAdministration,MedicationAdministration.effectiveDateTime,1,1,dateTime,Date/time when medication was administered,,,—
+MedicationAdministration,MedicationAdministration.performer,1,*,BackboneElement,Who performed the administration,,,—
+MedicationAdministration,MedicationAdministration.performer.actor,1,1,Reference(Practitioner | PractitionerRole),"Administrator (nurse, clinician, authorised staff)",,,—
+MedicationAdministration,MedicationAdministration.performer.function,0,1,CodeableConcept,Type of performance: A code  describing the role an individual played in administering the medication,Missing,No,http://hl7.org/fhir/ValueSet/med-admin-perform-function
+MedicationAdministration,MedicationAdministration.request,0,1,Reference(MedicationRequest),Link back to originating prescription,,,—
+MedicationAdministration,MedicationAdministration.device,0,*,Reference(device),Device used to Administer,,,
+MedicationAdministration,MedicationAdministration.reasonCode,0,*,CodeableConcept,Reason for administering the medication,Available & Incomplete,Yes,https://ilm-hie.dha.go.ke/ocl/orgs/WHO/ValueSet/icd-11/$expand
+MedicationAdministration,MedicationAdministration.dosage,0,1,Dosage,Dosage administered,,,—
+MedicationAdministration,MedicationAdministration.dosage.route,1,1,CodeableConcept,Route of administration,Available,Yes,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/MEDICATION-ADMINISTRATION-ROUTE/
+MedicationAdministration,MedicationAdministration.dosage.method,0,1,CodeableConcept,"Method of administration (e.g. IV push, inhalation)",Available,Yes,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/RouteOfAdministration/$expand
+MedicationAdministration,MedicationAdministration.dosage.dose,1,1,Quantity,Amount of medication administered,,,UCUM
+MedicationAdministration,MedicationAdministration.dosage.rate[x],0,1,Ratio | Quantity | Range | string,Rate at which medication was administered (if applicable),,,—
+MedicationAdministration,MedicationAdministration.note,0,*,Annotation,Administration notes or observations,,,—
+MedicationAdministration,MedicationAdministration.partOf,0,*,Reference(Procedure | MedicationAdministration),Links to related procedures or administrations,,,—
+MedicationStatement,MedicationStatement.identifier,0,*,Identifier,Unique medication statement identifier (facility or SHR-level),,,—
+MedicationStatement,MedicationStatement.status,1,1,code,"Status of medication use (active, completed, stopped, entered-in-error)",Missing,No,http://hl7.org/fhir/ValueSet/medication-statement-status
+MedicationStatement,MedicationStatement.statusReason,0,*,CodeableConcept,"Reason for current status (e.g. therapy stopped, adverse reaction)",Missing,No,http://hl7.org/fhir/ValueSet/reason-medication-status-codes
+MedicationStatement,MedicationStatement.medicationReference,0,1,Reference(Medication),Preferred: reference to Medication resource (product taken),,,—
+MedicationStatement,MedicationStatement.medicationCodeableConcept,1,1,CodeableConcept,Medication taken (fallback if Medication not referenced),Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/GenericProducts/
+MedicationStatement,MedicationStatement.subject,1,1,Reference(Patient),Patient taking or who took the medication,,,—
+MedicationStatement,MedicationStatement.encounter,0,1,Reference(Encounter),Encounter during which medication use was recorded,,,—
+MedicationStatement,MedicationStatement.effectivePeriod,0,1,Period,Period of medication use,,,—
+MedicationStatement,MedicationStatement.dateAsserted,0,1,dateTime,Date when medication use was asserted or recorded,,,—
+MedicationStatement,MedicationStatement.informationSource,0,1,Reference(Patient | Practitioner | RelatedPerson),Who reported the medication use,,,—
+MedicationStatement,MedicationStatement.reasonCode,0,*,CodeableConcept,Clinical reason for medication use,Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/WHO/ValueSet/icd-11/$expand
+MedicationStatement,MedicationStatement.reasonReference,0,*,Reference(Condition),Condition prompting medication use,,,—
+MedicationStatement,MedicationStatement.note,0,*,Annotation,Additional notes about medication use or adherence,,,—
+MedicationStatement,MedicationStatement.dosage,0,*,Dosage,Dosage information as taken by the patient,,,—
+MedicationStatement,MedicationStatement.partOf,0,*,Reference(MedicationRequest | MedicationAdministration),Link to prescribing or administration records,,,—
+MedicationRequest,Dose amount,1,1,,,,,
+MedicationRequest,Frequency / timing,1,1,,,,,
+MedicationRequest,Duration,0,1,,,,,
+MedicationRequest,Reason for prescription,0,1,string,,,,
+MedicationRequest,Patient instructions,1,1,,,,,
+MedicationRequest,MedicationRequest.medicationCodeableConcept,1,1,CodeableConcept,Prescribed product including form,Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/GenericProducts/
+MedicationRequest,MedicationRequest.dosageInstruction.route,1,1,CodeableConcept,"Route of administration (oral, IV, IM, topical, etc.)",Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/RouteOfAdministration/$expand
+MedicationRequest,MedicationRequest.dosageInstruction.doseAndRate,1,*,BackboneElement,Dose and rate specification,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.doseAndRate.doseQuantity,1,1,Quantity,"Amount per dose (e.g. 500 mg, 5 ml)",,,UCUM
+MedicationRequest,MedicationRequest.dosageInstruction.timing,1,1,Timing,When medication should be taken,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.frequency,0,1,integer,Times per period (e.g. 2),,,—
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.period,0,1,decimal,Period length (e.g. 1),,,—
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.periodUnit,1,1,code,"Time unit (day, hour, week)",Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/UoM/$expand
+MedicationRequest,MedicationRequest.dosageInstruction.timing.code,0,1,CodeableConcept,"Coded frequency (e.g. BID, TID)",,No,Local Frequency Codes VS
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.duration,0,1,decimal,Duration value,,,—
+MedicationRequest,MedicationRequest.dosageInstruction.timing.repeat.durationUnit,0,1,code,"Duration unit (days, weeks)",Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/UoM/$expand
+MedicationRequest,MedicationRequest.dosageInstruction.text,0,1,string,Human‑readable instructions (e.g. “Take with food”),,,—
+Medication,Medication.identifier,1,*,Identifier,"Unique product identifier (GTIN, SKU, national code)",,,Livia Product Catalogue
+Medication,Medication.code,1,1,CodeableConcept,Coded medicinal product (brand or generic),Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/GenericProducts/
+Medication,Medication.status,0,1,code,Active or inactive medication,Missing,No,http://hl7.org/fhir/ValueSet/medication-status
+Medication,Medication.manufacturer,0,1,Reference(Organization),Manufacturer or marketing authorisation holder,,,—
+Medication,Medication.form,1,1,CodeableConcept,"Dose form of the medication (tablet, capsule, syrup, injection)",Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/Formulation/$expand
+Medication,Medication.amount,0,1,Ratio,Strength per unit (e.g. 500 mg per tablet),,,UCUM
+Medication,Medication.ingredient,0,*,BackboneElement,Active ingredient(s) of the product,,,—
+Medication,Medication.ingredient.itemCodeableConcept,1,1,CodeableConcept,Ingredient substance,Available,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/ActiveComponents/$expand
+Medication,Medication.ingredient.strength,0,1,Ratio,Strength of the ingredient,,,UCUM
+Medication,Medication.batch,0,1,BackboneElement,Batch / lot information for traceability,,,—
+Medication,Medication.batch.lotNumber,0,1,string,Batch or lot number,,,—
+Medication,Medication.batch.expirationDate,0,1,date,Expiry date of the medication batch,,,—
+Medication,Medication.note,0,*,Annotation,Additional product notes (regulatory or dispensing-related),,,—
+EncounterProfile,Encounter.id,1,1,id,Logical id of this artifact,,,
+EncounterProfile,Encounter.meta,1,1,Meta,Metadata about the resource,,,
+EncounterProfile,Encounter.meta.profile,1,*,canonical(StructureDefinition),Profiles this resource claims to conform to ,,,
+EncounterProfile,Encounter.ImplicitRules,0,1,uri,A set of rules under which this content was created,,,
+EncounterProfile,Encounter.identifier,1,1,Identifier,Identifier(s) by which this encounter is known,,,
+EncounterProfile,Encounter.status,1,1,code,planned | arrived | triaged | in-progress | on-leave | finished | cancelled,Available & Incomplete,No,http://hl7.org/fhir/ValueSet/encounter-status
+EncounterProfile,Encounter.class,1,1,coding,Classification of patient encounter,Missing,No,http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
+EncounterProfile,Encounter.ServiceType,0,1,CodeableConcept,Specific type of service,Missing,No,http://hl7.org/fhir/ValueSet/service-type
+EncounterProfile,Encounter.priority,0,1,CodeableConcept,Indicates the urgency of the encounter,Missing,No,http://terminology.hl7.org/ValueSet/v3-ActPriority
+EncounterProfile,Encounter.subject,1,1,Reference(patient),The patient or group present at the encounter,,,
+EncounterProfile,Encounter.participant,1,*,BackboneElement,List of participants involved in the encounter,,,
+EncounterProfile,Encounter.participant.individual,1,1,Reference(Practitioner),Persons involved in the encounter other than the patient ,,,
+EncounterProfile,Encounter.period,1,1,period,the start and end time of the encounter,,,
+EncounterProfile,Encounter.hospitalization,0,1,BackboneElement,Details about the admission to a healthcare service,,,
+EncounterProfile,Encounter.hospitalization.origin,0,1,Reference(Location | Organization ),The location from which the patient came before admission ,,,
+EncounterProfile,Encounter.hospitalization.admitSource,0,1,CodeableConcept,From where patient was admitted,Missing,No,http://hl7.org/fhir/ValueSet/encounter-admit-source
+EncounterProfile,Encounter.hospitalization.reAdmission,0,1,CodeableConcept,"	The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission",Missing,No,http://terminology.hl7.org/ValueSet/v2-0092
+EncounterProfile,Encounter.hospitalization.DischargeDisposition,0,1,CodeableConcept,	Category or kind of location after discharge,Missing,No,http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+EncounterProfile,Encounter.serviceProvider,1,1,Reference(Organization),The organization (facility) responsible for this encounter,,,
+EpisodeOfCare,EpisodeOfCare.meta,1,1,Meta,Metadata about the resource,,,
+EpisodeOfCare,EpisodeOfCare.meta.profile,1,*,canonical(StructureDefinition),Profiles this resource claims to conform to ,,,
+EpisodeOfCare,EpisodeOfCare.implicit rules,0,1,uri,A set of rules under which this content was created,,,
+EpisodeOfCare,EpisodeOfCare.status,1,1,code,planned | waitlist | active | onhold | finished | cancelled | entered-in-error,Available & Incomplete,No,http://hl7.org/fhir/ValueSet/episode-of-care-status
+EpisodeOfCare,EpisodeOfCare.type,1,1,CodableConcept,"Type/class - e.g. specialist referral, disease management
+",Available & Incomplete,No,http://hl7.org/fhir/ValueSet/episodeofcare-type
+EpisodeOfCare,EpisodeOfCare.diagnosis,0,*,BackboneElement,The list of diagnosis relevant to this episode of care ,,,
+EpisodeOfCare,EpisodeOfCare.diagnosis.condition,1,1,Reference(condition),Conditions/problems/diagnoses this episode of care is for,,,
+EpisodeOfCare,EpisodeOfCare.patient,1,1,Reference(patient),The patient who is the focus of this episode of care,,,
+EpisodeOfCare,EpisodeOfCare.managingOrganization,0,1,Reference(Organization),Organization that assumes care,,,
+EpisodeOfCare,EpisodeOfCare.period,0,1,period,Interval during responsibility is assumed,,,
+EpisodeOfCare,EpisodeOfCare.caremanager,0,1,Reference(Practitioner | practitioner role ),Care manager/care coordinator for the patient,,,
+MorphologyObservationProfile,Observation.id,1,1,id,Logical id of this artifact,,,
+MorphologyObservationProfile,Observation.meta,0,1,Meta,Metadata about the resource,,,
+MorphologyObservationProfile,Observation.meta.profile,1,*,canonical(StructureDefinition),Profiles this resource claims to conform to ,,,
+MorphologyObservationProfile,Observation.ImplicitRules,0,1,uri,A set of rules under which this content was created,,,
+MorphologyObservationProfile,Observation.identifier,0,*,Identifier,Business Identifier for observation,,,
+MorphologyObservationProfile,Observation.status,1,1,code,registered | preliminary | final | amended +,Missing,No,http://hl7.org/fhir/ValueSet/observation-status
+MorphologyObservationProfile,Observation.category,1,*,CodableConcept,Classification of type of observation,Missing,No,http://hl7.org/fhir/ValueSet/observation-category
+MorphologyObservationProfile,Observation.code,1,1,CodableConcept,Type of observation (code / type),Missing,,http://hl7.org/fhir/ValueSet/observation-codes
+MorphologyObservationProfile,Observation.subject,1,1,Reference(Patient),Who and/or what the observation is about,,,
+MorphologyObservationProfile,Observation.focus,1,*,Reference(Condition),"What the observation is about, when it is not about the subject of record",,,
+MorphologyObservationProfile,Observation.encounter,0,1,Reference(Encounter),Healthcare event during which this observation is made,,,
+MorphologyObservationProfile,Observation.effective[x],1,1,,Clinically relevant time/time-period for observation,,,
+MorphologyObservationProfile,Observation.effective[x].effectiveDateTime,,,dateTime,,,,
+MorphologyObservationProfile,Observation.effective[x].effectivePeriod,,,Period,,,,
+MorphologyObservationProfile,Observation.performer,1,*,Reference(Practitioner),Who is responsible for the observation,,,
+MorphologyObservationProfile,Observation.value[x],1,1,CodeableConcept,Actual result,,,
+MorphologyObservationProfile,Observation.bodySite,0,1,CodeableConcept,Observed body part,Available,No,http://hl7.org/fhir/ValueSet/body-site
+MorphologyObservationProfile,Observation.method,1,1,CodeableConcept,How it was done,Missing,No,http://hl7.org/fhir/ValueSet/observation-methods
+OncologyCareplan,CarePlan.id,1,1,id,Logical id of this artifact,,,
+OncologyCareplan,CarePlan.meta,1,1,Meta,Metadata about the resource,,,
+OncologyCareplan,CarePlan.meta.profile,1,*,canonical(StructureDefinition),Profiles this resource claims to conform to ,,,
+OncologyCareplan,CarePlan.implicitRules,0,1,uri,A set of rules under which this content was created,,,
+OncologyCareplan,CarePlan.contained,1,*,Resource,"Contained, inline Resources",,,
+OncologyCareplan,CarePlan.identifier,1,*,identifier ,External Ids for this plan,,,
+OncologyCareplan,CarePlan.instantiatesUri,0,*,uri,Instantiates external protocol or definition,,,
+OncologyCareplan,CarePlan.status,1,1,code,draft | active | on-hold | revoked | completed | entered-in-error | unknown,Missing,No,http://hl7.org/fhir/ValueSet/request-status
+OncologyCareplan,CarePlan.intent,1,1,code,proposal | plan | order | option,Missing,No,http://hl7.org/fhir/ValueSet/care-plan-intent
+OncologyCareplan,CarePlan.category,1,*,codeableConcept,Type of plan,Missing,No,http://hl7.org/fhir/ValueSet/care-plan-category
+OncologyCareplan,CarePlan.title,1,1,string,Human-friendly name for the care plan,,,
+OncologyCareplan,CarePlan.description,0,1,string,Summary of nature of plan,,,
+OncologyCareplan,CarePlan.subject,1,1,Reference(Patient),Who the care plan is for,,,
+OncologyCareplan,CarePlan.encounter,1,1,Reference(Encounter),Encounter created as part of,,,
+OncologyCareplan,CarePlan.period,1,1,Period,Encounter created as part of,,,
+OncologyCareplan,CarePlan.author,1,1,Reference(Patient | Practitioner | PractitionerRole | Device | RelatedPerson | Organization | CareTeam),Who is the designated responsible party,,,
+OncologyCareplan,CarePlan.careTeam,1,*,Reference(CareTeam),CarePlan.,,,
+OncologyCareplan,CarePlan.addresses,1,*,Reference(Condition),Health issues this plan addresses,,,
+OncologyCareplan,CarePlan.supportingInfo,0,*,Reference(Resource),Information considered as part of plan,,,
+OncologyCareplan,CarePlan.goal,0,*,Reference(Goal),Desired outcome of plan,,,
+OncologyCareplan,CarePlan.activity,1,*,BackboneElement,"Action to occur as part of plan
+Constraints: cpl-3",,,
+OncologyCareplan,CarePlan.activity.detail,0,*,BackboneElement,In-line definition of activity,,,
+OncologyCareplan,CarePlan.activity.code,0,1,CodeableConcept,Detail type of activity,Available & Incomplete,No,http://hl7.org/fhir/ValueSet/procedure-code
+OncologyCareplan,CarePlan.activity.reasonCode,0,*,CodeableConcept,Why activity should be done or why activity was prohibited,Missing,No,http://hl7.org/fhir/ValueSet/clinical-findings
+OncologyCareplan,CarePlan.activity.reasonReference,0,*,Reference(Condition | Observation | DiagnosticReport | DocumentReference),Why activity is needed,,,
+OncologyCareplan,CarePlan.activity.status,1,1,code,not-started | scheduled | in-progress | on-hold | completed | cancelled | stopped | unknown | entered-in-error,Missing,No,http://hl7.org/fhir/ValueSet/care-plan-activity-status
+OncologyCareplan,CarePlan.activity.doNotPerform,0,1,boolean,"If true, activity is prohibiting action",,,
+OncologyDiagnosis ConditionProfile,Condition.id,1,1,id,Logical id of this artifact,,,
+OncologyDiagnosis ConditionProfile,Condition.meta,1,1,Meta,Metadata about the resource,,,
+OncologyDiagnosis ConditionProfile,Condition.meta.profile,1,*,canonical(StructureDefinition),Profiles this resource claims to conform to ,,,
+OncologyDiagnosis ConditionProfile,Condition.implicitRules,0,1,uri,A set of rules under which this content was created,,,
+OncologyDiagnosis ConditionProfile,Condition.identifier,0,1,identifier ,External Ids for this condition,,,
+OncologyDiagnosis ConditionProfile,Condition.ClinicalStatus,1,1,codeableConcept,active | recurrence | relapse | inactive | remission | resolved,Available & Incomplete,Yes,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-CLINICAL-STATUS/
+OncologyDiagnosis ConditionProfile,Condition.VerificationStatus,1,1,codeableConcept,unconfirmed | provisional | differential | confirmed | refuted | entered-in-error,Available & Incomplete,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-VERIFICATION-STATUS/
+OncologyDiagnosis ConditionProfile,Condition.category,1,1,codeableConcept,problem-list-item | encounter-diagnosis,Available & Incomplete,Yes,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-CATEGORY/
+OncologyDiagnosis ConditionProfile,Condition.Severity,0,1,codeableConcept,Subjective severity of condition,Missing,No,http://hl7.org/fhir/ValueSet/condition-severity
+OncologyDiagnosis ConditionProfile,Condition.code,1,1,codeableConcept,"Identification of the condition, problem or diagnosis",Available & Incomplete,No,https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-CODES/
+OncologyDiagnosis ConditionProfile,Condition.bodySite,0,1,codeableConcept,"Anatomical location, if relevant",Available,No,http://hl7.org/fhir/ValueSet/body-site
+OncologyDiagnosis ConditionProfile,Condition.subject,1,1,Reference(patient),Who has the condition?,,,
+OncologyDiagnosis ConditionProfile,Condition.encounter,1,1,Reference(Encounter),Encounter created as part of,,,
+OncologyDiagnosis ConditionProfile,Condition.SlicesForOnset[x],1,1,dateTime,"Estimated or actual date, date-time, or age
+Slice: Unordered, Closed by type:$this",,,
+OncologyDiagnosis ConditionProfile,Condition.SlicesForOnset[x].onset[x]:OnsetDateTime,1,1,dateTime,"Estimated or actual date, date-time, or age",,,
+OncologyDiagnosis ConditionProfile,Condition.abatement[x],0,1,,When in resolution/remission,,,
+OncologyDiagnosis ConditionProfile,Condition.abatement[x].abatementDateTime,,,dateTime,,,,
+OncologyDiagnosis ConditionProfile,Condition.abatement[x].abatementAge,,,Age,,,,
+OncologyDiagnosis ConditionProfile,Condition.abatement[x].abatementPeriod,,,Period,,,,
+OncologyDiagnosis ConditionProfile,Condition.abatement[x].abatementRange,,,Range,,,,
+OncologyDiagnosis ConditionProfile,Condition.abatement[x].abatementString,,,String,,,,
+OncologyDiagnosis ConditionProfile,Condition.recordedDate,1,1,dateTime,Date record was first recorded,,,
+OncologyDiagnosis ConditionProfile,Condition.Recorder,0,1,Reference(Practitioner),Who recorded the condition,,,
+OncologyDiagnosis ConditionProfile,Condition.asserter,0,1,Reference(Practitioner),Person who asserts this condition,,,
+OncologyDiagnosis ConditionProfile,Condition.stage,1,1,BackboneElement,"Stage/grade, usually assessed formally
+Constraints: con-1",,,
+OncologyDiagnosis ConditionProfile,Condition.stage.summary,0,1,codeableConcept,Simple summary (disease specific),Missing,No,http://hl7.org/fhir/ValueSet/condition-stage
+OncologyDiagnosis ConditionProfile,condition.stage.assesment,0,1,Reference(DiagnosticReport | Observation),Formal record of assessment,,,
+OncologyDiagnosis ConditionProfile,Condition.stage.type,0,1,codeableConcept,Kind of staging,Missing,No,http://hl7.org/fhir/ValueSet/condition-stage-type
+OncologyDiagnosis ConditionProfile,Condition.evidence,0,1,BackboneElement,"Supporting evidence
+Constraints: con-2",,,
+OncologyDiagnosis ConditionProfile,Condition.evidence.code,0,1,codeableConcept,Manifestation/symptom,Missing,No,http://hl7.org/fhir/ValueSet/manifestation-or-symptom
+OncologyDiagnosis ConditionProfile,Condition.note,0,*,annotation,Additional information about the Condition,,,
