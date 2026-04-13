@@ -4,7 +4,7 @@
 // ============================================================================
 
 Instance: example-morphologyobservation-otieno-histopath
-InstanceOf: KenyaMorphologyObservation
+InstanceOf: KEMorphologyObservation
 Usage: #example
 Title: "MorphologyObservation – James Otieno Lung Biopsy Histopathology"
 Description: "Final histopathology result for James Otieno's CT-guided lung biopsy confirming pulmonary adenocarcinoma, performed at KNH pathology department."
