@@ -25,12 +25,12 @@ Description: "Profile on Observation for recording tumour morphology (histology/
 
 // ── Category ─────────────────────────────────────────────
 * category 1..* MS
-* category from $VS-obs-category (preferred)
+* category from $VS-obs-category (required)
 * category ^short = "Category — default 'laboratory'"
 
 // ── Code ─────────────────────────────────────────────────
 * code 1..1 MS
-* code from $VS-obs-codes (extensible)
+* code from $VS-obs-codes (required)
 * code ^short = "LOINC or local code identifying the morphology observation"
 
 // ── Subject & focus ───────────────────────────────────────
@@ -63,10 +63,10 @@ Description: "Profile on Observation for recording tumour morphology (histology/
 
 // ── Body site ─────────────────────────────────────────────
 * bodySite 0..1 MS
-* bodySite from $VS-body-site (preferred)
+* bodySite from $VS-body-site (required)
 * bodySite ^short = "Observed body part"
 
 // ── Method ───────────────────────────────────────────────
 * method 1..1 MS
-* method from $KE-ObsMethods (preferred)
+* method from $KE-ObsMethods (required)
 * method ^short = "Method of morphology determination (biopsy, cytology, etc.)"

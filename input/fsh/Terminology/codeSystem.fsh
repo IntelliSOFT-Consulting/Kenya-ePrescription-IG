@@ -6847,3 +6847,410 @@ Description: "Generic medicinal product codes from MOH PPB OCL."
 * #GE13094 "Ipratropium 500 mcg/Salbutamol 2.5 mg per 2.5ml Nebuliser Solution"
 * #GE13095 "Betamethasone 0.05 %w/w/Clioquinol 1 %w/w/Gentamicin 0.1 %w/w/Tolnaftate 1 %w/w Topical Cream"
 * #GE13096 "Azelastine 5 mg/Mometasone 10 mg per 1spray Nasal Spray"
+
+// ============================================================================
+// MOH-KENYA CodeSystems — fetched from OCL 2026-04-13
+// Source: https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/collections/
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// MedicationRequest Status Reason
+// ----------------------------------------------------------------------------
+CodeSystem: MedicationRequestStatusReasonCS
+Id: medication-request-status-reason-cs
+Title: "MedicationRequest Status Reason CodeSystem"
+Description: "Reasons for a MedicationRequest status change (e.g. cancelled, on-hold). Source: MOH-KENYA OCL MEDICATIONREQUEST-STATUS-REASON."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATIONREQUEST-STATUS-REASON/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #WASHOUT-PERIOD "Washout period"
+* #SURGERY "Surgery"
+* #SIDE-EFFECTS "Side effects"
+* #DUPLICATE-THERAPY "Duplicate therapy"
+* #DRUG-DRUG-INTERACTION "Drug-drug interaction"
+* #PREGNANCY "Pregnancy"
+* #DRUG-NOT-AVAILABLE "Drug not available"
+* #LABORATORY-INTERFERENCE "Laboratory interference"
+* #HOSPITAL-ADMISSION "Hospital admission"
+* #DRUG-LEVEL-TOO-HIGH "Drug level too high"
+* #CLARIFICATION-REQUIRED "Clarification required"
+* #ALTERNATIVE-THERAPY-AVAILABLE "Alternative therapy available"
+* #ALLERGY "Allergy"
+
+
+// ----------------------------------------------------------------------------
+// MedicationDispense Status Reason
+// ----------------------------------------------------------------------------
+CodeSystem: MedicationDispenseStatusReasonCS
+Id: medication-dispense-status-reason-cs
+Title: "MedicationDispense Status Reason CodeSystem"
+Description: "Reasons for a MedicationDispense status (e.g. out-of-stock, patient refused). Source: MOH-KENYA OCL MEDICATIONDISPENSE-STATUS-REASON."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATIONDISPENSE-STATUS-REASON/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #FRAUD "Fraud"
+* #FORMULARY-RESTRICTION "Formulary restriction"
+* #PRESCRIPTION-INCOMPLETE "Prescription incomplete"
+* #PATIENT-REFUSED "Patient refused"
+* #DRUG-NOT-AVAILABLE "Drug not available"
+* #CLARIFICATION-REQUIRED "Clarification required"
+* #OUT-OF-STOCK "Out of stock"
+
+
+// ----------------------------------------------------------------------------
+// Medication Administration Status Reason
+// ----------------------------------------------------------------------------
+CodeSystem: MedicationAdminStatusReasonCS
+Id: medication-admin-status-reason-cs
+Title: "MedicationAdministration Status Reason CodeSystem"
+Description: "Reasons for a MedicationAdministration status (e.g. patient refused, not available). Source: MOH-KENYA OCL MEDICATION-ADMIN-STATUS-REASON."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATION-ADMIN-STATUS-REASON/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #ALLERGY-TO-MEDICATION "Allergy to medication"
+* #MEDICATION-DOSE-OMITTED "Medication dose omitted"
+* #ADVERSE-DRUG-REACTION "Adverse drug reaction"
+* #CLINICAL-HOLD "Clinical hold"
+* #PATIENT-UNCONSCIOUS "Patient unconscious"
+* #MEDICATION-NOT-AVAILABLE "Medication not available"
+* #PATIENT-REFUSED-MEDICATION "Patient refused medication"
+
+
+// ----------------------------------------------------------------------------
+// Reason Medication Status Codes (MedicationStatement statusReason)
+// ----------------------------------------------------------------------------
+CodeSystem: ReasonMedicationStatusCS
+Id: reason-medication-status-cs
+Title: "Reason Medication Status CodeSystem"
+Description: "Reasons for a MedicationStatement status (e.g. stopped, completed). Source: MOH-KENYA OCL REASON-MEDICATION-STATUS-CODES."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/REASON-MEDICATION-STATUS-CODES/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #DRUG-INTERACTION "Drug interaction"
+* #ALLERGY-TO-SUBSTANCE "Allergy to substance"
+* #TREATMENT-NOT-REQUIRED "Treatment not required"
+* #PATIENT-DISCHARGED "Patient discharged"
+* #PATIENT-TRANSFERRED "Patient transferred"
+* #OUT-OF-STOCK "Out of stock"
+* #DRUG-DISCONTINUED "Drug discontinued"
+* #MEDICATION-REFUSED "Medication refused"
+* #ADVERSE-REACTION-TO-DRUG "Adverse reaction to drug"
+* #PATIENT-NON-COMPLIANCE "Patient non-compliance"
+* #TREATMENT-COMPLETED "Treatment completed"
+
+
+// ----------------------------------------------------------------------------
+// Condition Clinical Status
+// ----------------------------------------------------------------------------
+CodeSystem: ConditionClinicalStatusCS
+Id: condition-clinical-status-cs
+Title: "Condition Clinical Status CodeSystem"
+Description: "Clinical status codes for Condition resources. Source: MOH-KENYA OCL CONDITION-CLINICAL-STATUS (supplemented with standard FHIR codes)."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-CLINICAL-STATUS/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #active "Active" "The condition is currently active."
+* #recurrence "Recurrence" "The condition has recurred after a period of remission."
+* #relapse "Relapse" "The condition relapsed after a period of remission."
+* #inactive "Inactive" "The condition is no longer active but not resolved."
+* #remission "Remission" "The condition is in remission."
+* #resolved "Resolved" "The condition is fully resolved."
+
+
+// ----------------------------------------------------------------------------
+// Condition Verification Status
+// ----------------------------------------------------------------------------
+CodeSystem: ConditionVerificationStatusCS
+Id: condition-verification-status-cs
+Title: "Condition Verification Status CodeSystem"
+Description: "Verification status codes for Condition resources. Source: MOH-KENYA OCL CONDITION-VERIFICATION-STATUS."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-VERIFICATION-STATUS/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #unconfirmed "Unconfirmed" "The condition has not been confirmed."
+* #provisional "Provisional" "The condition is provisional."
+* #differential "Differential" "The condition is considered in a differential diagnosis."
+* #confirmed "Confirmed" "The condition has been confirmed."
+* #refuted "Refuted" "The condition has been refuted."
+* #entered-in-error "Entered in error" "The condition was entered in error."
+
+
+// ----------------------------------------------------------------------------
+// Condition Category
+// ----------------------------------------------------------------------------
+CodeSystem: ConditionCategoryCS
+Id: condition-category-cs
+Title: "Condition Category CodeSystem"
+Description: "Category codes for Condition resources. Based on FHIR standard condition-category codes (OCL collection was empty)."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-CATEGORY/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #problem-list-item "Problem List Item" "A condition recorded on the patient's problem list."
+* #encounter-diagnosis "Encounter Diagnosis" "A diagnosis made during an encounter."
+* #health-concern "Health Concern" "A health concern noted for the patient."
+
+
+// ----------------------------------------------------------------------------
+// Condition Severity
+// ----------------------------------------------------------------------------
+CodeSystem: ConditionSeverityCS
+Id: condition-severity-cs
+Title: "Condition Severity CodeSystem"
+Description: "Severity codes for Condition resources. Source: MOH-KENYA OCL CONDITION-SEVERITY."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-SEVERITY/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #mild "Mild" "The condition causes minimal symptoms or functional impairment."
+* #moderate "Moderate" "The condition causes notable symptoms or functional impairment."
+* #severe "Severe" "The condition causes significant symptoms or functional impairment."
+
+
+// ----------------------------------------------------------------------------
+// Condition Stage
+// ----------------------------------------------------------------------------
+CodeSystem: ConditionStageCS
+Id: condition-stage-cs
+Title: "Condition Stage CodeSystem"
+Description: "Staging codes for oncology and other staged conditions. Source: MOH-KENYA OCL CONDITION-STAGE."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-STAGE/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #stage-0 "Stage 0" "In-situ disease; no invasion."
+* #stage-i "Stage I" "Localised disease with minimal spread."
+* #stage-ii "Stage II" "Regional spread with limited involvement."
+* #stage-iii "Stage III" "Extensive regional spread."
+* #stage-iv "Stage IV" "Distant metastasis."
+* #stage-v "Stage V" "Bilateral disease (used in paediatric oncology)."
+* #occult-stage "Occult stage" "Tumour present but primary site unknown."
+* #not-staged "Not staged" "Staging not performed or not applicable."
+
+
+// ----------------------------------------------------------------------------
+// Medication Administration Route (MOH-KENYA)
+// ----------------------------------------------------------------------------
+CodeSystem: MedAdminRouteCS
+Id: med-admin-route-cs
+Title: "Medication Administration Route CodeSystem"
+Description: "Route of administration codes used in MedicationAdministration. Source: MOH-KENYA OCL MEDICATION-ADMINISTRATION-ROUTE."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATION-ADMINISTRATION-ROUTE/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #INHALED "Inhaled" "Medication delivered by inhalation."
+* #ORAL "Oral" "Medication delivered by mouth."
+* #INTRAVENOUS-IV "Intravenous" "Medication delivered directly into a vein."
+
+
+// ----------------------------------------------------------------------------
+// Observation Methods
+// ----------------------------------------------------------------------------
+CodeSystem: ObservationMethodsCS
+Id: observation-methods-cs
+Title: "Observation Methods CodeSystem"
+Description: "Methods used to perform clinical observations. Source: MOH-KENYA OCL OBSERVATION-METHODS."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/OBSERVATION-METHODS/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #BLOOD-GLUCOSE-TEST "Blood glucose test"
+* #URINE-TEST-STRIP "Urine test strip"
+* #LABORATORY-TEST "Laboratory test"
+* #MRI-SCAN "MRI scan"
+* #CT-SCAN "CT scan"
+* #X-RAY "X-ray"
+* #ULTRASOUND-IMAGING "Ultrasound imaging"
+* #ELECTROCARDIOGRAM "Electrocardiogram"
+* #SPIROMETRY "Spirometry"
+* #MEASUREMENT "Measurement"
+* #TEMPERATURE-TAKING "Temperature taking"
+* #PULSE-TAKING "Pulse taking"
+* #BLOOD-PRESSURE-TAKING "Blood pressure taking"
+* #MICROSCOPY "Microscopy"
+* #VISUAL-INSPECTION "Visual inspection"
+* #PERCUSSION "Percussion"
+* #PALPATION "Palpation"
+* #AUSCULTATION "Auscultation"
+
+
+// ----------------------------------------------------------------------------
+// Additional Instruction Codes
+// ----------------------------------------------------------------------------
+CodeSystem: AdditionalInstructionCS
+Id: additional-instruction-cs
+Title: "Additional Instruction Codes CodeSystem"
+Description: "Supplementary instructions for dispensed or administered medication. Source: MOH-KENYA OCL ADDITIONAL-INSTRUCTION-CODES."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ADDITIONAL-INSTRUCTION-CODES/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #TAKE-AT-BEDTIME "Take at bedtime"
+* #TAKE-IN-THE-MORNING "Take in the morning"
+* #TAKE-IN-THE-EVENING "Take in the evening"
+* #TAKE-WITH-OR-AFTER-FOOD "Take with or after food"
+* #TAKE-WITH-OR-BEFORE-FOOD "Take with or before food"
+* #HALF-TO-ONE-HOUR-BEFORE-FOOD "Half to one hour before food"
+* #TAKE-BEFORE-BREAKFAST "Take before breakfast"
+* #TAKE-AFTER-BREAKFAST "Take after breakfast"
+* #TAKE-BEFORE-LUNCH "Take before lunch"
+* #TAKE-AFTER-LUNCH "Take after lunch"
+* #TAKE-BEFORE-DINNER "Take before dinner"
+* #TAKE-AFTER-DINNER "Take after dinner"
+* #DISSOLVE-OR-MIX-IN-WATER "Dissolve or mix in water"
+* #SWALLOW-WHOLE "Swallow whole"
+* #DO-NOT-CHEW "Do not chew"
+* #CHEW-BEFORE-SWALLOWING "Chew before swallowing"
+* #ALLOW-TO-DISSOLVE-UNDER-TONGUE "Allow to dissolve under tongue"
+* #DO-NOT-TAKE-WITH-ALCOHOL "Do not take with alcohol"
+* #DO-NOT-TAKE-WITH-DAIRY-PRODUCTS "Do not take with dairy products"
+* #MAY-CAUSE-DROWSINESS "May cause drowsiness"
+* #MAY-CAUSE-DROWSINESS-IF-COMBINED-WITH-ALCOHOL "May cause drowsiness if combined with alcohol"
+* #AVOID-PROLONGED-EXPOSURE-TO-SUNLIGHT "Avoid prolonged exposure to sunlight"
+* #KEEP-REFRIGERATED "Keep refrigerated"
+* #SHAKE-WELL-BEFORE-USE "Shake well before use"
+* #WARNING-MAY-CAUSE-DROWSINESS "Warning — may cause drowsiness"
+
+
+// ----------------------------------------------------------------------------
+// Approach Site Codes
+// ----------------------------------------------------------------------------
+CodeSystem: ApproachSiteCS
+Id: approach-site-cs
+Title: "Approach Site Codes CodeSystem"
+Description: "Body site codes for site of medication administration. Source: MOH-KENYA OCL APPROACH-SITE-CODES."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/APPROACH-SITE-CODES/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #SKIN-STRUCTURE "Skin structure"
+* #SUBCUTANEOUS-TISSUE "Subcutaneous tissue"
+* #MUSCLE-STRUCTURE "Muscle structure"
+* #VEIN "Vein"
+* #ARTERY "Artery"
+* #NASAL-CAVITY "Nasal cavity"
+* #ORAL-CAVITY "Oral cavity"
+* #EYE "Eye"
+* #EAR "Ear"
+* #RECTUM "Rectum"
+* #VAGINA "Vagina"
+* #URINARY-BLADDER "Urinary bladder"
+* #LUNG "Lung"
+* #SPINAL-CANAL "Spinal canal"
+* #PERITONEAL-CAVITY "Peritoneal cavity"
+* #ABDOMEN "Abdomen"
+* #LEFT-ARM "Left arm"
+* #RIGHT-ARM "Right arm"
+* #UPPER-ARM "Upper arm"
+* #THIGH "Thigh"
+
+
+// ----------------------------------------------------------------------------
+// Care Plan Category
+// ----------------------------------------------------------------------------
+CodeSystem: CarePlanCategoryCS
+Id: care-plan-category-cs
+Title: "Care Plan Category CodeSystem"
+Description: "Category codes for care plan types. Source: MOH-KENYA OCL CARE-PLAN-CATEGORY."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CARE-PLAN-CATEGORY/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #FOLLOW-UP "Follow Up"
+* #IMMUNIZATION "Immunization"
+* #REFERRAL "Referral"
+* #REHABILITATION "Rehabilitation"
+* #ASSESSMENT "Assessment"
+* #MEDICATION-MANAGEMENT "Medication management"
+* #SURGICAL-PROCEDURE "Surgical procedure"
+* #EDUCATION "Education"
+* #COUNSELING "Counseling"
+* #PALLIATION "Palliation"
+* #MONITORING "Monitoring"
+* #ALLERGY-MANAGEMENT "Allergy management"
+* #DIABETES-MANAGEMENT "Diabetes management"
+* #MENTAL-HEALTH-CARE "Mental health care"
+* #NUTRITION "Nutrition"
+
+
+// ----------------------------------------------------------------------------
+// Procedure Code
+// ----------------------------------------------------------------------------
+CodeSystem: ProcedureCodeCS
+Id: procedure-code-cs
+Title: "Procedure Code CodeSystem"
+Description: "Clinical procedure codes used in care plan activities and service requests. Source: MOH-KENYA OCL PROCEDURE-CODE."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #SURGICAL-PROCEDURE "Surgical procedure"
+* #DIAGNOSTIC-PROCEDURE "Diagnostic procedure"
+* #THERAPEUTIC-PROCEDURE "Therapeutic procedure"
+* #ADMINISTRATION-OF-SUBSTANCE "Administration of substance"
+* #LABORATORY-PROCEDURE "Laboratory procedure"
+* #IMAGING-PROCEDURE "Imaging procedure"
+* #PHYSIOTHERAPY "Physiotherapy"
+* #CHEMOTHERAPY "Chemotherapy"
+* #RADIOTHERAPY "Radiotherapy"
+* #BLOOD-TRANSFUSION "Blood transfusion"
+* #VACCINATION "Vaccination"
+* #BIOPSY "Biopsy"
+* #ENDOSCOPY "Endoscopy"
+* #HAEMODIALYSIS "Haemodialysis"
+* #INCISION-AND-DRAINAGE "Incision and drainage"
+* #SUTURE-OF-WOUND "Suture of wound"
+* #DRESSING-OF-WOUND "Dressing of wound"
+* #FRACTURE-REDUCTION "Fracture reduction"
+* #INTUBATION "Intubation"
+* #COUNSELLING "Counselling"
+
+
+// ----------------------------------------------------------------------------
+// Manifestation or Symptom
+// ----------------------------------------------------------------------------
+CodeSystem: ManifestationCS
+Id: manifestation-cs
+Title: "Manifestation or Symptom CodeSystem"
+Description: "Clinical manifestations and symptoms used in allergy reactions, conditions, and observations. Source: MOH-KENYA OCL MANIFESTATION-OR-SYMPTOM."
+* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/"
+* ^status = #active
+* ^content = #complete
+* ^caseSensitive = true
+* #FEVER "Fever"
+* #COUGH "Cough"
+* #DYSPNOEA "Dyspnoea"
+* #CHEST-PAIN "Chest pain"
+* #NAUSEA "Nausea"
+* #VOMITING "Vomiting"
+* #DIARRHOEA "Diarrhoea"
+* #HEADACHE "Headache"
+* #FATIGUE "Fatigue"
+* #RASH "Rash"
+* #OEDEMA "Oedema"
+* #PAIN "Pain"
+* #ABDOMINAL-PAIN "Abdominal pain"
+* #BACK-PAIN "Back pain"
+* #DIZZINESS "Dizziness"
+* #PALPITATIONS "Palpitations"
+* #WEIGHT-LOSS "Weight loss"
+* #NIGHT-SWEATS "Night sweats"
+* #LYMPHADENOPATHY "Lymphadenopathy"
+* #ANAEMIA "Anaemia"
+* #JAUNDICE "Jaundice"
+* #SKIN-LESION "Skin lesion"
+* #CONFUSION "Confusion"
+* #SEIZURE "Seizure"
+* #ANAPHYLAXIS "Anaphylaxis"
+* #URTICARIA "Urticaria"
+* #BRONCHOSPASM "Bronchospasm"
+* #HYPOTENSION "Hypotension"
+* #TACHYCARDIA "Tachycardia"
+* #RHINITIS "Rhinitis"

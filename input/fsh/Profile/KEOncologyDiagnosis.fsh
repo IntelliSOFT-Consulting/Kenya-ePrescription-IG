@@ -34,17 +34,17 @@ Description: "Profile on Condition representing an oncology diagnosis in the Ken
 
 // ── Severity ─────────────────────────────────────────────
 * severity 0..1 MS
-* severity from $KE-ConditionSeverity (preferred)
+* severity from $KE-ConditionSeverity (required)
 * severity ^short = "Subjective severity of condition"
 
 // ── Code ─────────────────────────────────────────────────
 * code 1..1 MS
-* code from $KE-ConditionCodes (preferred)
+* code from $KE-ConditionCodes (required)
 * code ^short = "Diagnosis code (Kenya MOH condition codes / ICD-10)"
 
 // ── Body site ─────────────────────────────────────────────
 * bodySite 0..1 MS
-* bodySite from $VS-body-site (preferred)
+* bodySite from $VS-body-site (required)
 * bodySite ^short = "Anatomical location, if relevant"
 
 // ── Subject & encounter ───────────────────────────────────
@@ -80,18 +80,18 @@ Description: "Profile on Condition representing an oncology diagnosis in the Ken
 * stage 1..1 MS
 * stage ^short = "Oncology staging (TNM or similar)"
 * stage.summary 0..1 MS
-* stage.summary from $KE-ConditionStage (preferred)
+* stage.summary from $KE-ConditionStage (required)
 * stage.summary ^short = "Simple summary (disease specific)"
 * stage.assessment 0..1 MS
 * stage.assessment only Reference(DiagnosticReport or Observation)
 * stage.type 0..1 MS
-* stage.type from $VS-condition-stage-type (preferred)
+* stage.type from $VS-condition-stage-type (required)
 * stage.type ^short = "Kind of staging"
 
 // ── Evidence ─────────────────────────────────────────────
 * evidence 0..1 MS
 * evidence.code 0..1 MS
-* evidence.code from $KE-Manifestation (preferred)
+* evidence.code from $KE-Manifestation (required)
 * evidence.code ^short = "Manifestation/symptom"
 
 * note 0..* MS

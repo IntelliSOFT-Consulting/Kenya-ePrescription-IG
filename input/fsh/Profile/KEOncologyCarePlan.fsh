@@ -31,7 +31,7 @@ Description: "Profile on CarePlan representing an oncology treatment plan in the
 
 // ── Category ─────────────────────────────────────────────
 * category 1..* MS
-* category from $KE-CarePlanCategory (preferred)
+* category from $KE-CarePlanCategory (required)
 * category ^short = "Oncology care plan category (Kenya MOH)"
 
 // ── Title & description ───────────────────────────────────
@@ -83,10 +83,10 @@ Description: "Profile on CarePlan representing an oncology treatment plan in the
 * activity.detail 0..1 MS
 // * activity.detail.category 0..1
 * activity.detail.code 0..1 MS
-* activity.detail.code from $KE-ProcedureCode (preferred)
+* activity.detail.code from $KE-ProcedureCode (required)
 * activity.detail.code ^short = "Detail type of activity"
 * activity.detail.reasonCode 0..* MS
-* activity.detail.reasonCode from $KE-Manifestation (preferred)
+* activity.detail.reasonCode from $KE-Manifestation (required)
 * activity.detail.reasonCode ^short = "Why activity should be done or why it was prohibited"
 * activity.detail.reasonReference 0..* MS
 * activity.detail.reasonReference only Reference(Condition or Observation or DiagnosticReport or DocumentReference)

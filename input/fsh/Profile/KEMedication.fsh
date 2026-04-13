@@ -20,7 +20,7 @@ Description: "Profile on Medication for the Kenya eRx Implementation Guide. Repr
 
 // ── Code ─────────────────────────────────────────────────
 * code 1..1 MS
-* code from $KE-GenericProducts (preferred)
+* code from $KE-GenericProducts (required)
 * code ^short = "Medicinal product code from Kenya MOH PPB Generic Products"
 
 // ── Status ────────────────────────────────────────────────
@@ -35,7 +35,7 @@ Description: "Profile on Medication for the Kenya eRx Implementation Guide. Repr
 
 // ── Form ─────────────────────────────────────────────────
 * form 1..1 MS
-* form from $KE-Formulation (preferred)
+* form from $KE-Formulation (required)
 * form ^short = "Dose form (tablet, syrup, injection, etc.)"
 
 // ── Amount ───────────────────────────────────────────────
@@ -46,7 +46,7 @@ Description: "Profile on Medication for the Kenya eRx Implementation Guide. Repr
 * ingredient 0..* MS
 * ingredient.item[x] only CodeableConcept
 * ingredient.itemCodeableConcept 1..1 MS
-* ingredient.itemCodeableConcept from $KE-ActiveComponents (preferred)
+* ingredient.itemCodeableConcept from $KE-ActiveComponents (required)
 * ingredient.itemCodeableConcept ^short = "Active component from Kenya MOH PPB Active Components"
 * ingredient.strength 0..1 MS
 * ingredient.strength ^short = "Active ingredient strength (UCUM units)"
