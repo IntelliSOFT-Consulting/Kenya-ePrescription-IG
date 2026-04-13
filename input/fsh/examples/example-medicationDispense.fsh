@@ -10,7 +10,7 @@ Title: "MedicationDispense – Amina Hassan Azithromycin First Fill"
 Description: "First-fill dispense of Azithromycin 500 mg (3 tablets) at KNH Outpatient Pharmacy against Amina Hassan's prescription."
 
 * id = "example-medicationdispense-amina-azithromycin"
-* meta.profile[0] = "http://example.org/StructureDefinition/ke-medication-dispense"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication-dispense"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/dispense-identifier"
 * identifier[0].value = "DISP-2025-OPD-00456"

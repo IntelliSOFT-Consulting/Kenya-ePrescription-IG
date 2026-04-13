@@ -10,7 +10,7 @@ Title: "AllergyIntolerance – Amina Hassan Penicillin Allergy"
 Description: "Documented high-criticality penicillin allergy for Amina Hassan, confirmed after urticarial reaction following oral exposure."
 
 * id = "example-allergyintolerance-amina-penicillin"
-* meta.profile[0] = "http://example.org/StructureDefinition/ke-allergyintolerance"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-allergyintolerance"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/allergy-identifier"
 * identifier[0].value = "ALG-2020-00042"

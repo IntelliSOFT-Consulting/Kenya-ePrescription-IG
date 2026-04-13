@@ -10,7 +10,7 @@ Title: "OncologyDiagnosis – James Otieno Lung Cancer"
 Description: "Confirmed diagnosis of malignant neoplasm of the right lower lobe of the lung (Stage II) for James Otieno, recorded at KNH during inpatient admission."
 
 * id = "example-oncologydiagnosis-otieno-lungcancer"
-* meta.profile[0] = "http://example.org/StructureDefinition/kenya-oncology-diagnosis-condition"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/kenya-oncology-diagnosis-condition"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/condition-identifier"
 * identifier[0].value = "COND-2025-IPD-00301"

@@ -10,18 +10,18 @@ Title: "MedicationRequest – Amina Hassan Azithromycin Prescription"
 Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 days, issued by Dr. Njoroge at KNH during Amina Hassan's consultation."
 
 * id = "example-medicationrequest-amina-azithromycin"
-* meta.profile[0] = "http://example.org/StructureDefinition/ke-medicationrequest"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationrequest"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-2025-OPD-00789"
 
-* status = http://example.org/CodeSystem/medication-request-status-cs#active "Active"
+* status = https://prescription.intellisoftkenya.com/CodeSystem/medication-request-status-cs#active "Active"
 
 * intent = #order
 
 * category[0] = http://terminology.hl7.org/CodeSystem/medicationrequest-category#outpatient "Outpatient"
 
-* priority = http://example.org/CodeSystem/medication-request-priorityCS#routine "Routine"
+* priority = https://prescription.intellisoftkenya.com/CodeSystem/medication-request-priorityCS#routine "Routine"
 
 * medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products#GE10015 "Azithromycin 500 mg Oral Tablet"
 

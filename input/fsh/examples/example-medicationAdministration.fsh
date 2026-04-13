@@ -10,7 +10,7 @@ Title: "MedicationAdministration – James Otieno IV Azithromycin"
 Description: "Intravenous administration of Azithromycin 500 mg to James Otieno during his oncology inpatient admission, as empirical antibiotic coverage prior to chemotherapy initiation."
 
 * id = "example-medicationadministration-otieno-iv"
-* meta.profile[0] = "http://example.org/StructureDefinition/ke-medicationadministration"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationadministration"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/administration-identifier"
 * identifier[0].value = "ADM-2025-IPD-00101"
