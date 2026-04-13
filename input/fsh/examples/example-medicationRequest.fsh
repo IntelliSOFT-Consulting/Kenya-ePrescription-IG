@@ -1,16 +1,16 @@
 // ============================================================================
 // Example: KenyaEPrescriptionMedicationRequest
-// Profile: ke-medicationrequest
+// Profile: ke-medication-request
 // ============================================================================
 
 Instance: example-medicationrequest-amina-azithromycin
-InstanceOf: KenyaEPrescriptionMedicationRequest
+InstanceOf: KEMedicationRequest
 Usage: #example
 Title: "MedicationRequest – Amina Hassan Azithromycin Prescription"
 Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 days, issued by Dr. Njoroge at KNH during Amina Hassan's consultation."
 
 * id = "example-medicationrequest-amina-azithromycin"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationrequest"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication-request"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-2025-OPD-00789"

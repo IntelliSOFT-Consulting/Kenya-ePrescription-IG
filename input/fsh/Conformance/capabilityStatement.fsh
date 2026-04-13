@@ -120,7 +120,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // MedicationRequest
 // ----------------------------------------------------------------------------
 * rest[0].resource[4].type = #MedicationRequest
-* rest[0].resource[4].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationrequest"
+* rest[0].resource[4].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication-request"
 * rest[0].resource[4].documentation = "Core ePrescription resource. Servers SHALL support create, read, update, and search by patient, requester, status, and authored date."
 * rest[0].resource[4].interaction[0].code = #read
 * rest[0].resource[4].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -152,7 +152,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // Medication
 // ----------------------------------------------------------------------------
 * rest[0].resource[5].type = #Medication
-* rest[0].resource[5].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/kenya-eprescription-medication"
+* rest[0].resource[5].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication"
 * rest[0].resource[5].interaction[0].code = #read
 * rest[0].resource[5].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[5].interaction[0].extension[0].valueCode = #SHALL
@@ -194,7 +194,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // MedicationAdministration
 // ----------------------------------------------------------------------------
 * rest[0].resource[7].type = #MedicationAdministration
-* rest[0].resource[7].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationadministration"
+* rest[0].resource[7].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication-administration"
 * rest[0].resource[7].interaction[0].code = #read
 * rest[0].resource[7].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[7].interaction[0].extension[0].valueCode = #SHALL
@@ -215,7 +215,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // MedicationStatement
 // ----------------------------------------------------------------------------
 * rest[0].resource[8].type = #MedicationStatement
-* rest[0].resource[8].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationstatement"
+* rest[0].resource[8].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication-statement"
 * rest[0].resource[8].interaction[0].code = #read
 * rest[0].resource[8].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[8].interaction[0].extension[0].valueCode = #SHALL
@@ -234,7 +234,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // AllergyIntolerance
 // ----------------------------------------------------------------------------
 * rest[0].resource[9].type = #AllergyIntolerance
-* rest[0].resource[9].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-allergyintolerance"
+* rest[0].resource[9].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-allergy-intolerance"
 * rest[0].resource[9].interaction[0].code = #read
 * rest[0].resource[9].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[9].interaction[0].extension[0].valueCode = #SHALL
@@ -259,7 +259,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // Condition (Oncology Diagnosis)
 // ----------------------------------------------------------------------------
 * rest[0].resource[10].type = #Condition
-* rest[0].resource[10].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/kenya-oncology-diagnosis-condition"
+* rest[0].resource[10].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-diagnosis"
 * rest[0].resource[10].interaction[0].code = #read
 * rest[0].resource[10].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[10].interaction[0].extension[0].valueCode = #SHALL
@@ -301,7 +301,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // CarePlan (Oncology)
 // ----------------------------------------------------------------------------
 * rest[0].resource[12].type = #CarePlan
-* rest[0].resource[12].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/oncology-careplan"
+* rest[0].resource[12].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-care-plan"
 * rest[0].resource[12].interaction[0].code = #read
 * rest[0].resource[12].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[12].interaction[0].extension[0].valueCode = #SHALL
@@ -323,7 +323,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // EpisodeOfCare
 // ----------------------------------------------------------------------------
 * rest[0].resource[13].type = #EpisodeOfCare
-* rest[0].resource[13].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/kenya-episode-of-care"
+* rest[0].resource[13].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-episode-of-care"
 * rest[0].resource[13].interaction[0].code = #read
 * rest[0].resource[13].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[13].interaction[0].extension[0].valueCode = #SHALL

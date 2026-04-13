@@ -4,7 +4,7 @@
 // ============================================================================
 
 Instance: example-medicationdispense-amina-azithromycin
-InstanceOf: KenyaMedicationDispense
+InstanceOf: KEMedicationDispense
 Usage: #example
 Title: "MedicationDispense – Amina Hassan Azithromycin First Fill"
 Description: "First-fill dispense of Azithromycin 500 mg (3 tablets) at KNH Outpatient Pharmacy against Amina Hassan's prescription."

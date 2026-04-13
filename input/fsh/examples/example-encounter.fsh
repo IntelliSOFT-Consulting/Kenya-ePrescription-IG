@@ -7,7 +7,7 @@
 // Outpatient encounter – Amina Hassan
 // ----------------------------------------------------------------------------
 Instance: example-encounter-amina-outpatient
-InstanceOf: KenyaEncounter
+InstanceOf: KEEncounter
 Usage: #example
 Title: "Encounter – Amina Hassan Outpatient Consultation"
 Description: "Outpatient consultation at KNH for Amina Hassan, during which a prescription for Azithromycin was issued."
@@ -40,7 +40,7 @@ Description: "Outpatient consultation at KNH for Amina Hassan, during which a pr
 // Inpatient encounter – James Otieno (oncology admission)
 // ----------------------------------------------------------------------------
 Instance: example-encounter-otieno-inpatient
-InstanceOf: KenyaEncounter
+InstanceOf: KEEncounter
 Usage: #example
 Title: "Encounter – James Otieno Oncology Inpatient Admission"
 Description: "Inpatient oncology admission for James Otieno at KNH for cancer evaluation and chemotherapy initiation."

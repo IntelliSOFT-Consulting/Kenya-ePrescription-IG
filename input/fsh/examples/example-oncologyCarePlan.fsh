@@ -1,16 +1,16 @@
 // ============================================================================
 // Example: KenyaOncologyCarePlan
-// Profile: oncology-careplan
+// Profile: ke-oncology-care-plan
 // ============================================================================
 
 Instance: example-oncologycareplan-otieno-chemo
-InstanceOf: KenyaOncologyCarePlan
+InstanceOf: KEOncologyCarePlan
 Usage: #example
 Title: "OncologyCarePlan – James Otieno Chemotherapy Plan"
 Description: "Active oncology care plan for James Otieno covering chemotherapy initiation and supportive care activities, managed by the KNH oncology MDT."
 
 * id = "example-oncologycareplan-otieno-chemo"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/oncology-careplan"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-care-plan"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/careplan-identifier"
 * identifier[0].value = "CP-2025-ONCO-00077"
