@@ -10,7 +10,7 @@ Title: "MedicationStatement – Amina Hassan Completed Azithromycin Course"
 Description: "Medication statement recording that Amina Hassan completed a 3-day course of Azithromycin 500 mg following her outpatient consultation at KNH."
 
 * id = "example-medicationstatement-amina-azithromycin"
-* meta.profile[0] = "http://example.org/StructureDefinition/ke-medicationstatement"
+* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationstatement"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/medstatement-identifier"
 * identifier[0].value = "MEDS-2025-00234"
