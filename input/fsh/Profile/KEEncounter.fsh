@@ -25,16 +25,16 @@ Description: "Profile on Encounter for the Kenya eRx Implementation Guide."
 
 // ── Class ────────────────────────────────────────────────
 * class 1..1 MS
-* class from $VS-encounter-class (extensible)
+* class from $VS-encounter-class (required)
 * class ^short = "Classification of patient encounter (ambulatory, inpatient, emergency, etc.)"
 
 // ── Type & service ────────────────────────────────────────
 * serviceType 0..1 MS
-* serviceType from $VS-service-type (preferred)
+* serviceType from $VS-service-type (required)
 * serviceType ^short = "Broad categorization of service (e.g. cardiology, oncology)"
 
 * priority 0..1 MS
-* priority from $VS-act-priority (preferred)
+* priority from $VS-act-priority (required)
 * priority ^short = "Urgency of the encounter"
 
 // ── Subject ───────────────────────────────────────────────
@@ -63,13 +63,13 @@ Description: "Profile on Encounter for the Kenya eRx Implementation Guide."
 * hospitalization.origin ^short = "Location/organization from which patient came before admission"
 
 * hospitalization.admitSource 0..1 MS
-* hospitalization.admitSource from $VS-admit-source (preferred)
+* hospitalization.admitSource from $VS-admit-source (required)
 * hospitalization.admitSource ^short = "From where patient was admitted (physician referral, transfer, etc.)"
 
 * hospitalization.reAdmission 0..1 MS
-* hospitalization.reAdmission from $VS-readmit (preferred)
+* hospitalization.reAdmission from $VS-readmit (required)
 * hospitalization.reAdmission ^short = "Type of re-admission (if any)"
 
 * hospitalization.dischargeDisposition 0..1 MS
-* hospitalization.dischargeDisposition from $VS-discharge-disp (preferred)
+* hospitalization.dischargeDisposition from $VS-discharge-disp (required)
 * hospitalization.dischargeDisposition ^short = "Category or kind of location after discharge"

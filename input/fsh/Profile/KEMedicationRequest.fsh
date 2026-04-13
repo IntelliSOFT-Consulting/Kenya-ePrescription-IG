@@ -25,7 +25,7 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 * status ^short = "Status of the prescription (active, completed, cancelled, on-hold, entered-in-error)"
 
 * statusReason 0..1 MS
-* statusReason from $KE-MedReqStatusReason (preferred)
+* statusReason from $KE-MedReqStatusReason (required)
 * statusReason ^short = "Reason for prescription status change"
 
 * intent 1..1 MS
@@ -33,7 +33,7 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 * intent ^short = "Must be 'order' for ePrescription"
 
 * category 1..* MS
-* category from $VS-med-request-category (preferred)
+* category from $VS-med-request-category (required)
 * category ^short = "Prescription type (community, inpatient, discharge)"
 
 * priority 0..1 MS
@@ -43,7 +43,7 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 // ── Medication ────────────────────────────────────────────
 * medication[x] only CodeableConcept
 * medicationCodeableConcept 1..1 MS
-* medicationCodeableConcept from $KE-GenericProducts (preferred)
+* medicationCodeableConcept from $KE-GenericProducts (required)
 * medicationCodeableConcept ^short = "Medicinal product prescribed — Kenya MOH PPB Generic Products"
 
 // ── Subject & context ─────────────────────────────────────
@@ -70,7 +70,7 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 
 // ── Reasons ───────────────────────────────────────────────
 * reasonCode 0..* MS
-* reasonCode from $KE-ConditionCodes (preferred)
+* reasonCode from $KE-ConditionCodes (required)
 * reasonCode ^short = "Clinical indication for therapy"
 
 * reasonReference 0..* MS

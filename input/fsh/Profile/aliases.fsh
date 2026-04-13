@@ -65,28 +65,35 @@ Alias: $VS-route-codes              = http://hl7.org/fhir/ValueSet/route-codes
 Alias: $VS-procedure-code           = http://hl7.org/fhir/ValueSet/procedure-code
 Alias: $VS-clinical-findings        = http://hl7.org/fhir/ValueSet/clinical-findings
 
-// ── Kenya MOH Local ValueSets (OCL / ILM-HIE) ────────────────
-Alias: $KE-GenericProducts          = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/GenericProducts/
-Alias: $KE-ActiveComponents         = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/ActiveComponents/$expand
-Alias: $KE-RouteOfAdmin             = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/RouteOfAdministration/$expand
-Alias: $KE-Formulation              = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/Formulation/$expand
-Alias: $KE-UoM                      = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-PPB/ValueSet/UoM/$expand
-Alias: $KE-MedReqStatusReason       = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/MEDICATIONREQUEST-STATUS-REASON/$expand
-Alias: $KE-MedDispStatusReason      = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/MEDICATIONDISPENSE-STATUS-REASON/$expand
-Alias: $KE-MedAdminStatusReason     = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/MEDICATION-ADMIN-STATUS-REASON/$expand
-Alias: $KE-MedAdminRoute            = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/MEDICATION-ADMINISTRATION-ROUTE/
-Alias: $KE-MedStmtStatusReason      = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/REASON-MEDICATION-STATUS-CODES/$expand
-Alias: $KE-ConditionCodes           = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-CODES/
-Alias: $KE-ConditionClinicalStatus  = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-CLINICAL-STATUS/
-Alias: $KE-ConditionVerifStatus     = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-VERIFICATION-STATUS/
-Alias: $KE-ConditionCategory        = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-CATEGORY/
-Alias: $KE-ConditionSeverity        = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-SEVERITY/$expand
-Alias: $KE-ConditionStage           = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CONDITION-STAGE/$expand
-Alias: $KE-Manifestation            = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/MANIFESTATION-OR-SYMPTOM/$expand
-Alias: $KE-ObsMethods               = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/OBSERVATION-METHODS/$expand
-Alias: $KE-AdditionalInstr          = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/ADDITIONAL-INSTRUCTION-CODES/$expand
-Alias: $KE-ApproachSite             = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/APPROACH-SITE-CODES/$expand
-Alias: $KE-CarePlanCategory         = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/CARE-PLAN-CATEGORY/$expand
-Alias: $KE-ProcedureCode            = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ValueSet/PROCEDURE-CODE/$expand
+// ── Kenya MOH Local ValueSets — now resolved to local FHIR IG ────────────────
+// MOH-PPB — codes sourced from OCL, published as local CodeSystems/ValueSets
+Alias: $KE-GenericProducts          = https://prescription.intellisoftkenya.com/ValueSet/generic-products-vs
+Alias: $KE-ActiveComponents         = https://prescription.intellisoftkenya.com/ValueSet/active-components-vs
+Alias: $KE-RouteOfAdmin             = https://prescription.intellisoftkenya.com/ValueSet/route-of-administration-vs
+Alias: $KE-Formulation              = https://prescription.intellisoftkenya.com/ValueSet/formulation-vs
+Alias: $KE-UoM                      = https://prescription.intellisoftkenya.com/ValueSet/unit-of-measure-vs
+
+// MOH-KENYA — codes sourced from OCL, published as local CodeSystems/ValueSets
+Alias: $KE-MedReqStatusReason       = https://prescription.intellisoftkenya.com/ValueSet/medication-request-status-reason
+Alias: $KE-MedDispStatusReason      = https://prescription.intellisoftkenya.com/ValueSet/medication-dispense-status-reason
+Alias: $KE-MedAdminStatusReason     = https://prescription.intellisoftkenya.com/ValueSet/medication-admin-status-reason
+Alias: $KE-MedAdminRoute            = https://prescription.intellisoftkenya.com/ValueSet/med-admin-route
+Alias: $KE-MedStmtStatusReason      = https://prescription.intellisoftkenya.com/ValueSet/reason-medication-status
+Alias: $KE-ConditionCodes           = https://prescription.intellisoftkenya.com/ValueSet/condition-codes-vs
+Alias: $KE-ConditionClinicalStatus  = https://prescription.intellisoftkenya.com/ValueSet/condition-clinical-status
+Alias: $KE-ConditionVerifStatus     = https://prescription.intellisoftkenya.com/ValueSet/condition-verification-status
+Alias: $KE-ConditionCategory        = https://prescription.intellisoftkenya.com/ValueSet/condition-category
+Alias: $KE-ConditionSeverity        = https://prescription.intellisoftkenya.com/ValueSet/condition-severity
+Alias: $KE-ConditionStage           = https://prescription.intellisoftkenya.com/ValueSet/condition-stage
+Alias: $KE-Manifestation            = https://prescription.intellisoftkenya.com/ValueSet/manifestation
+Alias: $KE-ObsMethods               = https://prescription.intellisoftkenya.com/ValueSet/observation-methods
+Alias: $KE-AdditionalInstr          = https://prescription.intellisoftkenya.com/ValueSet/additional-instruction
+Alias: $KE-ApproachSite             = https://prescription.intellisoftkenya.com/ValueSet/approach-site
+Alias: $KE-CarePlanCategory         = https://prescription.intellisoftkenya.com/ValueSet/care-plan-category
+Alias: $KE-ProcedureCode            = https://prescription.intellisoftkenya.com/ValueSet/procedure-code
+
+// WHO ICD-11 — external system, too large to embed locally; referenced by URL
 Alias: $KE-ICD11                    = https://ilm-hie.dha.go.ke/ocl/orgs/WHO/ValueSet/icd-11/$expand
+
+// FHIR standard dispenser instructions ValueSet
 Alias: $KE-MedReqDispenserInstr     = http://hl7.org/fhir/ValueSet/medicationrequest-dispenser-instructions

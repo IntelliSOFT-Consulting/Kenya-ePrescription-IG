@@ -28,7 +28,7 @@ Description: "Profile on MedicationDispense for the Kenya Electronic Prescriptio
 
 * statusReason[x] only CodeableConcept
 * statusReasonCodeableConcept 0..1 MS
-* statusReasonCodeableConcept from $KE-MedDispStatusReason (preferred)
+* statusReasonCodeableConcept from $KE-MedDispStatusReason (required)
 * statusReasonCodeableConcept ^short = "Reason for dispense status (e.g. out of stock)"
 
 // ── Category & type ───────────────────────────────────────
@@ -41,7 +41,7 @@ Description: "Profile on MedicationDispense for the Kenya Electronic Prescriptio
 // ── Medication ────────────────────────────────────────────
 * medication[x] only CodeableConcept
 * medicationCodeableConcept 1..1 MS
-* medicationCodeableConcept from $KE-GenericProducts (preferred)
+* medicationCodeableConcept from $KE-GenericProducts (required)
 * medicationCodeableConcept ^short = "Medication dispensed — Kenya MOH PPB Generic Products"
 * medicationCodeableConcept.coding 1..* MS
 * medicationCodeableConcept.coding.system 1..1 MS
@@ -97,16 +97,16 @@ Description: "Profile on MedicationDispense for the Kenya Electronic Prescriptio
 * dosageInstruction.sequence 0..1 MS
 * dosageInstruction.text 0..1 MS
 * dosageInstruction.additionalInstruction 0..*
-* dosageInstruction.additionalInstruction from $KE-AdditionalInstr (preferred)
+* dosageInstruction.additionalInstruction from $KE-AdditionalInstr (required)
 * dosageInstruction.additionalInstruction ^short = "Supplement instructions or warnings to the patient"
 * dosageInstruction.patientInstruction 0..1 MS
 * dosageInstruction.timing 0..1 MS
 * dosageInstruction.asNeeded[x] 0..1 MS
 * dosageInstruction.site 0..1 MS
-* dosageInstruction.site from $KE-ApproachSite (preferred)
+* dosageInstruction.site from $KE-ApproachSite (required)
 * dosageInstruction.site ^short = "Body site to administer to"
 * dosageInstruction.route 0..1 MS
-* dosageInstruction.route from $KE-RouteOfAdmin (preferred)
+* dosageInstruction.route from $KE-RouteOfAdmin (required)
 * dosageInstruction.route ^short = "How drug should enter body"
 * dosageInstruction.method 0..1
 * dosageInstruction.doseAndRate 0..* MS
@@ -116,10 +116,10 @@ Description: "Profile on MedicationDispense for the Kenya Electronic Prescriptio
 * substitution.wasSubstituted 1..1 MS
 * substitution.wasSubstituted ^short = "Whether substitution occurred"
 * substitution.type 0..1 MS
-* substitution.type from $VS-subst-admin-subst (preferred)
+* substitution.type from $VS-subst-admin-subst (required)
 * substitution.type ^short = "Type of substitution"
 * substitution.reason 0..* MS
-* substitution.reason from $VS-subst-admin-reason (preferred)
+* substitution.reason from $VS-subst-admin-reason (required)
 * substitution.reason ^short = "Reason for substitution"
 
 * detectedIssue 0..* MS

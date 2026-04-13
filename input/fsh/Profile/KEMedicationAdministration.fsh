@@ -27,18 +27,18 @@ Description: "Profile on MedicationAdministration for the Kenya eRx Implementati
 * status ^short = "Status (in-progress, not-done, on-hold, completed, entered-in-error, stopped, unknown)"
 
 * statusReason 0..* MS
-* statusReason from $KE-MedAdminStatusReason (preferred)
+* statusReason from $KE-MedAdminStatusReason (required)
 * statusReason ^short = "Reason for current status (e.g. patient refused, clinical hold)"
 
 // ── Category ─────────────────────────────────────────────
 * category 0..1 MS
-* category from $VS-med-admin-category (preferred)
+* category from $VS-med-admin-category (required)
 * category ^short = "Type of medication administration (inpatient, outpatient)"
 
 // ── Medication ────────────────────────────────────────────
 * medication[x] only CodeableConcept
 * medicationCodeableConcept 1..1 MS
-* medicationCodeableConcept from $KE-GenericProducts (preferred)
+* medicationCodeableConcept from $KE-GenericProducts (required)
 * medicationCodeableConcept ^short = "Medication administered — Kenya MOH PPB Generic Products"
 
 // ── Subject & context ─────────────────────────────────────
@@ -83,10 +83,10 @@ Description: "Profile on MedicationAdministration for the Kenya eRx Implementati
 * dosage ^short = "Dosage details for this administration event"
 * dosage.site 0..1 MS
 * dosage.route 1..1 MS
-* dosage.route from $KE-MedAdminRoute (preferred)
+* dosage.route from $KE-MedAdminRoute (required)
 * dosage.route ^short = "Route of administration"
 * dosage.method 0..1 MS
-* dosage.method from $KE-RouteOfAdmin (example)
+* dosage.method from $KE-RouteOfAdmin (required)
 * dosage.method ^short = "Method of administration (e.g. IV push, inhalation)"
 * dosage.dose 1..1 MS
 * dosage.dose only SimpleQuantity

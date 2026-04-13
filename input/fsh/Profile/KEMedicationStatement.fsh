@@ -23,13 +23,13 @@ Description: "Profile on MedicationStatement for the Kenya eRx Implementation Gu
 * status ^short = "Status of medication use (active, completed, stopped, entered-in-error)"
 
 * statusReason 0..* MS
-* statusReason from $KE-MedStmtStatusReason (preferred)
+* statusReason from $KE-MedStmtStatusReason (required)
 * statusReason ^short = "Reason for current status (e.g. therapy stopped, adverse reaction)"
 
 // ── Medication ────────────────────────────────────────────
 * medication[x] only CodeableConcept
 * medicationCodeableConcept 1..1 MS
-* medicationCodeableConcept from $KE-GenericProducts (preferred)
+* medicationCodeableConcept from $KE-GenericProducts (required)
 * medicationCodeableConcept ^short = "Medication taken — Kenya MOH PPB Generic Products"
 
 // ── Subject & context ─────────────────────────────────────
@@ -55,7 +55,7 @@ Description: "Profile on MedicationStatement for the Kenya eRx Implementation Gu
 
 // ── Reason ───────────────────────────────────────────────
 * reasonCode 0..* MS
-* reasonCode from $KE-ICD11 (preferred)
+* reasonCode from $KE-ICD11 (required)
 * reasonCode ^short = "Clinical reason for medication use (ICD-11)"
 
 * reasonReference 0..* MS
