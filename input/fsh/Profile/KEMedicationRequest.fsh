@@ -89,12 +89,10 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 * dosageInstruction.timing.repeat.frequency 0..1 MS
 * dosageInstruction.timing.repeat.period 0..1 MS
 * dosageInstruction.timing.repeat.periodUnit 1..1 MS
-* dosageInstruction.timing.repeat.periodUnit from $KE-UoM (required)
 * dosageInstruction.timing.repeat.periodUnit ^short = "Time unit (day, hour, week)"
 * dosageInstruction.timing.repeat.duration 0..1 MS
 * dosageInstruction.timing.repeat.duration ^short = "Duration value"
 * dosageInstruction.timing.repeat.durationUnit 0..1 MS
-* dosageInstruction.timing.repeat.durationUnit from $KE-UoM (required)
 * dosageInstruction.timing.repeat.durationUnit ^short = "Duration unit"
 * dosageInstruction.timing.code 0..1 MS
 * dosageInstruction.timing.code from $KE-MedReqDispenserInstr (required)

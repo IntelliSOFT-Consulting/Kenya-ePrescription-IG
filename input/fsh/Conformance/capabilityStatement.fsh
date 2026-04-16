@@ -276,64 +276,64 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 * rest[0].resource[10].searchParam[2].name = "clinical-status"
 * rest[0].resource[10].searchParam[2].type = #token
 
+// // ----------------------------------------------------------------------------
+// // Observation (Morphology)
+// // ----------------------------------------------------------------------------
+// * rest[0].resource[11].type = #Observation
+// * rest[0].resource[11].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-morphology-observation"
+// * rest[0].resource[11].interaction[0].code = #read
+// * rest[0].resource[11].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest[0].resource[11].interaction[0].extension[0].valueCode = #SHALL
+// * rest[0].resource[11].interaction[1].code = #create
+// * rest[0].resource[11].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest[0].resource[11].interaction[1].extension[0].valueCode = #SHALL
+// * rest[0].resource[11].interaction[2].code = #search-type
+// * rest[0].resource[11].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest[0].resource[11].interaction[2].extension[0].valueCode = #SHALL
+// * rest[0].resource[11].searchParam[0].name = "patient"
+// * rest[0].resource[11].searchParam[0].type = #reference
+// * rest[0].resource[11].searchParam[1].name = "code"
+// * rest[0].resource[11].searchParam[1].type = #token
+// * rest[0].resource[11].searchParam[2].name = "status"
+// * rest[0].resource[11].searchParam[2].type = #token
+
+// // ----------------------------------------------------------------------------
+// // CarePlan (Oncology)
+// // ----------------------------------------------------------------------------
+// * rest[0].resource[12].type = #CarePlan
+// * rest[0].resource[12].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-care-plan"
+// * rest[0].resource[12].interaction[0].code = #read
+// * rest[0].resource[12].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest[0].resource[12].interaction[0].extension[0].valueCode = #SHALL
+// * rest[0].resource[12].interaction[1].code = #create
+// * rest[0].resource[12].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest[0].resource[12].interaction[1].extension[0].valueCode = #SHALL
+// * rest[0].resource[12].interaction[2].code = #update
+// * rest[0].resource[12].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest[0].resource[12].interaction[2].extension[0].valueCode = #SHALL
+// * rest[0].resource[12].interaction[3].code = #search-type
+// * rest[0].resource[12].interaction[3].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest[0].resource[12].interaction[3].extension[0].valueCode = #SHALL
+// * rest[0].resource[12].searchParam[0].name = "patient"
+// * rest[0].resource[12].searchParam[0].type = #reference
+// * rest[0].resource[12].searchParam[1].name = "status"
+// * rest[0].resource[12].searchParam[1].type = #token
+
 // ----------------------------------------------------------------------------
-// Observation (Morphology)
+// EpisodeOfCare
 // ----------------------------------------------------------------------------
-* rest[0].resource[11].type = #Observation
-* rest[0].resource[11].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-morphology-observation"
+* rest[0].resource[11].type = #EpisodeOfCare
+* rest[0].resource[11].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-episode-of-care"
 * rest[0].resource[11].interaction[0].code = #read
 * rest[0].resource[11].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[11].interaction[0].extension[0].valueCode = #SHALL
 * rest[0].resource[11].interaction[1].code = #create
 * rest[0].resource[11].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[11].interaction[1].extension[0].valueCode = #SHALL
+* rest[0].resource[11].interaction[1].extension[0].valueCode = #SHOULD
 * rest[0].resource[11].interaction[2].code = #search-type
 * rest[0].resource[11].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[11].interaction[2].extension[0].valueCode = #SHALL
+* rest[0].resource[11].interaction[2].extension[0].valueCode = #SHOULD
 * rest[0].resource[11].searchParam[0].name = "patient"
 * rest[0].resource[11].searchParam[0].type = #reference
-* rest[0].resource[11].searchParam[1].name = "code"
+* rest[0].resource[11].searchParam[1].name = "status"
 * rest[0].resource[11].searchParam[1].type = #token
-* rest[0].resource[11].searchParam[2].name = "status"
-* rest[0].resource[11].searchParam[2].type = #token
-
-// ----------------------------------------------------------------------------
-// CarePlan (Oncology)
-// ----------------------------------------------------------------------------
-* rest[0].resource[12].type = #CarePlan
-* rest[0].resource[12].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-care-plan"
-* rest[0].resource[12].interaction[0].code = #read
-* rest[0].resource[12].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[12].interaction[0].extension[0].valueCode = #SHALL
-* rest[0].resource[12].interaction[1].code = #create
-* rest[0].resource[12].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[12].interaction[1].extension[0].valueCode = #SHALL
-* rest[0].resource[12].interaction[2].code = #update
-* rest[0].resource[12].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[12].interaction[2].extension[0].valueCode = #SHALL
-* rest[0].resource[12].interaction[3].code = #search-type
-* rest[0].resource[12].interaction[3].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[12].interaction[3].extension[0].valueCode = #SHALL
-* rest[0].resource[12].searchParam[0].name = "patient"
-* rest[0].resource[12].searchParam[0].type = #reference
-* rest[0].resource[12].searchParam[1].name = "status"
-* rest[0].resource[12].searchParam[1].type = #token
-
-// ----------------------------------------------------------------------------
-// EpisodeOfCare
-// ----------------------------------------------------------------------------
-* rest[0].resource[13].type = #EpisodeOfCare
-* rest[0].resource[13].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-episode-of-care"
-* rest[0].resource[13].interaction[0].code = #read
-* rest[0].resource[13].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[13].interaction[0].extension[0].valueCode = #SHALL
-* rest[0].resource[13].interaction[1].code = #create
-* rest[0].resource[13].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[13].interaction[1].extension[0].valueCode = #SHOULD
-* rest[0].resource[13].interaction[2].code = #search-type
-* rest[0].resource[13].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[13].interaction[2].extension[0].valueCode = #SHOULD
-* rest[0].resource[13].searchParam[0].name = "patient"
-* rest[0].resource[13].searchParam[0].type = #reference
-* rest[0].resource[13].searchParam[1].name = "status"
-* rest[0].resource[13].searchParam[1].type = #token

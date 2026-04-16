@@ -1,54 +1,54 @@
-// ============================================================================
-// Example: KenyaOncologyCarePlan
-// Profile: ke-oncology-care-plan
-// ============================================================================
+// // ============================================================================
+// // Example: KenyaOncologyCarePlan
+// // Profile: ke-oncology-care-plan
+// // ============================================================================
 
-Instance: example-oncologycareplan-otieno-chemo
-InstanceOf: KEOncologyCarePlan
-Usage: #example
-Title: "OncologyCarePlan – James Otieno Chemotherapy Plan"
-Description: "Active oncology care plan for James Otieno covering chemotherapy initiation and supportive care activities, managed by the KNH oncology MDT."
+// Instance: example-oncologycareplan-otieno-chemo
+// InstanceOf: KEOncologyCarePlan
+// Usage: #example
+// Title: "OncologyCarePlan – James Otieno Chemotherapy Plan"
+// Description: "Active oncology care plan for James Otieno covering chemotherapy initiation and supportive care activities, managed by the KNH oncology MDT."
 
-* id = "example-oncologycareplan-otieno-chemo"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-care-plan"
+// * id = "example-oncologycareplan-otieno-chemo"
+// * meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-care-plan"
 
-* identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/careplan-identifier"
-* identifier[0].value = "CP-2025-ONCO-00077"
+// * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/careplan-identifier"
+// * identifier[0].value = "CP-2025-ONCO-00077"
 
-* status = #active
+// * status = #active
 
-* intent = #plan
+// * intent = #plan
 
-* category[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CARE-PLAN-CATEGORY/#MEDICATION-MANAGEMENT "Medication management"
+// * category[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CARE-PLAN-CATEGORY/#MEDICATION-MANAGEMENT "Medication management"
 
-* title = "Lung Cancer Chemotherapy and Supportive Care Plan"
+// * title = "Lung Cancer Chemotherapy and Supportive Care Plan"
 
-* description = "Multidisciplinary oncology care plan for James Otieno with Stage IIA pulmonary adenocarcinoma, encompassing platinum-based chemotherapy, monitoring, and supportive care."
+// * description = "Multidisciplinary oncology care plan for James Otieno with Stage IIA pulmonary adenocarcinoma, encompassing platinum-based chemotherapy, monitoring, and supportive care."
 
-* subject = Reference(example-patient-otieno)
+// * subject = Reference(example-patient-otieno)
 
-* encounter = Reference(example-encounter-otieno-inpatient)
+// * encounter = Reference(example-encounter-otieno-inpatient)
 
-* period.start = "2025-06-15"
-* period.end   = "2025-12-15"
+// * period.start = "2025-06-15"
+// * period.end   = "2025-12-15"
 
-* author = Reference(example-practitioner-njoroge)
+// * author = Reference(example-practitioner-njoroge)
 
-// Contained CareTeam (inline instance)
-* contained[+] = inline-careteam-oncology
-* careTeam[0] = Reference(inline-careteam-oncology)
+// // Contained CareTeam (inline instance)
+// * contained[+] = inline-careteam-oncology
+// * careTeam[0] = Reference(inline-careteam-oncology)
 
-// Addressed condition
-* addresses[0] = Reference(example-oncologydiagnosis-otieno-lungcancer)
+// // Addressed condition
+// * addresses[0] = Reference(example-oncologydiagnosis-otieno-lungcancer)
 
-// Activity 1: Chemotherapy administration
-* activity[0].detail.code = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/#CHEMOTHERAPY "Chemotherapy"
-* activity[0].detail.reasonCode[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#DYSPNOEA "Dyspnoea"
-* activity[0].detail.status = #in-progress
-* activity[0].detail.doNotPerform = false
+// // Activity 1: Chemotherapy administration
+// * activity[0].detail.code = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/#CHEMOTHERAPY "Chemotherapy"
+// * activity[0].detail.reasonCode[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#DYSPNOEA "Dyspnoea"
+// * activity[0].detail.status = #in-progress
+// * activity[0].detail.doNotPerform = false
 
-// Activity 2: Oncology follow-up review
-* activity[1].detail.code = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/#THERAPEUTIC-PROCEDURE "Therapeutic procedure"
-* activity[1].detail.reasonCode[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#DYSPNOEA "Dyspnoea"
-* activity[1].detail.status = #scheduled
-* activity[1].detail.doNotPerform = false
+// // Activity 2: Oncology follow-up review
+// * activity[1].detail.code = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/#THERAPEUTIC-PROCEDURE "Therapeutic procedure"
+// * activity[1].detail.reasonCode[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#DYSPNOEA "Dyspnoea"
+// * activity[1].detail.status = #scheduled
+// * activity[1].detail.doNotPerform = false
