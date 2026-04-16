@@ -322,18 +322,18 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // ----------------------------------------------------------------------------
 // EpisodeOfCare
 // ----------------------------------------------------------------------------
-* rest[0].resource[13].type = #EpisodeOfCare
-* rest[0].resource[13].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-episode-of-care"
-* rest[0].resource[13].interaction[0].code = #read
-* rest[0].resource[13].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[13].interaction[0].extension[0].valueCode = #SHALL
-* rest[0].resource[13].interaction[1].code = #create
-* rest[0].resource[13].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[13].interaction[1].extension[0].valueCode = #SHOULD
-* rest[0].resource[13].interaction[2].code = #search-type
-* rest[0].resource[13].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[13].interaction[2].extension[0].valueCode = #SHOULD
-* rest[0].resource[13].searchParam[0].name = "patient"
-* rest[0].resource[13].searchParam[0].type = #reference
-* rest[0].resource[13].searchParam[1].name = "status"
-* rest[0].resource[13].searchParam[1].type = #token
+* rest[0].resource[11].type = #EpisodeOfCare
+* rest[0].resource[11].profile = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-episode-of-care"
+* rest[0].resource[11].interaction[0].code = #read
+* rest[0].resource[11].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[11].interaction[0].extension[0].valueCode = #SHALL
+* rest[0].resource[11].interaction[1].code = #create
+* rest[0].resource[11].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[11].interaction[1].extension[0].valueCode = #SHOULD
+* rest[0].resource[11].interaction[2].code = #search-type
+* rest[0].resource[11].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[11].interaction[2].extension[0].valueCode = #SHOULD
+* rest[0].resource[11].searchParam[0].name = "patient"
+* rest[0].resource[11].searchParam[0].type = #reference
+* rest[0].resource[11].searchParam[1].name = "status"
+* rest[0].resource[11].searchParam[1].type = #token
