@@ -43,7 +43,7 @@ Description: "Documented high-criticality penicillin allergy for Amina Hassan, c
 
 // Reaction details
 * reaction[0].substance = https://ilm-hie.dha.go.ke/fhir/CodeSystem/active-components#AC10686 "Penicillin V potassium"
-* reaction[0].manifestation[0] = http://snomed.info/sct#126485001 "Urticaria (disorder)"
+* reaction[0].manifestation[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#URTICARIA "Urticaria"
 * reaction[0].description = "Widespread urticaria over trunk and limbs appearing within 30 minutes of penicillin administration."
 * reaction[0].onset = "2020-03-10T14:00:00+03:00"
 * reaction[0].severity = #moderate

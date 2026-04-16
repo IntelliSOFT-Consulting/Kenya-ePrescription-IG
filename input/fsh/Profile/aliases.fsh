@@ -97,3 +97,5 @@ Alias: $KE-ICD11                    = https://ilm-hie.dha.go.ke/ocl/orgs/WHO/Val
 
 // FHIR standard dispenser instructions ValueSet
 Alias: $KE-MedReqDispenserInstr     = http://hl7.org/fhir/ValueSet/medicationrequest-dispenser-instructions
+
+Alias: $KE-TS                       = http://ilm-hie.dha.go.ke

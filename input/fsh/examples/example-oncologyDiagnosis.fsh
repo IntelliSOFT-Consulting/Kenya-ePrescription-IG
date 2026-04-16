@@ -21,11 +21,9 @@ Description: "Confirmed diagnosis of malignant neoplasm of the right lower lobe 
 
 * category[0] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis "Encounter Diagnosis"
 
-* severity = http://snomed.info/sct#24484000 "Severe (severity modifier)"
+* severity = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-SEVERITY/#severe "Severe"
 
 * code = http://hl7.org/fhir/sid/icd-10#C34.1 "Malignant neoplasm of upper lobe, bronchus or lung"
-
-* bodySite[0] = http://snomed.info/sct#39607008 "Lung structure (body structure)"
 
 * subject = Reference(example-patient-otieno)
 
@@ -40,10 +38,9 @@ Description: "Confirmed diagnosis of malignant neoplasm of the right lower lobe 
 * asserter = Reference(example-practitioner-njoroge)
 
 // Staging: TNM Stage II
-* stage[0].summary = http://snomed.info/sct#258219007 "Stage 2 (qualifier value)"
-* stage[0].type = http://snomed.info/sct#254299000 "Tumor staging (tumor staging)"
+* stage[0].summary = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-STAGE/#stage-ii "Stage II"
 
 // Supporting evidence
-* evidence[0].code[0] = http://snomed.info/sct#169069000 "CT scan of chest"
+* evidence[0].code[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#CHEST-PAIN "Chest pain"
 
 * note[0].text = "Histopathology confirmed non-small cell lung carcinoma (adenocarcinoma) of the right upper lobe. CT staging indicates T2N1M0, clinical Stage IIA. Patient referred for oncology MDT review and chemotherapy planning."

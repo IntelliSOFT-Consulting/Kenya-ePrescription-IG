@@ -19,7 +19,7 @@ Description: "Active oncology care plan for James Otieno covering chemotherapy i
 
 * intent = #plan
 
-* category[0] = http://snomed.info/sct#734163000 "Care plan (record artifact)"
+* category[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CARE-PLAN-CATEGORY/#MEDICATION-MANAGEMENT "Medication management"
 
 * title = "Lung Cancer Chemotherapy and Supportive Care Plan"
 
@@ -42,13 +42,13 @@ Description: "Active oncology care plan for James Otieno covering chemotherapy i
 * addresses[0] = Reference(example-oncologydiagnosis-otieno-lungcancer)
 
 // Activity 1: Chemotherapy administration
-* activity[0].detail.code = http://snomed.info/sct#367336001 "Chemotherapy (procedure)"
-* activity[0].detail.reasonCode[0] = http://snomed.info/sct#363358000 "Malignant tumor of lung (disorder)"
+* activity[0].detail.code = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/#CHEMOTHERAPY "Chemotherapy"
+* activity[0].detail.reasonCode[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#DYSPNOEA "Dyspnoea"
 * activity[0].detail.status = #in-progress
 * activity[0].detail.doNotPerform = false
 
 // Activity 2: Oncology follow-up review
-* activity[1].detail.code = http://snomed.info/sct#185389009 "Follow-up visit (procedure)"
-* activity[1].detail.reasonCode[0] = http://snomed.info/sct#363358000 "Malignant tumor of lung (disorder)"
+* activity[1].detail.code = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/#THERAPEUTIC-PROCEDURE "Therapeutic procedure"
+* activity[1].detail.reasonCode[0] = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/#DYSPNOEA "Dyspnoea"
 * activity[1].detail.status = #scheduled
 * activity[1].detail.doNotPerform = false
