@@ -34,10 +34,7 @@ Description: "Final histopathology result for James Otieno's CT-guided lung biop
 * performer[0] = Reference(example-practitioner-njoroge)
 
 // Morphology finding: pulmonary adenocarcinoma (ICD-O-3 M-8140/3)
-* valueCodeableConcept = http://snomed.info/sct#413448000 "Adenocarcinoma (morphologic abnormality)"
 * valueCodeableConcept.text = "Pulmonary adenocarcinoma – moderately differentiated (Grade 2). ICD-O-3: 8140/3."
 
-* bodySite = http://snomed.info/sct#39607008 "Lung structure (body structure)"
-
-// Method: CT-guided core biopsy
-* method = http://snomed.info/sct#432541000124108 "Computed tomography guided biopsy (procedure)"
+// Method: Histopathology — microscopy
+* method = https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/OBSERVATION-METHODS/#MICROSCOPY "Microscopy"

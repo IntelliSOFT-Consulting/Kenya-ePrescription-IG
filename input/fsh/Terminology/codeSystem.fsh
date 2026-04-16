@@ -29,7 +29,7 @@ CodeSystem: RouteOfAdministrationCS
 Id: route-of-administration-cs
 Title: "Route of Administration CodeSystem"
 Description: "Route of administration codes from MOH PPB OCL."
-* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration-cs"
 * ^status = #active
 * ^content = #complete
 
@@ -80,7 +80,7 @@ CodeSystem: UnitOfMeasureCS
 Id: unit-of-measure-cs
 Title: "Unit of Measure CodeSystem"
 Description: "Unit of measure codes from MOH PPB OCL."
-* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/unit-of-measure"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/unit-of-measure-cs"
 * ^status = #active
 * ^content = #complete
 
@@ -582,7 +582,7 @@ CodeSystem: FormulationCS
 Id: formulation-cs
 Title: "Formulation CodeSystem"
 Description: "Pharmaceutical formulation/dosage form codes from MOH PPB OCL."
-* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/formulation"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/formulation-cs"
 * ^status = #active
 * ^content = #complete
 
@@ -1183,7 +1183,7 @@ CodeSystem: ActiveComponentsCS
 Id: active-components-cs
 Title: "Active Components CodeSystem"
 Description: "Active pharmaceutical ingredient codes from MOH PPB OCL."
-* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/active-components"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/active-components-cs"
 * ^status = #active
 * ^content = #complete
 
@@ -3824,7 +3824,7 @@ CodeSystem: GenericProductsCS
 Id: generic-products-cs
 Title: "Generic Products CodeSystem"
 Description: "Generic medicinal product codes from MOH PPB OCL."
-* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products-cs"
 * ^status = #active
 * ^content = #complete
 
@@ -6860,7 +6860,7 @@ CodeSystem: MedicationRequestStatusReasonCS
 Id: medication-request-status-reason-cs
 Title: "MedicationRequest Status Reason CodeSystem"
 Description: "Reasons for a MedicationRequest status change (e.g. cancelled, on-hold). Source: MOH-KENYA OCL MEDICATIONREQUEST-STATUS-REASON."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATIONREQUEST-STATUS-REASON/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/medication-request-status-reason-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -6886,7 +6886,7 @@ CodeSystem: MedicationDispenseStatusReasonCS
 Id: medication-dispense-status-reason-cs
 Title: "MedicationDispense Status Reason CodeSystem"
 Description: "Reasons for a MedicationDispense status (e.g. out-of-stock, patient refused). Source: MOH-KENYA OCL MEDICATIONDISPENSE-STATUS-REASON."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATIONDISPENSE-STATUS-REASON/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/medication-dispense-status-reason-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -6906,7 +6906,7 @@ CodeSystem: MedicationAdminStatusReasonCS
 Id: medication-admin-status-reason-cs
 Title: "MedicationAdministration Status Reason CodeSystem"
 Description: "Reasons for a MedicationAdministration status (e.g. patient refused, not available). Source: MOH-KENYA OCL MEDICATION-ADMIN-STATUS-REASON."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATION-ADMIN-STATUS-REASON/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/medication-admin-status-reason-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -6926,7 +6926,7 @@ CodeSystem: ReasonMedicationStatusCS
 Id: reason-medication-status-cs
 Title: "Reason Medication Status CodeSystem"
 Description: "Reasons for a MedicationStatement status (e.g. stopped, completed). Source: MOH-KENYA OCL REASON-MEDICATION-STATUS-CODES."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/REASON-MEDICATION-STATUS-CODES/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/reason-medication-status-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -6950,7 +6950,7 @@ CodeSystem: ConditionClinicalStatusCS
 Id: condition-clinical-status-cs
 Title: "Condition Clinical Status CodeSystem"
 Description: "Clinical status codes for Condition resources. Source: MOH-KENYA OCL CONDITION-CLINICAL-STATUS (supplemented with standard FHIR codes)."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-CLINICAL-STATUS/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/condition-clinical-status-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -6969,7 +6969,7 @@ CodeSystem: ConditionVerificationStatusCS
 Id: condition-verification-status-cs
 Title: "Condition Verification Status CodeSystem"
 Description: "Verification status codes for Condition resources. Source: MOH-KENYA OCL CONDITION-VERIFICATION-STATUS."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-VERIFICATION-STATUS/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/condition-verification-status-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -6988,7 +6988,7 @@ CodeSystem: ConditionCategoryCS
 Id: condition-category-cs
 Title: "Condition Category CodeSystem"
 Description: "Category codes for Condition resources. Based on FHIR standard condition-category codes (OCL collection was empty)."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-CATEGORY/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/condition-category-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7004,7 +7004,7 @@ CodeSystem: ConditionSeverityCS
 Id: condition-severity-cs
 Title: "Condition Severity CodeSystem"
 Description: "Severity codes for Condition resources. Source: MOH-KENYA OCL CONDITION-SEVERITY."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-SEVERITY/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/condition-severity-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7020,7 +7020,7 @@ CodeSystem: ConditionStageCS
 Id: condition-stage-cs
 Title: "Condition Stage CodeSystem"
 Description: "Staging codes for oncology and other staged conditions. Source: MOH-KENYA OCL CONDITION-STAGE."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CONDITION-STAGE/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/condition-stage-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7041,7 +7041,7 @@ CodeSystem: MedAdminRouteCS
 Id: med-admin-route-cs
 Title: "Medication Administration Route CodeSystem"
 Description: "Route of administration codes used in MedicationAdministration. Source: MOH-KENYA OCL MEDICATION-ADMINISTRATION-ROUTE."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MEDICATION-ADMINISTRATION-ROUTE/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/med-admin-route-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7057,7 +7057,7 @@ CodeSystem: ObservationMethodsCS
 Id: observation-methods-cs
 Title: "Observation Methods CodeSystem"
 Description: "Methods used to perform clinical observations. Source: MOH-KENYA OCL OBSERVATION-METHODS."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/OBSERVATION-METHODS/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/observation-methods-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7088,7 +7088,7 @@ CodeSystem: AdditionalInstructionCS
 Id: additional-instruction-cs
 Title: "Additional Instruction Codes CodeSystem"
 Description: "Supplementary instructions for dispensed or administered medication. Source: MOH-KENYA OCL ADDITIONAL-INSTRUCTION-CODES."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/ADDITIONAL-INSTRUCTION-CODES/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/additional-instruction-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7126,7 +7126,7 @@ CodeSystem: ApproachSiteCS
 Id: approach-site-cs
 Title: "Approach Site Codes CodeSystem"
 Description: "Body site codes for site of medication administration. Source: MOH-KENYA OCL APPROACH-SITE-CODES."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/APPROACH-SITE-CODES/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/approach-site-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7159,7 +7159,7 @@ CodeSystem: CarePlanCategoryCS
 Id: care-plan-category-cs
 Title: "Care Plan Category CodeSystem"
 Description: "Category codes for care plan types. Source: MOH-KENYA OCL CARE-PLAN-CATEGORY."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CARE-PLAN-CATEGORY/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/care-plan-category-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7187,7 +7187,7 @@ CodeSystem: ProcedureCodeCS
 Id: procedure-code-cs
 Title: "Procedure Code CodeSystem"
 Description: "Clinical procedure codes used in care plan activities and service requests. Source: MOH-KENYA OCL PROCEDURE-CODE."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/PROCEDURE-CODE/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/procedure-code-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -7220,7 +7220,7 @@ CodeSystem: ManifestationCS
 Id: manifestation-cs
 Title: "Manifestation or Symptom CodeSystem"
 Description: "Clinical manifestations and symptoms used in allergy reactions, conditions, and observations. Source: MOH-KENYA OCL MANIFESTATION-OR-SYMPTOM."
-* ^url = "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/MANIFESTATION-OR-SYMPTOM/"
+* ^url = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/manifestation-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
