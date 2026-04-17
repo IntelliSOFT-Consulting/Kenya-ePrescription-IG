@@ -111,8 +111,6 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 * dosageInstruction.doseAndRate.doseQuantity 1..1 MS
 * dosageInstruction.doseAndRate.doseQuantity ^short = "Dose per administration (e.g. 500 mg, 5 ml)"
 
-* dosageInstruction.asNeeded[x] 0..1 MS
-* dosageInstruction.asNeeded[x] only boolean or CodeableConcept
 
 // ── Dispense request ──────────────────────────────────────
 * dispenseRequest 1..1 MS
