@@ -13,7 +13,7 @@ Title: "Encounter – Amina Hassan Outpatient Consultation"
 Description: "Outpatient consultation at KNH for Amina Hassan, during which a prescription for Azithromycin was issued."
 
 * id = "example-encounter-amina-outpatient"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-encounter"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-encounter"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/encounter-identifier"
 * identifier[0].value = "ENC-2025-OPD-00123"
@@ -46,7 +46,7 @@ Title: "Encounter – James Otieno Oncology Inpatient Admission"
 Description: "Inpatient oncology admission for James Otieno at KNH for cancer evaluation and chemotherapy initiation."
 
 * id = "example-encounter-otieno-inpatient"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-encounter"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-encounter"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/encounter-identifier"
 * identifier[0].value = "ENC-2025-IPD-00456"

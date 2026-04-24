@@ -10,20 +10,20 @@ Title: "MedicationRequest – Amina Hassan Azithromycin Prescription"
 Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 days, issued by Dr. Njoroge at KNH during Amina Hassan's consultation."
 
 * id = "example-medicationrequest-amina-azithromycin"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication-request"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-request"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-2025-OPD-00789"
 
-* status = https://prescription.intellisoftkenya.com/CodeSystem/medication-request-status-cs#active "Active"
+* status = https://nshr-uat.sha.go.ke/CodeSystem/medication-request-status-cs#active "Active"
 
 * intent = #order
 
 * category[0] = http://terminology.hl7.org/CodeSystem/medicationrequest-category#outpatient "Outpatient"
 
-* priority = https://prescription.intellisoftkenya.com/CodeSystem/medication-request-priorityCS#routine "Routine"
+* priority = https://nshr-uat.sha.go.ke/CodeSystem/medication-request-priorityCS#routine "Routine"
 
-* medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
@@ -41,7 +41,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * dosageInstruction[0].timing.repeat.periodUnit = #d
 * dosageInstruction[0].timing.repeat.duration = 3
 * dosageInstruction[0].timing.repeat.durationUnit = #d
-* dosageInstruction[0].route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration#RT10025 "Oral"
+* dosageInstruction[0].route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.value = 500
 * dosageInstruction[0].doseAndRate[0].doseQuantity.unit = "mg"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.system = "http://unitsofmeasure.org"

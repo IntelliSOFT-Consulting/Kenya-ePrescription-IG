@@ -10,7 +10,7 @@
 // Description: "Active oncology care plan for James Otieno covering chemotherapy initiation and supportive care activities, managed by the KNH oncology MDT."
 
 // * id = "example-oncologycareplan-otieno-chemo"
-// * meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-care-plan"
+// * meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-oncology-care-plan"
 
 // * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/careplan-identifier"
 // * identifier[0].value = "CP-2025-ONCO-00077"

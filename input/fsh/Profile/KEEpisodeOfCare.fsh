@@ -21,7 +21,7 @@ Description: "Profile on EpisodeOfCare for the Kenya eRx Implementation Guide."
 
 // ── Type ─────────────────────────────────────────────────
 * type 1..* MS
-* type from $VS-episode-type (preferred)
+* type from $VS-episode-type (required)
 * type ^short = "Type of episode of care (e.g. specialist referral, disease management)"
 
 // ── Diagnosis ─────────────────────────────────────────────

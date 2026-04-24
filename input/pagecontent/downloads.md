@@ -62,9 +62,9 @@ To validate a FHIR resource against this IG:
 
 ```bash
 java -jar validator_cli.jar \
-  -ig https://prescription.intellisoftkenya.com/packages/fhir.eprescription.ig-0.1.0.tgz \
+  -ig https://nshr-uat.sha.go.ke/packages/fhir.eprescription.ig-0.1.0.tgz \
   -version 4.0.1 \
-  -profile https://prescription.intellisoftkenya.com/StructureDefinition/ke-medicationrequest \
+  -profile https://nshr-uat.sha.go.ke/StructureDefinition/ke-medicationrequest \
   my-prescription.json
 ```
 
@@ -83,6 +83,6 @@ java -jar validator_cli.jar \
 
 ## License
 
-This Implementation Guide is published under the **Creative Commons Attribution 4.0 International (CC-BY-4.0)** license. You are free to share and adapt the material, provided you give appropriate credit to IntelliSOFT Kenya and the Kenya Ministry of Health Digital Health Programme.
+This Implementation Guide is published under the **Creative Commons Attribution 4.0 International (CC-BY-4.0)** license. You are free to share and adapt the material, provided you give appropriate credit to Digital Health Agency, Kenya.
 
-&copy; 2025 IntelliSOFT Kenya. All rights reserved where not otherwise stated.
+&copy; 2025 Digital Health Agency, Kenya. All rights reserved where not otherwise stated.
