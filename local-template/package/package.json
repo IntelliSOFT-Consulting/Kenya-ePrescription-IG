@@ -1,10 +1,10 @@
 {
-  "name": "base.intellisoftkenya.com.template",
+  "name": "base.dha.go.ke.template",
   "version": "0.0.1",
   "type": "fhir.template",
   "license": "CC0-1.0",
   "description": "Local DHA  Template extension for FHIR IG",
-  "author": "https://www.intellisoftkenya.com/",
+  "author": "https://dha.go.ke/",
   "base": "fhir.base.template",
   "dependencies": {
       "fhir.base.template": "current"

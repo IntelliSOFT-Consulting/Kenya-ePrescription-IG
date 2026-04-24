@@ -60,12 +60,12 @@ Description: "Profile on MedicationAdministration for the Kenya eRx Implementati
 * performer.actor only Reference(Practitioner or PractitionerRole)
 * performer.actor ^short = "Administrator (nurse, clinician, authorised staff)"
 * performer.function 0..1 MS
-* performer.function from $VS-med-admin-fn (preferred)
+* performer.function from $VS-med-admin-fn (required)
 * performer.function ^short = "Role individual played in administering the medication"
 
 // ── Reason ───────────────────────────────────────────────
 * reasonCode 0..* MS
-* reasonCode from $KE-ICD11 (preferred)
+* reasonCode from $KE-ICD11 (required)
 * reasonCode ^short = "Reason for medication administration (ICD-11)"
 
 // ── Request ───────────────────────────────────────────────

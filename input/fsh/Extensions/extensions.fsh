@@ -13,7 +13,7 @@ Id: prescription-digital-signature
 Title: "Prescription Digital Signature"
 Description: "A reference to a digital signature or electronic authorization applied to a prescription by the prescribing practitioner, as required under Kenya e-Health regulations."
 
-* ^url    = "https://prescription.intellisoftkenya.com/StructureDefinition/prescription-digital-signature"
+* ^url    = "https://nshr-uat.sha.go.ke/StructureDefinition/prescription-digital-signature"
 * ^status = #active
 * ^context[0].type       = #element
 * ^context[0].expression = "MedicationRequest"
@@ -49,7 +49,7 @@ Id: insurance-pre-authorization
 Title: "Insurance Pre-Authorization"
 Description: "Captures an insurance pre-authorization number issued by NHIF, SHIF, or a private insurer for a specific medication or treatment, enabling claim adjudication downstream."
 
-* ^url    = "https://prescription.intellisoftkenya.com/StructureDefinition/insurance-pre-authorization"
+* ^url    = "https://nshr-uat.sha.go.ke/StructureDefinition/insurance-pre-authorization"
 * ^status = #active
 * ^context[0].type       = #element
 * ^context[0].expression = "MedicationRequest"
@@ -86,7 +86,7 @@ Id: refill-authorization
 Title: "Refill Authorization"
 Description: "Records the number of refills authorized and remaining, together with the earliest eligible refill date, supporting chronic medication management workflows."
 
-* ^url    = "https://prescription.intellisoftkenya.com/StructureDefinition/refill-authorization"
+* ^url    = "https://nshr-uat.sha.go.ke/StructureDefinition/refill-authorization"
 * ^status = #active
 * ^context[0].type       = #element
 * ^context[0].expression = "MedicationRequest"
@@ -118,7 +118,7 @@ Id: controlled-substance-schedule
 Title: "Controlled Substance Schedule"
 Description: "Indicates that the medication is a controlled substance under the Kenya Pharmacy and Poisons Act, and specifies its regulatory schedule (I through IV). Required for narcotic, psychotropic, and other scheduled medicines."
 
-* ^url    = "https://prescription.intellisoftkenya.com/StructureDefinition/controlled-substance-schedule"
+* ^url    = "https://nshr-uat.sha.go.ke/StructureDefinition/controlled-substance-schedule"
 * ^status = #active
 * ^context[0].type       = #element
 * ^context[0].expression = "MedicationRequest"
@@ -148,7 +148,7 @@ Id: dispense-notification
 Title: "Dispense Notification"
 Description: "Indicates whether a notification was sent to the prescriber and/or patient following a dispensing event, and the communication channel used."
 
-* ^url    = "https://prescription.intellisoftkenya.com/StructureDefinition/dispense-notification"
+* ^url    = "https://nshr-uat.sha.go.ke/StructureDefinition/dispense-notification"
 * ^status = #active
 * ^context[0].type       = #element
 * ^context[0].expression = "MedicationDispense"
@@ -176,7 +176,7 @@ Id: controlled-substance-schedule-vs
 Title: "Controlled Substance Schedule ValueSet"
 Description: "Regulatory schedules for controlled substances as defined under the Kenya Pharmacy and Poisons Act, Cap 244."
 
-* ^url    = "https://prescription.intellisoftkenya.com/ValueSet/controlled-substance-schedule"
+* ^url    = "https://nshr-uat.sha.go.ke/ValueSet/controlled-substance-schedule"
 * ^status = #active
 * include codes from system ControlledSubstanceScheduleCS
 
@@ -186,7 +186,7 @@ Id: controlled-substance-schedule-cs
 Title: "Controlled Substance Schedule CodeSystem"
 Description: "Schedules for controlled substances under the Kenya Pharmacy and Poisons Act."
 
-* ^url         = "https://prescription.intellisoftkenya.com/CodeSystem/controlled-substance-schedule"
+* ^url         = "https://nshr-uat.sha.go.ke/CodeSystem/controlled-substance-schedule"
 * ^status      = #active
 * ^content     = #complete
 * ^caseSensitive = true

@@ -41,7 +41,7 @@ Description: "Profile on AllergyIntolerance for the Kenya eRx Implementation Gui
 
 // ── Allergen code ─────────────────────────────────────────
 * code 1..1 MS
-* code from $KE-ActiveComponents (preferred)
+* code from $KE-ActiveComponents (required)
 * code ^short = "Allergen substance from Kenya MOH PPB Active Components"
 
 // ── Patient & encounter ───────────────────────────────────
@@ -82,11 +82,11 @@ Description: "Profile on AllergyIntolerance for the Kenya eRx Implementation Gui
 // ── Reaction ─────────────────────────────────────────────
 * reaction 0..* MS
 * reaction.substance 1..1 MS
-* reaction.substance from $KE-ActiveComponents (preferred)
+* reaction.substance from $KE-ActiveComponents (required)
 * reaction.substance ^short = "Specific allergen that caused the reaction"
 
 * reaction.manifestation 1..* MS
-* reaction.manifestation from $KE-Manifestation (preferred)
+* reaction.manifestation from $KE-Manifestation (required)
 * reaction.manifestation ^short = "Clinical manifestation / symptom"
 
 * reaction.description 0..1 MS
@@ -100,5 +100,5 @@ Description: "Profile on AllergyIntolerance for the Kenya eRx Implementation Gui
 * reaction.severity ^short = "Severity (mild, moderate, severe)"
 
 * reaction.exposureRoute 0..1 MS
-* reaction.exposureRoute from $KE-RouteOfAdmin (preferred)
+* reaction.exposureRoute from $KE-RouteOfAdmin (required)
 * reaction.exposureRoute ^short = "Route of exposure that caused the reaction"

@@ -10,7 +10,7 @@ Title: "MedicationAdministration – James Otieno IV Azithromycin"
 Description: "Intravenous administration of Azithromycin 500 mg to James Otieno during his oncology inpatient admission, as empirical antibiotic coverage prior to chemotherapy initiation."
 
 * id = "example-medicationadministration-otieno-iv"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-medication-administration"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-administration"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/administration-identifier"
 * identifier[0].value = "ADM-2025-IPD-00101"
@@ -19,7 +19,7 @@ Description: "Intravenous administration of Azithromycin 500 mg to James Otieno 
 
 * category = http://terminology.hl7.org/CodeSystem/medication-admin-category#inpatient "Inpatient"
 
-* medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-otieno)
 
@@ -35,8 +35,10 @@ Description: "Intravenous administration of Azithromycin 500 mg to James Otieno 
 * note[0].text = "Administered as pre-chemotherapy antibiotic prophylaxis. Patient tolerated infusion well with no adverse reactions."
 
 // Dosage
-* dosage.route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration#RT10036 "Intravenous"
-* dosage.method = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration#RT10036 "Intravenous"
+// dosage.route bound to $KE-MedAdminRoute (MedAdminRouteCS): ORAL | INTRAVENOUS-IV | INHALED
+* dosage.route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/med-admin-route-cs#INTRAVENOUS-IV "Intravenous"
+// dosage.method bound to $KE-RouteOfAdmin (RouteOfAdministrationCS)
+* dosage.method = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"

@@ -10,7 +10,7 @@ Title: "EpisodeOfCare – James Otieno Oncology Management"
 Description: "Active episode of care for James Otieno covering ongoing oncology management at KNH, from initial diagnosis through planned chemotherapy."
 
 * id = "example-episodeofcare-otieno-oncology"
-* meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-episode-of-care"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-episode-of-care"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/episode-identifier"
 * identifier[0].value = "EOC-2025-ONCO-00099"
@@ -19,7 +19,7 @@ Description: "Active episode of care for James Otieno covering ongoing oncology 
 
 * type[0] = http://terminology.hl7.org/CodeSystem/episodeofcare-type#hacc "Home and Community Care"
 
-* diagnosis[0].condition = Reference(example-oncologydiagnosis-otieno-lungcancer)
+* diagnosis[0].condition = Reference(example-condition-otieno-lungcancer)
 
 * patient = Reference(example-patient-otieno)
 

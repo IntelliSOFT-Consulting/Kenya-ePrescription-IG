@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhir.eprescription.ig
-canonical: https://prescription.intellisoftkenya.com
+canonical: https://nshr-uat.sha.go.ke
 name: Kenya-ePrescription-IG
 title: "Kenya ePrescription FHIR Implementation Guide"
 description: >-
@@ -18,25 +18,25 @@ version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 copyright: >-
-  Copyright 2025+ IntelliSOFT Kenya. This content is licensed under Creative Commons
+  Copyright 2025+ Digital Health Agency, Kenya. This content is licensed under Creative Commons
   Attribution 4.0 International (CC-BY-4.0). Terminology content from the Kenya Pharmacy
   and Poisons Board (PPB) via Open Concept Lab (OCL) is subject to separate terms.
 releaseLabel: ci-build
 license: CC-BY-4.0
 jurisdiction: urn:iso:std:iso:3166#KE "Kenya"
 publisher:
-  name: IntelliSOFT Kenya
-  url: https://www.intellisoftkenya.com
-  email: fhir@intellisoftkenya.com
+  name: DHA, Kenya
+  url: https://dha.go.ke/
+  email: helpdesk@dha.go.ke
 
 contact:
-  - name: IntelliSOFT Kenya – FHIR Team
+  - name: Digital Health Agency, Kenya
     telecom:
       - system: email
-        value: fhir@intellisoftkenya.com
+        value: helpdesk@dha.go.ke
         use: work
       - system: url
-        value: https://www.intellisoftkenya.com
+        value: https://www.dha.go.ke/
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -124,8 +124,8 @@ menu:
 # it with the correct canonical when generating the IG JSON.
 #
 # global:
-#   Patient: https://prescription.intellisoftkenya.com/fhir/StructureDefinition/my-patient-profile
-#   Encounter: https://prescription.intellisoftkenya.com/fhir/StructureDefinition/my-encounter-profile
+#   Patient: https://nshr-uat.sha.go.ke/fhir/StructureDefinition/my-patient-profile
+#   Encounter: https://nshr-uat.sha.go.ke/fhir/StructureDefinition/my-encounter-profile
 #
 #
 # The resources property corresponds to IG.definition.resource.

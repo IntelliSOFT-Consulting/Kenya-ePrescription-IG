@@ -11,7 +11,7 @@ ValueSet: MedicationRequestPriorityVS
 Id: medication-request-priority-vs
 Title: "Medication Request Priority ValueSet"
 Description: "ValueSet for priority levels in the MedicationRequest workflow."
-* ^url = "https://prescription.intellisoftkenya.com/fhir/ValueSet/medication-request-priority-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-request-priority-vs"
 * ^status = #draft
 * include codes from system MedicationRequestPriorityCS
 
@@ -20,7 +20,7 @@ ValueSet: MedicationRequestStatusVS
 Id: medication-request-status-vs
 Title: "MedicationRequest Status ValueSet"
 Description: "ValueSet containing status codes for MedicationRequest."
-* ^url = "https://prescription.intellisoftkenya.com/fhir/ValueSet/medication-request-status-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-request-status-vs"
 * ^status = #draft
 * include codes from system MedicationRequestStatusCS
 
@@ -37,7 +37,7 @@ ValueSet: RouteOfAdministrationVS
 Id: route-of-administration-vs
 Title: "Route of Administration ValueSet"
 Description: "Codes for route of administration of medications, drawn from the MOH PPB route of administration code system."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/route-of-administration-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/route-of-administration-vs"
 * ^status = #draft
 * include codes from system RouteOfAdministrationCS
 
@@ -51,7 +51,7 @@ ValueSet: UnitOfMeasureVS
 Id: unit-of-measure-vs
 Title: "Unit of Measure ValueSet"
 Description: "Codes for units of measure used in medication dosing, drawn from the MOH PPB unit of measure code system."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/unit-of-measure-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/unit-of-measure-vs"
 * ^status = #draft
 * include codes from system UnitOfMeasureCS
 
@@ -65,7 +65,7 @@ ValueSet: FormulationVS
 Id: formulation-vs
 Title: "Formulation (Dosage Form) ValueSet"
 Description: "Pharmaceutical formulation/dosage form codes drawn from the MOH PPB formulation code system."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/formulation-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/formulation-vs"
 * ^status = #draft
 * include codes from system FormulationCS
 
@@ -81,7 +81,7 @@ ValueSet: ActiveComponentsVS
 Id: active-components-vs
 Title: "Active Components ValueSet"
 Description: "Active pharmaceutical ingredient codes drawn from the MOH PPB active components code system."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/active-components-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/active-components-vs"
 * ^status = #draft
 * include codes from system ActiveComponentsCS
 
@@ -99,7 +99,7 @@ ValueSet: GenericProductsVS
 Id: generic-products-vs
 Title: "Generic Products ValueSet"
 Description: "Generic medicinal product codes drawn from the MOH PPB generic products code system."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/generic-products-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/generic-products-vs"
 * ^status = #draft
 * include codes from system GenericProductsCS
 
@@ -113,7 +113,7 @@ ValueSet: MedicationRequestStatusReasonVS
 Id: medication-request-status-reason-vs
 Title: "MedicationRequest Status Reason ValueSet"
 Description: "Reasons for a MedicationRequest status change."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/medication-request-status-reason-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-request-status-reason-vs"
 * ^status = #draft
 * include codes from system MedicationRequestStatusReasonCS
 
@@ -123,7 +123,7 @@ ValueSet: MedicationDispenseStatusReasonVS
 Id: medication-dispense-status-reason-vs
 Title: "MedicationDispense Status Reason ValueSet"
 Description: "Reasons for a MedicationDispense status."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/medication-dispense-status-reason-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-dispense-status-reason-vs"
 * ^status = #draft
 * include codes from system MedicationDispenseStatusReasonCS
 
@@ -133,7 +133,7 @@ ValueSet: MedicationAdminStatusReasonVS
 Id: medication-admin-status-reason-vs
 Title: "MedicationAdministration Status Reason ValueSet"
 Description: "Reasons for a MedicationAdministration status."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/medication-admin-status-reason-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-admin-status-reason-vs"
 * ^status = #draft
 * include codes from system MedicationAdminStatusReasonCS
 
@@ -143,7 +143,7 @@ ValueSet: ReasonMedicationStatusVS
 Id: reason-medication-status-vs
 Title: "Reason Medication Status ValueSet"
 Description: "Reasons for a MedicationStatement status."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/reason-medication-status-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/reason-medication-status-vs"
 * ^status = #draft
 * include codes from system ReasonMedicationStatusCS
 
@@ -153,7 +153,7 @@ ValueSet: ConditionClinicalStatusVS
 Id: condition-clinical-status-vs
 Title: "Condition Clinical Status ValueSet"
 Description: "Clinical status codes for Condition resources."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/condition-clinical-status-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-clinical-status-vs"
 * ^status = #draft
 * include codes from system ConditionClinicalStatusCS
 
@@ -163,7 +163,7 @@ ValueSet: ConditionVerificationStatusVS
 Id: condition-verification-status-vs
 Title: "Condition Verification Status ValueSet"
 Description: "Verification status codes for Condition resources."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/condition-verification-status-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-verification-status-vs"
 * ^status = #draft
 * include codes from system ConditionVerificationStatusCS
 
@@ -173,7 +173,7 @@ ValueSet: ConditionCategoryVS
 Id: condition-category-vs
 Title: "Condition Category ValueSet"
 Description: "Category codes for Condition resources."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/condition-category-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-category-vs"
 * ^status = #draft
 * include codes from system ConditionCategoryCS
 
@@ -183,7 +183,7 @@ ValueSet: ConditionSeverityVS
 Id: condition-severity-vs
 Title: "Condition Severity ValueSet"
 Description: "Severity codes for Condition resources."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/condition-severity-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-severity-vs"
 * ^status = #draft
 * include codes from system ConditionSeverityCS
 
@@ -193,7 +193,7 @@ ValueSet: ConditionStageVS
 Id: condition-stage-vs
 Title: "Condition Stage ValueSet"
 Description: "Staging codes for oncology and staged conditions."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/condition-stage-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-stage-vs"
 * ^status = #draft
 * include codes from system ConditionStageCS
 
@@ -203,7 +203,7 @@ ValueSet: MedAdminRouteVS
 Id: med-admin-route-vs
 Title: "Medication Administration Route ValueSet"
 Description: "Route of administration codes for MedicationAdministration."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/med-admin-route-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/med-admin-route-vs"
 * ^status = #draft
 * include codes from system MedAdminRouteCS
 
@@ -213,7 +213,7 @@ ValueSet: ObservationMethodsVS
 Id: observation-methods-vs
 Title: "Observation Methods ValueSet"
 Description: "Methods used to perform clinical observations."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/observation-methods-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/observation-methods-vs"
 * ^status = #draft
 * include codes from system ObservationMethodsCS
 
@@ -223,7 +223,7 @@ ValueSet: AdditionalInstructionVS
 Id: additional-instruction-vs
 Title: "Additional Instruction Codes ValueSet"
 Description: "Supplementary instructions for dispensed or administered medication."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/additional-instruction-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/additional-instruction-vs"
 * ^status = #draft
 * include codes from system AdditionalInstructionCS
 
@@ -234,7 +234,7 @@ ValueSet: ApproachSiteVS
 Id: approach-site-vs
 Title: "Approach Site Codes ValueSet"
 Description: "Body site codes for medication administration site."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/approach-site-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/approach-site-vs"
 * ^status = #draft
 * include codes from system ApproachSiteCS
 
@@ -244,7 +244,7 @@ ValueSet: CarePlanCategoryVS
 Id: care-plan-category-vs
 Title: "Care Plan Category ValueSet"
 Description: "Category codes for care plan types."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/care-plan-category-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/care-plan-category-vs"
 * ^status = #draft
 * include codes from system CarePlanCategoryCS
 
@@ -255,7 +255,7 @@ ValueSet: ProcedureCodeVS
 Id: procedure-code-vs
 Title: "Procedure Code ValueSet"
 Description: "Clinical procedure codes for care plan activities and service requests."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/procedure-code-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/procedure-code-vs"
 * ^status = #draft
 * include codes from system ProcedureCodeCS
 
@@ -267,7 +267,7 @@ ValueSet: ManifestationVS
 Id: manifestation-vs
 Title: "Manifestation or Symptom ValueSet"
 Description: "Clinical manifestations and symptoms."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/manifestation-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/manifestation-vs"
 * ^status = #draft
 * include codes from system ManifestationCS
 
@@ -279,6 +279,6 @@ ValueSet: ConditionCodesVS
 Id: condition-codes-vs
 Title: "Condition Codes ValueSet"
 Description: "Codes for clinical conditions and diagnoses. References ICD-10 pending population of the MOH-KENYA CONDITION-CODES OCL collection."
-* ^url = "https://prescription.intellisoftkenya.com/ValueSet/condition-codes-vs"
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-codes-vs"
 * ^status = #draft
 * include codes from system http://hl7.org/fhir/sid/icd-10

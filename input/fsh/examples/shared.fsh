@@ -112,6 +112,25 @@ Description: "Outpatient pharmacy at Kenyatta National Hospital."
 
 
 // ----------------------------------------------------------------------------
+// Condition – James Otieno Lung Cancer (shared placeholder for EpisodeOfCare)
+// ----------------------------------------------------------------------------
+Instance: example-condition-otieno-lungcancer
+InstanceOf: Condition
+Usage: #example
+Title: "Condition – James Otieno Lung Cancer"
+Description: "Lung carcinoma condition for James Otieno, referenced by the oncology episode of care."
+
+* id = "example-condition-otieno-lungcancer"
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical-status#active "Active"
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
+* category[0] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis "Encounter Diagnosis"
+* code = http://hl7.org/fhir/sid/icd-10#C34.1 "Malignant neoplasm of upper lobe, bronchus or lung"
+* subject = Reference(example-patient-otieno)
+* onsetDateTime = "2025-06-10"
+* recordedDate = "2025-06-10"
+
+
+// ----------------------------------------------------------------------------
 // Inline CareTeam – used inside the OncologyCarePlan contained element
 // ----------------------------------------------------------------------------
 Instance: inline-careteam-oncology

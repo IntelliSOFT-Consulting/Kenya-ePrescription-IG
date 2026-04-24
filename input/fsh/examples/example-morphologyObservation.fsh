@@ -10,7 +10,7 @@
 // Description: "Final histopathology result for James Otieno's CT-guided lung biopsy confirming pulmonary adenocarcinoma, performed at KNH pathology department."
 
 // * id = "example-morphologyobservation-otieno-histopath"
-// * meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-morphology-observation"
+// * meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-morphology-observation"
 
 // * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/observation-identifier"
 // * identifier[0].value = "OBS-2025-PATH-00512"

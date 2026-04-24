@@ -10,7 +10,7 @@
 // Description: "Confirmed diagnosis of malignant neoplasm of the right lower lobe of the lung (Stage II) for James Otieno, recorded at KNH during inpatient admission."
 
 // * id = "example-oncologydiagnosis-otieno-lungcancer"
-// * meta.profile[0] = "https://prescription.intellisoftkenya.com/StructureDefinition/ke-oncology-diagnosis"
+// * meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-oncology-diagnosis"
 
 // * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/condition-identifier"
 // * identifier[0].value = "COND-2025-IPD-00301"
