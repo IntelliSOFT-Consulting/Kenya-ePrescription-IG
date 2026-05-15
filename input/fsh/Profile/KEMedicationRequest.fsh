@@ -9,6 +9,8 @@ Id: ke-medication-request
 Title: "Kenya eRx MedicationRequest"
 Description: "Profile on MedicationRequest for the Kenya Electronic Prescription (eRx) Implementation Guide."
 
+* obeys has-dosage-or-dispense
+
 // ── Resource identity ─────────────────────────────────────
 * id 1..1
 * meta 1..1 MS
@@ -95,16 +97,16 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 * dosageInstruction.timing.repeat.durationUnit 0..1 MS
 * dosageInstruction.timing.repeat.durationUnit ^short = "Duration unit"
 * dosageInstruction.timing.code 0..1 MS
-* dosageInstruction.timing.code from $KE-MedReqDispenserInstr (required)
-* dosageInstruction.timing.code ^short = "Coded frequency (e.g. BID, TID)"
+* dosageInstruction.timing.code from $KE-TimingAbbreviation (extensible)
+* dosageInstruction.timing.code ^short = "Coded timing abbreviation (e.g. BID, TID, QD)"
 
 * dosageInstruction.route 1..1 MS
 * dosageInstruction.route from $KE-RouteOfAdmin (required)
 * dosageInstruction.route ^short = "Route of administration"
 
 * dosageInstruction.method 0..1
-* dosageInstruction.method from $KE-RouteOfAdmin (required)
-* dosageInstruction.method ^short = "Method of administration"
+* dosageInstruction.method from http://hl7.org/fhir/ValueSet/administration-method-codes (extensible)
+* dosageInstruction.method ^short = "Method of administration (e.g. swallow, inject, infuse)"
 
 * dosageInstruction.doseAndRate 1..* MS
 * dosageInstruction.doseAndRate.dose[x]

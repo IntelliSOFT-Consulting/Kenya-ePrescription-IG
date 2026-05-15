@@ -55,8 +55,8 @@ Description: "Profile on MedicationStatement for the Kenya eRx Implementation Gu
 
 // ── Reason ───────────────────────────────────────────────
 * reasonCode 0..* MS
-* reasonCode from $KE-ICD11 (required)
-* reasonCode ^short = "Clinical reason for medication use (ICD-11)"
+* reasonCode from $KE-ICD11 (preferred)
+* reasonCode ^short = "Clinical reason for medication use (ICD-11 preferred)"
 
 * reasonReference 0..* MS
 * reasonReference only Reference(Condition)

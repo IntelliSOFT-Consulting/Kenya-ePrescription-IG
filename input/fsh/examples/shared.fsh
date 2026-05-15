@@ -121,10 +121,10 @@ Title: "Condition – James Otieno Lung Cancer"
 Description: "Lung carcinoma condition for James Otieno, referenced by the oncology episode of care."
 
 * id = "example-condition-otieno-lungcancer"
-* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical-status#active "Active"
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
 * category[0] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis "Encounter Diagnosis"
-* code = http://hl7.org/fhir/sid/icd-10#C34.1 "Malignant neoplasm of upper lobe, bronchus or lung"
+* code = http://hl7.org/fhir/sid/icd-10#C34.1 "Upper lobe, bronchus or lung"
 * subject = Reference(example-patient-otieno)
 * onsetDateTime = "2025-06-10"
 * recordedDate = "2025-06-10"

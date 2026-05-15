@@ -41,3 +41,13 @@ The Kenya ePrescription FHIR Implementation Guide (IG) defines how electronic pr
 ### Summary
 
 The Kenya ePrescription FHIR IG delivers the rules, profiles, workflows, and vocabulary bindings needed for safe, standardised, and interoperable exchange of electronic prescriptions. It connects prescribers, pharmacies, and health systems to ensure medications are prescribed and dispensed digitally with accuracy, safety, and efficiency, while seamlessly integrating with Patient Summaries and eClaims processes.
+
+---
+
+{% include ip-statements.xhtml %}
+
+{% include cross-version-analysis.xhtml %}
+
+{% include dependency-table.xhtml %}
+
+{% include globals-table.xhtml %}

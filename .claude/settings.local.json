@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n 'medication-request-status-cs#\\\\|medication-request-priorityCS#\\\\|icd-11/$expand\\\\|ke-md-dosage' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/examples/invalid-examples.fsh)",
+      "Bash(git -C /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG diff --stat)",
+      "Bash(python3 -)",
+      "Bash(grep -v \"^#\\\\|^$\\\\| 0 / 0 \")",
+      "Bash(sed -i '' 's|\"https://nshr-uat\\\\.sha\\\\.go\\\\.ke/policy/eprescription-creation\"|\"urn:ke:eprescription:policy:prescription-creation\"|g' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/examples/example-provenance.fsh)",
+      "Bash(sed -i '' 's|\"https://nshr-uat\\\\.sha\\\\.go\\\\.ke/policy/medication-administration\"|\"urn:ke:eprescription:policy:medication-administration\"|g' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/examples/example-provenance.fsh)",
+      "Bash(python3 -c ' *)",
+      "Bash(sed -i '' 's/\\\\* \\\\^experimental = true/\\\\* ^experimental = false/g' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/Terminology/valueSet.fsh)",
+      "Bash(sed -i '' 's/\\\\* \\\\^status = #draft/\\\\* ^status = #active/g' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/Terminology/valueSet.fsh)",
+      "Bash(sed -i '' 's/\\\\* \\\\^experimental = true/\\\\* ^experimental = false/g' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/Terminology/codeSystem.fsh)",
+      "Bash(sed -i '' 's/\\\\* \\\\^experimental = true/\\\\* ^experimental = false/g' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/Extensions/extensions.fsh)",
+      "Bash(sed -i '' 's/\\\\* \\\\^experimental  = true/\\\\* ^experimental = false/g' /Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/input/fsh/Extensions/extensions.fsh)"
+    ]
+  }
+}

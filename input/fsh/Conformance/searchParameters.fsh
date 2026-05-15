@@ -7,13 +7,13 @@
 // ----------------------------------------------------------------------------
 // MedicationRequest – by prescription identifier
 // ----------------------------------------------------------------------------
-Instance: sp-medicationrequest-identifier
+Instance: medicationrequest-identifier
 InstanceOf: SearchParameter
 Usage: #definition
 Title: "SearchParameter – MedicationRequest Identifier"
 Description: "Search MedicationRequest resources by their Kenya prescription identifier (NamingSystem: prescription-identifier)."
 
-* id          = "sp-medicationrequest-identifier"
+* id          = "medicationrequest-identifier"
 * url         = "https://nshr-uat.sha.go.ke/SearchParameter/medicationrequest-identifier"
 * version     = "0.1.0"
 * name        = "MedicationRequestIdentifier"
@@ -34,13 +34,13 @@ Description: "Search MedicationRequest resources by their Kenya prescription ide
 // ----------------------------------------------------------------------------
 // MedicationRequest – by authoredOn date range
 // ----------------------------------------------------------------------------
-Instance: sp-medicationrequest-authoredon
+Instance: medicationrequest-authoredon
 InstanceOf: SearchParameter
 Usage: #definition
 Title: "SearchParameter – MedicationRequest AuthoredOn"
 Description: "Search MedicationRequest resources by the date the prescription was authored, supporting date range queries."
 
-* id          = "sp-medicationrequest-authoredon"
+* id          = "medicationrequest-authoredon"
 * url         = "https://nshr-uat.sha.go.ke/SearchParameter/medicationrequest-authoredon"
 * version     = "0.1.0"
 * name        = "MedicationRequestAuthoredOn"
@@ -66,13 +66,13 @@ Description: "Search MedicationRequest resources by the date the prescription wa
 // ----------------------------------------------------------------------------
 // MedicationRequest – by medication code (GenericProducts)
 // ----------------------------------------------------------------------------
-Instance: sp-medicationrequest-medication-code
+Instance: medicationrequest-medication-code
 InstanceOf: SearchParameter
 Usage: #definition
 Title: "SearchParameter – MedicationRequest Medication Code"
 Description: "Search MedicationRequest resources by the PPB generic product code in medicationCodeableConcept."
 
-* id          = "sp-medicationrequest-medication-code"
+* id          = "medicationrequest-medication-code"
 * url         = "https://nshr-uat.sha.go.ke/SearchParameter/medicationrequest-medication-code"
 * version     = "0.1.0"
 * name        = "MedicationRequestMedicationCode"
@@ -93,13 +93,13 @@ Description: "Search MedicationRequest resources by the PPB generic product code
 // ----------------------------------------------------------------------------
 // MedicationDispense – by prescription reference
 // ----------------------------------------------------------------------------
-Instance: sp-medicationdispense-prescription
+Instance: medicationdispense-prescription
 InstanceOf: SearchParameter
 Usage: #definition
 Title: "SearchParameter – MedicationDispense Prescription"
 Description: "Search MedicationDispense resources by the authorizing MedicationRequest (prescription) reference."
 
-* id          = "sp-medicationdispense-prescription"
+* id          = "medicationdispense-prescription"
 * url         = "https://nshr-uat.sha.go.ke/SearchParameter/medicationdispense-prescription"
 * version     = "0.1.0"
 * name        = "MedicationDispensePrescription"
@@ -121,13 +121,13 @@ Description: "Search MedicationDispense resources by the authorizing MedicationR
 // ----------------------------------------------------------------------------
 // MedicationDispense – by whenHandedOver date
 // ----------------------------------------------------------------------------
-Instance: sp-medicationdispense-whenhandedover
+Instance: medicationdispense-whenhandedover
 InstanceOf: SearchParameter
 Usage: #definition
 Title: "SearchParameter – MedicationDispense WhenHandedOver"
 Description: "Search MedicationDispense resources by the date the medication was handed to the patient."
 
-* id          = "sp-medicationdispense-whenhandedover"
+* id          = "medicationdispense-whenhandedover"
 * url         = "https://nshr-uat.sha.go.ke/SearchParameter/medicationdispense-whenhandedover"
 * version     = "0.1.0"
 * name        = "MedicationDispenseWhenHandedOver"
@@ -151,13 +151,13 @@ Description: "Search MedicationDispense resources by the date the medication was
 // ----------------------------------------------------------------------------
 // AllergyIntolerance – by substance code
 // ----------------------------------------------------------------------------
-Instance: sp-allergyintolerance-substance
+Instance: allergyintolerance-substance
 InstanceOf: SearchParameter
 Usage: #definition
 Title: "SearchParameter – AllergyIntolerance Substance Code"
 Description: "Search AllergyIntolerance resources by the allergen substance code from ActiveComponentsVS, supporting clinical decision support alerts."
 
-* id          = "sp-allergyintolerance-substance"
+* id          = "allergyintolerance-substance"
 * url         = "https://nshr-uat.sha.go.ke/SearchParameter/allergyintolerance-substance"
 * version     = "0.1.0"
 * name        = "AllergyIntoleranceSubstance"
@@ -176,15 +176,78 @@ Description: "Search AllergyIntolerance resources by the allergen substance code
 
 
 // ----------------------------------------------------------------------------
+// Provenance – by target resource
+// ----------------------------------------------------------------------------
+Instance: provenance-target
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SearchParameter – Provenance Target"
+Description: "Search Provenance records by the medication workflow resource they describe (MedicationRequest, MedicationDispense, MedicationAdministration, or MedicationStatement)."
+
+* id          = "provenance-target"
+* url         = "https://nshr-uat.sha.go.ke/SearchParameter/provenance-target"
+* version     = "0.1.0"
+* name        = "ProvenanceTarget"
+* status      = #active
+* experimental = false
+* date        = "2025-06-01"
+* publisher   = "Digital Health Agency, Kenya"
+* description = "Allows retrieval of all audit records linked to a specific prescription, dispense, administration, or medication statement resource."
+* jurisdiction = urn:iso:std:iso:3166#KE "Kenya"
+* code        = #target
+* base[0]     = #Provenance
+* type        = #reference
+* expression  = "Provenance.target"
+* xpath       = "f:Provenance/f:target"
+* xpathUsage  = #normal
+* target[0]   = #MedicationRequest
+* target[1]   = #MedicationDispense
+* target[2]   = #MedicationAdministration
+* target[3]   = #MedicationStatement
+
+
+// ----------------------------------------------------------------------------
+// Provenance – by recorded date
+// ----------------------------------------------------------------------------
+Instance: provenance-recorded
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SearchParameter – Provenance Recorded"
+Description: "Search Provenance records by the instant they were written to the server, supporting time-bounded audit queries."
+
+* id          = "provenance-recorded"
+* url         = "https://nshr-uat.sha.go.ke/SearchParameter/provenance-recorded"
+* version     = "0.1.0"
+* name        = "ProvenanceRecorded"
+* status      = #active
+* experimental = false
+* date        = "2025-06-01"
+* publisher   = "Digital Health Agency, Kenya"
+* description = "Enables date-range audit queries such as 'all changes recorded on a given day' for compliance and pharmacovigilance reporting."
+* jurisdiction = urn:iso:std:iso:3166#KE "Kenya"
+* code        = #recorded
+* base[0]     = #Provenance
+* type        = #date
+* expression  = "Provenance.recorded"
+* xpath       = "f:Provenance/f:recorded"
+* xpathUsage  = #normal
+* comparator[0] = #eq
+* comparator[1] = #ge
+* comparator[2] = #le
+* comparator[3] = #gt
+* comparator[4] = #lt
+
+
+// ----------------------------------------------------------------------------
 // Encounter – by service provider (facility)
 // ----------------------------------------------------------------------------
-Instance: sp-encounter-service-provider
+Instance: encounter-service-provider
 InstanceOf: SearchParameter
 Usage: #definition
 Title: "SearchParameter – Encounter ServiceProvider"
 Description: "Search Encounter resources by the managing organisation (health facility) using the MFL facility code."
 
-* id          = "sp-encounter-service-provider"
+* id          = "encounter-service-provider"
 * url         = "https://nshr-uat.sha.go.ke/SearchParameter/encounter-service-provider"
 * version     = "0.1.0"
 * name        = "EncounterServiceProvider"

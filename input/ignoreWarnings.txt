@@ -1,5 +1,11 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
-# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# ICD-11 is not available on the public FHIR terminology server (tx.fhir.org).
+# The ValueSet is intentionally defined as a placeholder for implementers who have
+# access to the WHO ICD-11 CodeSystem. This limitation does not affect IG correctness.
+A definition for CodeSystem 'http://id.who.int/icd/release/11/mms' could not be found
+
+# Provenance.policy URNs (urn:ke:eprescription:policy:...) are opaque identifiers
+# for internal policy documents. They are valid URI syntax under RFC 2141 and do not
+# need to resolve to a network location. The validator warning is expected and safe.
+No definition could be found for URL value 'urn:ke:eprescription:policy:

@@ -30,7 +30,7 @@ Description: "Profile on Encounter for the Kenya eRx Implementation Guide."
 
 // ── Type & service ────────────────────────────────────────
 * serviceType 0..1 MS
-* serviceType from $VS-service-type (required)
+* serviceType from $VS-service-type (extensible)
 * serviceType ^short = "Broad categorization of service (e.g. cardiology, oncology)"
 
 * priority 0..1 MS

@@ -4,19 +4,19 @@
 // system hosted at the national Health Information Exchange (HIE).
 // ============================================================================
 
-Instance: kenya-eprescription-server-capability
+Instance: kenya-eprescription-server
 InstanceOf: CapabilityStatement
 Usage: #definition
 Title: "Kenya ePrescription Server CapabilityStatement"
 Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescription server. Implementers must support all SHALL interactions and SHOULD support all SHOULD interactions to claim conformance with this IG."
 
-* id          = "kenya-eprescription-server-capability"
+* id          = "kenya-eprescription-server"
 * url         = "https://nshr-uat.sha.go.ke/CapabilityStatement/kenya-eprescription-server"
 * version     = "0.1.0"
 * name        = "KenyaEPrescriptionServerCapabilityStatement"
 * title       = "Kenya ePrescription Server CapabilityStatement"
-* status      = #draft
-* experimental = true
+* status      = #active
+* experimental = false
 * date        = "2025-06-01"
 * publisher   = "Digital Health Agency, Kenya"
 * contact[0].name = "Digital Health Agency – FHIR Team"
@@ -259,7 +259,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // Condition (Oncology Diagnosis)
 // ----------------------------------------------------------------------------
 * rest[0].resource[10].type = #Condition
-* rest[0].resource[10].profile = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-oncology-diagnosis"
+* rest[0].resource[10].profile = "http://hl7.org/fhir/StructureDefinition/Condition"
 * rest[0].resource[10].interaction[0].code = #read
 * rest[0].resource[10].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[10].interaction[0].extension[0].valueCode = #SHALL
@@ -320,20 +320,45 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // * rest[0].resource[12].searchParam[1].type = #token
 
 // ----------------------------------------------------------------------------
-// EpisodeOfCare
+// Provenance
 // ----------------------------------------------------------------------------
-* rest[0].resource[11].type = #EpisodeOfCare
-* rest[0].resource[11].profile = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-episode-of-care"
+* rest[0].resource[11].type = #Provenance
+* rest[0].resource[11].profile = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-provenance"
+* rest[0].resource[11].documentation = "Audit trail resource capturing authorship and lifecycle changes to prescriptions, dispenses, and administration records. Servers SHALL support read and create; search by target is SHOULD."
 * rest[0].resource[11].interaction[0].code = #read
 * rest[0].resource[11].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[11].interaction[0].extension[0].valueCode = #SHALL
 * rest[0].resource[11].interaction[1].code = #create
 * rest[0].resource[11].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[11].interaction[1].extension[0].valueCode = #SHOULD
+* rest[0].resource[11].interaction[1].extension[0].valueCode = #SHALL
 * rest[0].resource[11].interaction[2].code = #search-type
 * rest[0].resource[11].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[11].interaction[2].extension[0].valueCode = #SHOULD
-* rest[0].resource[11].searchParam[0].name = "patient"
+* rest[0].resource[11].searchParam[0].name = "target"
 * rest[0].resource[11].searchParam[0].type = #reference
-* rest[0].resource[11].searchParam[1].name = "status"
-* rest[0].resource[11].searchParam[1].type = #token
+* rest[0].resource[11].searchParam[0].documentation = "Filter provenance records by the target medication resource (MedicationRequest, MedicationDispense, MedicationAdministration, MedicationStatement)"
+* rest[0].resource[11].searchParam[1].name = "recorded"
+* rest[0].resource[11].searchParam[1].type = #date
+* rest[0].resource[11].searchParam[1].documentation = "Filter provenance records by the date the record was created"
+* rest[0].resource[11].searchParam[2].name = "agent"
+* rest[0].resource[11].searchParam[2].type = #reference
+* rest[0].resource[11].searchParam[2].documentation = "Filter provenance records by the responsible actor (prescriber, pharmacist, or system)"
+
+// ----------------------------------------------------------------------------
+// EpisodeOfCare
+// ----------------------------------------------------------------------------
+* rest[0].resource[12].type = #EpisodeOfCare
+* rest[0].resource[12].profile = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-episode-of-care"
+* rest[0].resource[12].interaction[0].code = #read
+* rest[0].resource[12].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[12].interaction[0].extension[0].valueCode = #SHALL
+* rest[0].resource[12].interaction[1].code = #create
+* rest[0].resource[12].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[12].interaction[1].extension[0].valueCode = #SHOULD
+* rest[0].resource[12].interaction[2].code = #search-type
+* rest[0].resource[12].interaction[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[12].interaction[2].extension[0].valueCode = #SHOULD
+* rest[0].resource[12].searchParam[0].name = "patient"
+* rest[0].resource[12].searchParam[0].type = #reference
+* rest[0].resource[12].searchParam[1].name = "status"
+* rest[0].resource[12].searchParam[1].type = #token
