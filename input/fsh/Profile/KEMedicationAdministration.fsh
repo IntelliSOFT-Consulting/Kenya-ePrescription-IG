@@ -65,8 +65,8 @@ Description: "Profile on MedicationAdministration for the Kenya eRx Implementati
 
 // ── Reason ───────────────────────────────────────────────
 * reasonCode 0..* MS
-* reasonCode from $KE-ICD11 (required)
-* reasonCode ^short = "Reason for medication administration (ICD-11)"
+* reasonCode from $KE-ICD11 (preferred)
+* reasonCode ^short = "Reason for medication administration (ICD-11 preferred)"
 
 // ── Request ───────────────────────────────────────────────
 * request 0..1 MS
@@ -86,8 +86,8 @@ Description: "Profile on MedicationAdministration for the Kenya eRx Implementati
 * dosage.route from $KE-MedAdminRoute (required)
 * dosage.route ^short = "Route of administration"
 * dosage.method 0..1 MS
-* dosage.method from $KE-RouteOfAdmin (required)
-* dosage.method ^short = "Method of administration (e.g. IV push, inhalation)"
+* dosage.method from http://hl7.org/fhir/ValueSet/administration-method-codes (extensible)
+* dosage.method ^short = "Method of administration (e.g. IV push, infusion, inhalation)"
 * dosage.dose 1..1 MS
 * dosage.dose only SimpleQuantity
 * dosage.dose ^short = "Quantity of medication administered (UCUM)"

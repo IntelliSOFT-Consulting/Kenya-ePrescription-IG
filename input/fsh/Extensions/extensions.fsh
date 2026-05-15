@@ -172,23 +172,25 @@ Description: "Indicates whether a notification was sent to the prescriber and/or
 // Supporting ValueSet for ControlledSubstanceScheduleExtension
 // ============================================================================
 ValueSet: ControlledSubstanceScheduleVS
-Id: controlled-substance-schedule-vs
+Id: controlled-substance-schedule
 Title: "Controlled Substance Schedule ValueSet"
 Description: "Regulatory schedules for controlled substances as defined under the Kenya Pharmacy and Poisons Act, Cap 244."
 
-* ^url    = "https://nshr-uat.sha.go.ke/ValueSet/controlled-substance-schedule"
-* ^status = #active
+* ^url         = "https://nshr-uat.sha.go.ke/ValueSet/controlled-substance-schedule"
+* ^status      = #active
+* ^experimental = false
 * include codes from system ControlledSubstanceScheduleCS
 
 
 CodeSystem: ControlledSubstanceScheduleCS
-Id: controlled-substance-schedule-cs
+Id: controlled-substance-schedule
 Title: "Controlled Substance Schedule CodeSystem"
 Description: "Schedules for controlled substances under the Kenya Pharmacy and Poisons Act."
 
-* ^url         = "https://nshr-uat.sha.go.ke/CodeSystem/controlled-substance-schedule"
-* ^status      = #active
-* ^content     = #complete
+* ^url           = "https://nshr-uat.sha.go.ke/CodeSystem/controlled-substance-schedule"
+* ^status        = #active
+* ^experimental = false
+* ^content       = #complete
 * ^caseSensitive = true
 
 * #schedule-I   "Schedule I"   "Substances with high abuse potential and no accepted medical use (e.g. heroin)."

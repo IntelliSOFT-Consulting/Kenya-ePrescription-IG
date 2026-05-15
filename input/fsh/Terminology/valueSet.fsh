@@ -1,18 +1,18 @@
 // ============================================================================
 // ValueSets for Kenya ePrescription Implementation Guide
-// Each ValueSet is backed by a local CodeSystem in codeSystem.fsh
+// Rules:
+//   • Id MUST equal the last segment of ^url (IG Publisher enforces this).
+//   • ^url MUST match alias definitions in aliases.fsh exactly.
+//   • ^experimental = false (production) — ShareableValueSet profile requires this field.
 // ============================================================================
-
-// ----------------------------------------------------------------------------
-// MedicationRequest
-// ----------------------------------------------------------------------------
 
 ValueSet: MedicationRequestPriorityVS
 Id: medication-request-priority-vs
 Title: "Medication Request Priority ValueSet"
 Description: "ValueSet for priority levels in the MedicationRequest workflow."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-request-priority-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/medication-request-priority-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system MedicationRequestPriorityCS
 
 
@@ -20,265 +20,266 @@ ValueSet: MedicationRequestStatusVS
 Id: medication-request-status-vs
 Title: "MedicationRequest Status ValueSet"
 Description: "ValueSet containing status codes for MedicationRequest."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-request-status-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/medication-request-status-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system MedicationRequestStatusCS
 
 
-// ----------------------------------------------------------------------------
-// Route of Administration
-// Used in: MedicationRequest.dosageInstruction.route / .method
-//          AllergyIntolerance.reaction.exposureRoute
-//          MedicationAdministration.dosage.route / .method
-//          MedicationDispense.dosageInstruction.route
-// ----------------------------------------------------------------------------
-
+// Alias: $KE-RouteOfAdmin
 ValueSet: RouteOfAdministrationVS
 Id: route-of-administration-vs
 Title: "Route of Administration ValueSet"
 Description: "Codes for route of administration of medications, drawn from the MOH PPB route of administration code system."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/route-of-administration-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/route-of-administration-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system RouteOfAdministrationCS
 
 
-// ----------------------------------------------------------------------------
-// Unit of Measure
-// Used in: MedicationRequest.dosageInstruction.timing.repeat.periodUnit / durationUnit
-// ----------------------------------------------------------------------------
-
+// Alias: $KE-UoM
 ValueSet: UnitOfMeasureVS
 Id: unit-of-measure-vs
 Title: "Unit of Measure ValueSet"
 Description: "Codes for units of measure used in medication dosing, drawn from the MOH PPB unit of measure code system."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/unit-of-measure-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/unit-of-measure-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system UnitOfMeasureCS
 
 
-// ----------------------------------------------------------------------------
-// Formulation (Dosage Form)
-// Used in: Medication.form
-// ----------------------------------------------------------------------------
-
+// Alias: $KE-Formulation
 ValueSet: FormulationVS
 Id: formulation-vs
 Title: "Formulation (Dosage Form) ValueSet"
 Description: "Pharmaceutical formulation/dosage form codes drawn from the MOH PPB formulation code system."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/formulation-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/formulation-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system FormulationCS
 
 
-// ----------------------------------------------------------------------------
-// Active Components (Active Pharmaceutical Ingredients)
-// Used in: AllergyIntolerance.code
-//          AllergyIntolerance.reaction.substance
-//          Medication.ingredient.itemCodeableConcept
-// ----------------------------------------------------------------------------
-
+// Alias: $KE-ActiveComponents
 ValueSet: ActiveComponentsVS
 Id: active-components-vs
 Title: "Active Components ValueSet"
 Description: "Active pharmaceutical ingredient codes drawn from the MOH PPB active components code system."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/active-components-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/active-components-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system ActiveComponentsCS
 
 
-// ----------------------------------------------------------------------------
-// Generic Products (Medicinal Products)
-// Used in: MedicationRequest.medicationCodeableConcept
-//          MedicationDispense.medicationCodeableConcept
-//          MedicationAdministration.medicationCodeableConcept
-//          MedicationStatement.medicationCodeableConcept
-//          Medication.code
-// ----------------------------------------------------------------------------
-
+// Alias: $KE-GenericProducts
 ValueSet: GenericProductsVS
 Id: generic-products-vs
 Title: "Generic Products ValueSet"
 Description: "Generic medicinal product codes drawn from the MOH PPB generic products code system."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/generic-products-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/generic-products-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system GenericProductsCS
 
 
 // ============================================================================
-// ValueSets for MOH-KENYA CodeSystems
+// MOH-KENYA local ValueSets
 // ============================================================================
 
-// Used in: MedicationRequest.statusReason
+// Alias: $KE-MedReqStatusReason
 ValueSet: MedicationRequestStatusReasonVS
-Id: medication-request-status-reason-vs
+Id: medication-request-status-reason
 Title: "MedicationRequest Status Reason ValueSet"
 Description: "Reasons for a MedicationRequest status change."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-request-status-reason-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/medication-request-status-reason"
+* ^status = #active
+* ^experimental = false
 * include codes from system MedicationRequestStatusReasonCS
 
 
-// Used in: MedicationDispense.statusReasonCodeableConcept
+// Alias: $KE-MedDispStatusReason
 ValueSet: MedicationDispenseStatusReasonVS
-Id: medication-dispense-status-reason-vs
+Id: medication-dispense-status-reason
 Title: "MedicationDispense Status Reason ValueSet"
 Description: "Reasons for a MedicationDispense status."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-dispense-status-reason-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/medication-dispense-status-reason"
+* ^status = #active
+* ^experimental = false
 * include codes from system MedicationDispenseStatusReasonCS
 
 
-// Used in: MedicationAdministration.statusReason
+// Alias: $KE-MedAdminStatusReason
 ValueSet: MedicationAdminStatusReasonVS
-Id: medication-admin-status-reason-vs
+Id: medication-admin-status-reason
 Title: "MedicationAdministration Status Reason ValueSet"
 Description: "Reasons for a MedicationAdministration status."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-admin-status-reason-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/medication-admin-status-reason"
+* ^status = #active
+* ^experimental = false
 * include codes from system MedicationAdminStatusReasonCS
 
 
-// Used in: MedicationStatement.statusReason
+// Alias: $KE-MedStmtStatusReason
 ValueSet: ReasonMedicationStatusVS
-Id: reason-medication-status-vs
+Id: reason-medication-status
 Title: "Reason Medication Status ValueSet"
 Description: "Reasons for a MedicationStatement status."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/reason-medication-status-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/reason-medication-status"
+* ^status = #active
+* ^experimental = false
 * include codes from system ReasonMedicationStatusCS
 
 
-// Used in: Condition.clinicalStatus (KEOncologyDiagnosis)
+// Alias: $KE-ConditionClinicalStatus
 ValueSet: ConditionClinicalStatusVS
-Id: condition-clinical-status-vs
+Id: condition-clinical-status
 Title: "Condition Clinical Status ValueSet"
 Description: "Clinical status codes for Condition resources."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-clinical-status-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/condition-clinical-status"
+* ^status = #active
+* ^experimental = false
 * include codes from system ConditionClinicalStatusCS
 
 
-// Used in: Condition.verificationStatus (KEOncologyDiagnosis)
+// Alias: $KE-ConditionVerifStatus
 ValueSet: ConditionVerificationStatusVS
-Id: condition-verification-status-vs
+Id: condition-verification-status
 Title: "Condition Verification Status ValueSet"
 Description: "Verification status codes for Condition resources."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-verification-status-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/condition-verification-status"
+* ^status = #active
+* ^experimental = false
 * include codes from system ConditionVerificationStatusCS
 
 
-// Used in: Condition.category (KEOncologyDiagnosis)
+// Alias: $KE-ConditionCategory
 ValueSet: ConditionCategoryVS
-Id: condition-category-vs
+Id: condition-category
 Title: "Condition Category ValueSet"
 Description: "Category codes for Condition resources."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-category-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/condition-category"
+* ^status = #active
+* ^experimental = false
 * include codes from system ConditionCategoryCS
 
 
-// Used in: Condition.severity (KEOncologyDiagnosis)
+// Alias: $KE-ConditionSeverity
 ValueSet: ConditionSeverityVS
-Id: condition-severity-vs
+Id: condition-severity
 Title: "Condition Severity ValueSet"
 Description: "Severity codes for Condition resources."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-severity-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/condition-severity"
+* ^status = #active
+* ^experimental = false
 * include codes from system ConditionSeverityCS
 
 
-// Used in: Condition.stage.summary / stage.type (KEOncologyDiagnosis)
+// Alias: $KE-ConditionStage
 ValueSet: ConditionStageVS
-Id: condition-stage-vs
+Id: condition-stage
 Title: "Condition Stage ValueSet"
 Description: "Staging codes for oncology and staged conditions."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-stage-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/condition-stage"
+* ^status = #active
+* ^experimental = false
 * include codes from system ConditionStageCS
 
 
-// Used in: MedicationAdministration.dosage.route
+// Alias: $KE-MedAdminRoute
 ValueSet: MedAdminRouteVS
-Id: med-admin-route-vs
+Id: med-admin-route
 Title: "Medication Administration Route ValueSet"
 Description: "Route of administration codes for MedicationAdministration."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/med-admin-route-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/med-admin-route"
+* ^status = #active
+* ^experimental = false
 * include codes from system MedAdminRouteCS
 
 
-// Used in: Observation.method (KEMorphologyObservation)
+// Alias: $KE-ObsMethods
 ValueSet: ObservationMethodsVS
-Id: observation-methods-vs
+Id: observation-methods
 Title: "Observation Methods ValueSet"
 Description: "Methods used to perform clinical observations."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/observation-methods-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/observation-methods"
+* ^status = #active
+* ^experimental = false
 * include codes from system ObservationMethodsCS
 
 
-// Used in: MedicationDispense.dosageInstruction.additionalInstruction
+// Alias: $KE-AdditionalInstr
 ValueSet: AdditionalInstructionVS
-Id: additional-instruction-vs
+Id: additional-instruction
 Title: "Additional Instruction Codes ValueSet"
 Description: "Supplementary instructions for dispensed or administered medication."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/additional-instruction-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/additional-instruction"
+* ^status = #active
+* ^experimental = false
 * include codes from system AdditionalInstructionCS
 
 
-// Used in: MedicationDispense.dosageInstruction.site
-//          MedicationAdministration.dosage.site
+// Alias: $KE-ApproachSite
 ValueSet: ApproachSiteVS
-Id: approach-site-vs
+Id: approach-site
 Title: "Approach Site Codes ValueSet"
 Description: "Body site codes for medication administration site."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/approach-site-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/approach-site"
+* ^status = #active
+* ^experimental = false
 * include codes from system ApproachSiteCS
 
 
-// Used in: CarePlan.category (KEOncologyCarePlan)
+// Alias: $KE-CarePlanCategory
 ValueSet: CarePlanCategoryVS
-Id: care-plan-category-vs
+Id: care-plan-category
 Title: "Care Plan Category ValueSet"
 Description: "Category codes for care plan types."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/care-plan-category-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/care-plan-category"
+* ^status = #active
+* ^experimental = false
 * include codes from system CarePlanCategoryCS
 
 
-// Used in: CarePlan.activity.detail.code (KEOncologyCarePlan)
-//          ServiceRequest.code (KEServiceRequest)
+// Alias: $KE-ProcedureCode
 ValueSet: ProcedureCodeVS
-Id: procedure-code-vs
+Id: procedure-code
 Title: "Procedure Code ValueSet"
 Description: "Clinical procedure codes for care plan activities and service requests."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/procedure-code-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/procedure-code"
+* ^status = #active
+* ^experimental = false
 * include codes from system ProcedureCodeCS
 
 
-// Used in: AllergyIntolerance.reaction.manifestation (KEAllergyIntolerance)
-//          Condition.evidence.code (KEOncologyDiagnosis)
-//          CarePlan.activity.detail.reasonCode (KEOncologyCarePlan)
+// Alias: $KE-Manifestation
 ValueSet: ManifestationVS
-Id: manifestation-vs
+Id: manifestation
 Title: "Manifestation or Symptom ValueSet"
 Description: "Clinical manifestations and symptoms."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/manifestation-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/manifestation"
+* ^status = #active
+* ^experimental = false
 * include codes from system ManifestationCS
 
 
-// Used in: MedicationRequest.reasonCode, MedicationAdministration.reasonCode
-// Note: MOH-KENYA CONDITION-CODES OCL collection is currently unpopulated.
-// Using ICD-10 as the backing terminology until the collection is populated.
+// Alias: $KE-ConditionCodes
 ValueSet: ConditionCodesVS
 Id: condition-codes-vs
 Title: "Condition Codes ValueSet"
 Description: "Codes for clinical conditions and diagnoses. References ICD-10 pending population of the MOH-KENYA CONDITION-CODES OCL collection."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-codes-vs"
-* ^status = #draft
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/condition-codes-vs"
+* ^status = #active
+* ^experimental = false
 * include codes from system http://hl7.org/fhir/sid/icd-10
+
+
+// Alias: $KE-ICD11
+// Local placeholder; system per WHO FHIR IG. Preferred binding — codes accepted
+// even when the tx server cannot enumerate the full ICD-11 hierarchy.
+ValueSet: ICD11VS
+Id: icd11
+Title: "ICD-11 Codes ValueSet"
+Description: "All codes from the WHO International Classification of Diseases, 11th Revision (ICD-11)."
+* ^url = "https://nshr-uat.sha.go.ke/ValueSet/icd11"
+* ^status = #active
+* ^experimental = false
+* include codes from system http://id.who.int/icd/release/11/mms

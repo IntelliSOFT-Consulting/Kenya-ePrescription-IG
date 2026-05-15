@@ -19,7 +19,7 @@ Description: "Intravenous administration of Azithromycin 500 mg to James Otieno 
 
 * category = http://terminology.hl7.org/CodeSystem/medication-admin-category#inpatient "Inpatient"
 
-* medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-otieno)
 
@@ -30,15 +30,11 @@ Description: "Intravenous administration of Azithromycin 500 mg to James Otieno 
 * performer[0].actor = Reference(example-practitioner-njoroge)
 * performer[0].function = http://terminology.hl7.org/CodeSystem/med-admin-perform-function#performer "Performer"
 
-* request = Reference(example-medicationrequest-amina-azithromycin)
-
 * note[0].text = "Administered as pre-chemotherapy antibiotic prophylaxis. Patient tolerated infusion well with no adverse reactions."
 
 // Dosage
 // dosage.route bound to $KE-MedAdminRoute (MedAdminRouteCS): ORAL | INTRAVENOUS-IV | INHALED
-* dosage.route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/med-admin-route-cs#INTRAVENOUS-IV "Intravenous"
-// dosage.method bound to $KE-RouteOfAdmin (RouteOfAdministrationCS)
-* dosage.method = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
+* dosage.route = https://nshr-uat.sha.go.ke/CodeSystem/med-admin-route-cs#INTRAVENOUS-IV "Intravenous"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"

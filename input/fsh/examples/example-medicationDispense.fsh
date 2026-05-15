@@ -17,7 +17,7 @@ Description: "First-fill dispense of Azithromycin 500 mg (3 tablets) at KNH Outp
 
 * status = #completed
 
-* medicationCodeableConcept.coding[0].system = "https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products-cs"
+* medicationCodeableConcept.coding[0].system = "https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs"
 * medicationCodeableConcept.coding[0].code = #GE10015
 * medicationCodeableConcept.coding[0].display = "Azithromycin 500 mg Oral Tablet"
 * medicationCodeableConcept.text = "Azithromycin 500 mg Oral Tablet"
@@ -37,7 +37,7 @@ Description: "First-fill dispense of Azithromycin 500 mg (3 tablets) at KNH Outp
 * quantity.value = 3
 * quantity.unit = "tablet"
 * quantity.system = "http://unitsofmeasure.org"
-* quantity.code = #{tablet}
+* quantity.code = #1
 
 * daysSupply.value = 3
 * daysSupply.unit = "day"
@@ -51,7 +51,7 @@ Description: "First-fill dispense of Azithromycin 500 mg (3 tablets) at KNH Outp
 * dosageInstruction[0].timing.repeat.frequency = 1
 * dosageInstruction[0].timing.repeat.period = 1
 * dosageInstruction[0].timing.repeat.periodUnit = #d
-* dosageInstruction[0].route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* dosageInstruction[0].route = https://nshr-uat.sha.go.ke/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 
 // No substitution occurred
 * substitution.wasSubstituted = false

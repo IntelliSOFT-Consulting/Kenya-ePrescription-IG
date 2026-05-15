@@ -182,3 +182,29 @@ This page describes the primary clinical and operational use cases supported by 
 **FHIR Resources Used:**
 - `KEAllergyIntolerance` — allergy record
 - `KenyaEPrescriptionMedicationRequest` — prescription with `detectedIssue` reference
+
+---
+
+## UC-08 – Prescription Audit Trail
+
+**Trigger:** A regulator, pharmacovigilance officer, or facility manager needs to determine who created, amended, or verified a medication record and when.
+
+**Actors:** Prescriber, Pharmacist, EMR System, National HIE, Kenya Pharmacy and Poisons Board (PPB)
+
+**Preconditions:**
+- The medication workflow resources (`MedicationRequest`, `MedicationDispense`, or `MedicationAdministration`) already exist on the HIE.
+- The acting system is authorised to write provenance records.
+
+**Main Flow:**
+1. Whenever a medication workflow resource is created or updated, the EMR or pharmacy system generates a `KEProvenance` resource pointing to that resource as `target`.
+2. The `activity` element records the nature of the operation (`CREATE`, `UPDATE`, `DELETE`) using the HL7 v3 DataOperation vocabulary.
+3. The `agent` element identifies the responsible person (prescriber, pharmacist) and the organisation on whose behalf they acted.
+4. The `entity` element optionally links to the prior version of the resource or the originating prescription to preserve the full chain of custody.
+5. When an audit query is received, the HIE returns all `Provenance` records matching the queried `target` resource or date range.
+6. The regulator or auditor can reconstruct the complete lifecycle: prescription created → prescription updated → dispense recorded → administration documented.
+
+**FHIR Resources Used:**
+- `KEProvenance` — audit record linking actor, activity, and target
+- `KenyaEPrescriptionMedicationRequest` — target: prescription creation / amendment
+- `KenyaMedicationDispense` — target: dispense verification
+- `KEMedicationAdministration` — target: administration recording

@@ -15,15 +15,15 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-2025-OPD-00789"
 
-* status = https://nshr-uat.sha.go.ke/CodeSystem/medication-request-status-cs#active "Active"
+* status = #active
 
 * intent = #order
 
 * category[0] = http://terminology.hl7.org/CodeSystem/medicationrequest-category#outpatient "Outpatient"
 
-* priority = https://nshr-uat.sha.go.ke/CodeSystem/medication-request-priorityCS#routine "Routine"
+* priority = #routine
 
-* medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
@@ -41,7 +41,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * dosageInstruction[0].timing.repeat.periodUnit = #d
 * dosageInstruction[0].timing.repeat.duration = 3
 * dosageInstruction[0].timing.repeat.durationUnit = #d
-* dosageInstruction[0].route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* dosageInstruction[0].route = https://nshr-uat.sha.go.ke/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.value = 500
 * dosageInstruction[0].doseAndRate[0].doseQuantity.unit = "mg"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.system = "http://unitsofmeasure.org"
@@ -54,7 +54,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * dispenseRequest.quantity.value = 3
 * dispenseRequest.quantity.unit = "tablet"
 * dispenseRequest.quantity.system = "http://unitsofmeasure.org"
-* dispenseRequest.quantity.code = #{tablet}
+* dispenseRequest.quantity.code = #1
 
 // Substitution: generic substitution permitted
 * substitution.allowedBoolean = true

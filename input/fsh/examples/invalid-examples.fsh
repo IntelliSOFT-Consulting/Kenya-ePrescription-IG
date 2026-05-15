@@ -34,7 +34,7 @@ Description: "INVALID Medication resource. The declared profile ke-medication re
 // INVALID: form [1..1 MS in ke-medication] — omitted entirely
 // INVALID: identifier [1..* in ke-medication] — omitted entirely
 
-* ingredient[0].itemCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10746 "Azithromycin"
+* ingredient[0].itemCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/active-components-cs#AC10746 "Azithromycin"
 
 
 // ----------------------------------------------------------------------------
@@ -70,8 +70,8 @@ Description: "INVALID MedicationRequest. Violations: dispenseRequest (1..1) omit
 * dosageInstruction[0].timing.repeat.frequency = 1
 * dosageInstruction[0].timing.repeat.period = 1
 * dosageInstruction[0].timing.repeat.periodUnit = #d
-// INVALID: route uses an unknown system not in $KE-RouteOfAdmin (RouteOfAdministrationCS)
-* dosageInstruction[0].route = http://example.org/wrong-routes#by-mouth "By Mouth"
+// INVALID: SNOMED oral route code is not in the required $KE-RouteOfAdmin (RouteOfAdministrationCS)
+* dosageInstruction[0].route = http://snomed.info/sct#26643006 "Oral route"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.value = 500
 * dosageInstruction[0].doseAndRate[0].doseQuantity.unit = "mg"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.system = "http://unitsofmeasure.org"
@@ -118,7 +118,7 @@ Description: "INVALID MedicationDispense. Violations: authorizingPrescription (1
 * quantity.value = 3
 * quantity.unit = "tablet"
 * quantity.system = "http://unitsofmeasure.org"
-* quantity.code = #{tablet}
+* quantity.code = #1
 
 * substitution.wasSubstituted = false
 
@@ -141,7 +141,7 @@ Description: "INVALID MedicationAdministration. Violations: context (Encounter, 
 
 * status = #completed
 
-* medicationCodeableConcept = https://ilm-hie.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 // subject uses a valid Patient reference (base FHIR requires Patient|Group; profile requires Patient only)
 * subject = Reference(example-patient-amina)
@@ -155,7 +155,7 @@ Description: "INVALID MedicationAdministration. Violations: context (Encounter, 
 
 // INVALID: dosage.route must use $KE-MedAdminRoute (MedAdminRouteCS: ORAL|INTRAVENOUS-IV|INHALED)
 // RT10036 is from RouteOfAdministrationCS which is NOT the required value set for this element
-* dosage.route = https://ilm-hie.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
+* dosage.route = https://nshr-uat.sha.go.ke/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"
@@ -219,14 +219,14 @@ Description: "INVALID AllergyIntolerance. Violations: recordedDate (1..1) omitte
 // Valid codes: low | high | unable-to-assess
 * criticality = #extreme
 
-* code = https://ilm-hie.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* code = https://nshr-uat.sha.go.ke/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
 
 * patient = Reference(example-patient-amina)
 
 // INVALID: recordedDate [1..1 in ke-allergy-intolerance] — omitted
 
-* reaction[0].substance = https://ilm-hie.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
-* reaction[0].manifestation[0] = https://ilm-hie.dha.go.ke/fhir/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
+* reaction[0].substance = https://nshr-uat.sha.go.ke/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* reaction[0].manifestation[0] = https://nshr-uat.sha.go.ke/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
 // INVALID: reaction.severity [1..1 in ke-allergy-intolerance] — omitted
 
 

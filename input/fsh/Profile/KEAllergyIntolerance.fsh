@@ -55,11 +55,11 @@ Description: "Profile on AllergyIntolerance for the Kenya eRx Implementation Gui
 * onset[x] 0..1 MS
 * onsetDateTime 0..1 MS
 * onsetDateTime ^short = "Use when allergy is still active"
-* onsetAge 0..1
-* onsetPeriod 0..1
+* onsetAge 0..1 MS
+* onsetPeriod 0..1 MS
 * onsetPeriod ^short = "Use when both start and end of allergy are known"
-* onsetRange 0..1
-* onsetString 0..1
+* onsetRange 0..1 MS
+* onsetString 0..1 MS
 
 // ── Recorded ─────────────────────────────────────────────
 * recordedDate 1..1 MS

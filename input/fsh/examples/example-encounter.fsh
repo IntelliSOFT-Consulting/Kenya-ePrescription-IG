@@ -22,7 +22,7 @@ Description: "Outpatient consultation at KNH for Amina Hassan, during which a pr
 
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
 
-* serviceType = http://terminology.hl7.org/CodeSystem/service-type#57 "General Practice"
+* serviceType = http://terminology.hl7.org/CodeSystem/service-type#124 "General Practice"
 
 * priority = http://terminology.hl7.org/CodeSystem/v3-ActPriority#R "Routine"
 
@@ -55,7 +55,7 @@ Description: "Inpatient oncology admission for James Otieno at KNH for cancer ev
 
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 
-* serviceType = http://terminology.hl7.org/CodeSystem/service-type#218 "Oncology"
+* serviceType = http://terminology.hl7.org/CodeSystem/service-type#83 "Cancer Services"
 
 * priority = http://terminology.hl7.org/CodeSystem/v3-ActPriority#R "Routine"
 

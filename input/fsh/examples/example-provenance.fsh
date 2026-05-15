@@ -21,7 +21,7 @@ Description: "Valid provenance record capturing the creation of Amina Hassan's A
 
 * recorded = "2025-06-15T09:30:05+03:00"
 
-* policy[0] = "https://nshr-uat.sha.go.ke/policy/eprescription-creation"
+* policy[0] = "urn:ke:eprescription:policy:prescription-creation"
 
 * location = Reference(example-location-knh-pharmacy)
 
@@ -60,33 +60,61 @@ Description: "Valid provenance record capturing the verification and completion 
 
 
 // ----------------------------------------------------------------------------
-// INVALID: Provenance – Wrong target type and missing activity
-// InstanceOf base Provenance so SUSHI compiles; meta.profile triggers
-// IG Publisher validator which reports profile violations.
-// Expected validation errors:
-//   • activity [1..1 in ke-provenance] — omitted
-//   • target restricted to Reference(MedicationRequest|MedicationDispense|
-//     MedicationAdministration|MedicationStatement) — Patient reference violates constraint
-//   • agent.who restricted to Reference(Practitioner|PractitionerRole|Organization|Patient)
-//     from an invalid system reference
+// VALID: Provenance – Administration recorded by Dr. Njoroge (Otieno IV cycle)
 // ----------------------------------------------------------------------------
-Instance: example-provenance-invalid
-InstanceOf: Provenance
+Instance: example-provenance-administration-recorded
+InstanceOf: KEProvenance
 Usage: #example
-Title: "Provenance – INVALID: Missing activity; wrong target type"
-Description: "INVALID Provenance. Violations: activity (1..1 in ke-provenance) omitted; target references a Patient instead of the required MedicationRequest|MedicationDispense|MedicationAdministration|MedicationStatement; agent.who references a Location which is not in the allowed reference types."
+Title: "Provenance – Administration Recorded by Dr. Njoroge (VALID)"
+Description: "Valid provenance record capturing the recording of James Otieno's IV chemotherapy administration by Dr. Sarah Njoroge at KNH, linking back to the originating prescription as a source entity."
 
-* id = "example-provenance-invalid"
+* id = "example-provenance-administration-recorded"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-provenance"
 
-// INVALID: ke-provenance restricts target to medication workflow resources only
-// Patient is not in Reference(MedicationRequest|MedicationDispense|MedicationAdministration|MedicationStatement)
-* target[0] = Reference(example-patient-amina)
+* target[0] = Reference(example-medicationadministration-otieno-iv)
 
-* recorded = "2025-06-15T09:30:05+03:00"
+* occurredDateTime = "2025-06-15T10:00:00+03:00"
 
-// INVALID: activity [1..1 in ke-provenance] — omitted entirely
+* recorded = "2025-06-15T10:00:10+03:00"
 
-// agent.who uses a valid base-FHIR type (Practitioner); the profile violations shown above
-// (wrong target type + missing activity) are what the validator will catch
+* policy[0] = "urn:ke:eprescription:policy:medication-administration"
+
+* location = Reference(example-location-knh-pharmacy)
+
+* activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#CREATE "create"
+
+* agent[0].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"
 * agent[0].who = Reference(example-practitioner-njoroge)
+* agent[0].onBehalfOf = Reference(example-organization-knh)
+
+* entity[0].role = #source
+* entity[0].what = Reference(example-medicationrequest-amina-azithromycin)
+
+
+// ----------------------------------------------------------------------------
+// VALID: Provenance – Medication statement recorded by Dr. Njoroge
+// ----------------------------------------------------------------------------
+Instance: example-provenance-statement-recorded
+InstanceOf: KEProvenance
+Usage: #example
+Title: "Provenance – Medication Statement Asserted by Amina Hassan (VALID)"
+Description: "Valid provenance record capturing the assertion of Amina Hassan's completed Azithromycin medication statement, as recorded in the patient's longitudinal medication history at KNH."
+
+* id = "example-provenance-statement-recorded"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-provenance"
+
+* target[0] = Reference(example-medicationstatement-amina-azithromycin)
+
+* occurredDateTime = "2025-06-18T11:00:00+03:00"
+
+* recorded = "2025-06-18T11:00:05+03:00"
+
+* policy[0] = "urn:ke:eprescription:policy:medication-statement"
+
+* location = Reference(example-location-knh-pharmacy)
+
+* activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#CREATE "create"
+
+* agent[0].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"
+* agent[0].who = Reference(example-patient-amina)
+* agent[0].onBehalfOf = Reference(example-organization-knh)

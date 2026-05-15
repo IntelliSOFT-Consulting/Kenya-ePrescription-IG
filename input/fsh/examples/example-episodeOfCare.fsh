@@ -17,7 +17,13 @@ Description: "Active episode of care for James Otieno covering ongoing oncology 
 
 * status = #active
 
-* type[0] = http://terminology.hl7.org/CodeSystem/episodeofcare-type#hacc "Home and Community Care"
+* type[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/episodeofcare-type"
+* type[0].coding[0].code = #hacc
+* type[0].coding[0].display = "Home and Community Care"
+* type[0].coding[1].system = "http://snomed.info/sct"
+* type[0].coding[1].code = #394593009
+* type[0].coding[1].display = "Medical oncology"
+* type[0].text = "Oncology Management"
 
 * diagnosis[0].condition = Reference(example-condition-otieno-lungcancer)
 

@@ -56,7 +56,7 @@ Alias: $VS-care-plan-status         = http://hl7.org/fhir/ValueSet/request-statu
 Alias: $VS-care-plan-intent         = http://hl7.org/fhir/ValueSet/care-plan-intent
 Alias: $VS-care-plan-category       = http://hl7.org/fhir/ValueSet/care-plan-category
 Alias: $VS-care-plan-activity-stat  = http://hl7.org/fhir/ValueSet/care-plan-activity-status
-Alias: $VS-subst-admin-subst        = http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitution
+Alias: $VS-subst-admin-subst        = http://terminology.hl7.org/ValueSet/v3-substanceAdminSubstitution
 Alias: $VS-subst-admin-reason       = http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason
 Alias: $VS-supply-type              = http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType
 Alias: $VS-additional-instr        = http://hl7.org/fhir/ValueSet/additional-instruction-codes
@@ -92,10 +92,10 @@ Alias: $KE-ApproachSite             = https://nshr-uat.sha.go.ke/ValueSet/approa
 Alias: $KE-CarePlanCategory         = https://nshr-uat.sha.go.ke/ValueSet/care-plan-category
 Alias: $KE-ProcedureCode            = https://nshr-uat.sha.go.ke/ValueSet/procedure-code
 
-// WHO ICD-11 — external system, too large to embed locally; referenced by URL
-Alias: $KE-ICD11                    = https://ilm-hie.dha.go.ke/ocl/orgs/WHO/ValueSet/icd-11/$expand
+// WHO ICD-11 — local placeholder ValueSet; system per WHO FHIR IG
+Alias: $KE-ICD11                    = https://nshr-uat.sha.go.ke/ValueSet/icd11
 
-// FHIR standard dispenser instructions ValueSet
-Alias: $KE-MedReqDispenserInstr     = http://hl7.org/fhir/ValueSet/medicationrequest-dispenser-instructions
+// FHIR standard timing abbreviation ValueSet (used for dosageInstruction.timing.code)
+Alias: $KE-TimingAbbreviation       = http://hl7.org/fhir/ValueSet/timing-abbreviation
 
 Alias: $KE-TS                       = http://ilm-hie.dha.go.ke
