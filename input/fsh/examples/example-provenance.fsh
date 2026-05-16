@@ -21,8 +21,6 @@ Description: "Valid provenance record capturing the creation of Amina Hassan's A
 
 * recorded = "2025-06-15T09:30:05+03:00"
 
-* policy[0] = "urn:ke:eprescription:policy:prescription-creation"
-
 * location = Reference(example-location-knh-pharmacy)
 
 * activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#CREATE "create"
@@ -77,8 +75,6 @@ Description: "Valid provenance record capturing the recording of James Otieno's 
 
 * recorded = "2025-06-15T10:00:10+03:00"
 
-* policy[0] = "urn:ke:eprescription:policy:medication-administration"
-
 * location = Reference(example-location-knh-pharmacy)
 
 * activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#CREATE "create"
@@ -108,8 +104,6 @@ Description: "Valid provenance record capturing the assertion of Amina Hassan's 
 * occurredDateTime = "2025-06-18T11:00:00+03:00"
 
 * recorded = "2025-06-18T11:00:05+03:00"
-
-* policy[0] = "urn:ke:eprescription:policy:medication-statement"
 
 * location = Reference(example-location-knh-pharmacy)
 
