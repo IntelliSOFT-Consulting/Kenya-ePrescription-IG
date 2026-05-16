@@ -55,7 +55,7 @@ Description: "Inpatient oncology admission for James Otieno at KNH for cancer ev
 
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 
-* serviceType = http://terminology.hl7.org/CodeSystem/service-type#83 "Cancer Services"
+* serviceType = http://terminology.hl7.org/CodeSystem/service-type#501 "Cancer Services"
 
 * priority = http://terminology.hl7.org/CodeSystem/v3-ActPriority#R "Routine"
 
