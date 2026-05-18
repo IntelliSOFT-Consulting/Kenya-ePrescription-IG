@@ -13,7 +13,7 @@ Title: "Provenance – Prescription Created by Dr. Njoroge (VALID)"
 Description: "Valid provenance record capturing the creation of Amina Hassan's Azithromycin prescription by Dr. Sarah Njoroge at KNH on 15 June 2025."
 
 * id = "example-provenance-prescription-created"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * target[0] = Reference(example-medicationrequest-amina-azithromycin)
 
@@ -40,7 +40,7 @@ Title: "Provenance – Dispense Verified at KNH Pharmacy (VALID)"
 Description: "Valid provenance record capturing the verification and completion of Amina Hassan's Azithromycin dispense at KNH Outpatient Pharmacy."
 
 * id = "example-provenance-dispense-verified"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * target[0] = Reference(example-medicationdispense-amina-azithromycin)
 
@@ -67,7 +67,7 @@ Title: "Provenance – Administration Recorded by Dr. Njoroge (VALID)"
 Description: "Valid provenance record capturing the recording of James Otieno's IV chemotherapy administration by Dr. Sarah Njoroge at KNH, linking back to the originating prescription as a source entity."
 
 * id = "example-provenance-administration-recorded"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * target[0] = Reference(example-medicationadministration-otieno-iv)
 
@@ -97,7 +97,7 @@ Title: "Provenance – Medication Statement Asserted by Amina Hassan (VALID)"
 Description: "Valid provenance record capturing the assertion of Amina Hassan's completed Azithromycin medication statement, as recorded in the patient's longitudinal medication history at KNH."
 
 * id = "example-provenance-statement-recorded"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * target[0] = Reference(example-medicationstatement-amina-azithromycin)
 

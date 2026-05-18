@@ -18,10 +18,10 @@ Title: "MedicationRequest – Extensions: Digital Signature, Refill, Controlled 
 Description: "MedicationRequest for Metformin 500 mg demonstrating the PrescriptionDigitalSignature, RefillAuthorization, ControlledSubstanceSchedule, and InsurancePreAuthorization custom extensions defined in the Kenya ePrescription IG."
 
 * id = "example-medicationrequest-with-extensions"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-request"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-request"
 
 // -- Extension 0: PrescriptionDigitalSignature --
-* extension[0].url = "https://nshr-uat.sha.go.ke/StructureDefinition/prescription-digital-signature"
+* extension[0].url = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/prescription-digital-signature"
 * extension[0].extension[0].url = "signatureType"
 * extension[0].extension[0].valueCoding.system  = "urn:iso-astm:E1762-95:2013"
 * extension[0].extension[0].valueCoding.code    = #1.2.840.10065.1.12.1.1
@@ -34,7 +34,7 @@ Description: "MedicationRequest for Metformin 500 mg demonstrating the Prescript
 * extension[0].extension[3].valueInstant        = "2025-06-15T09:30:00+03:00"
 
 // -- Extension 1: RefillAuthorization --
-* extension[1].url = "https://nshr-uat.sha.go.ke/StructureDefinition/refill-authorization"
+* extension[1].url = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/refill-authorization"
 * extension[1].extension[0].url = "authorizedRefills"
 * extension[1].extension[0].valueUnsignedInt    = 3
 * extension[1].extension[1].url = "remainingRefills"
@@ -43,12 +43,12 @@ Description: "MedicationRequest for Metformin 500 mg demonstrating the Prescript
 * extension[1].extension[2].valueDate           = "2025-07-15"
 
 // -- Extension 2: ControlledSubstanceSchedule --
-* extension[2].url = "https://nshr-uat.sha.go.ke/StructureDefinition/controlled-substance-schedule"
+* extension[2].url = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/controlled-substance-schedule"
 * extension[2].extension[0].url = "isControlled"
 * extension[2].extension[0].valueBoolean        = false
 
 // -- Extension 3: InsurancePreAuthorization --
-* extension[3].url = "https://nshr-uat.sha.go.ke/StructureDefinition/insurance-pre-authorization"
+* extension[3].url = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/insurance-pre-authorization"
 * extension[3].extension[0].url = "authorizationNumber"
 * extension[3].extension[0].valueString         = "SHA-2025-AUTH-001234"
 * extension[3].extension[1].url = "insurerName"
@@ -66,7 +66,7 @@ Description: "MedicationRequest for Metformin 500 mg demonstrating the Prescript
 * intent   = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/medicationrequest-category#outpatient "Outpatient"
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs#GE10002 "Metformin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10002 "Metformin 500 mg Oral Tablet"
 
 * subject     = Reference(example-patient-otieno)
 * authoredOn  = "2025-06-15"
@@ -76,7 +76,7 @@ Description: "MedicationRequest for Metformin 500 mg demonstrating the Prescript
 * dosageInstruction[0].timing.repeat.frequency  = 2
 * dosageInstruction[0].timing.repeat.period     = 1
 * dosageInstruction[0].timing.repeat.periodUnit = #d
-* dosageInstruction[0].route = https://nshr-uat.sha.go.ke/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* dosageInstruction[0].route = https://nshr-uat.sha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.value  = 500
 * dosageInstruction[0].doseAndRate[0].doseQuantity.unit   = "mg"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.system = "http://unitsofmeasure.org"
@@ -102,10 +102,10 @@ Title: "MedicationDispense – Extension: Dispense Notification"
 Description: "MedicationDispense demonstrating the DispenseNotification extension, recording that both the prescriber and patient were notified by SMS after Metformin was dispensed at KNH Pharmacy."
 
 * id = "example-medicationdispense-with-notification"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-dispense"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-dispense"
 
 // -- Extension 0: DispenseNotification --
-* extension[0].url = "https://nshr-uat.sha.go.ke/StructureDefinition/dispense-notification"
+* extension[0].url = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/dispense-notification"
 * extension[0].extension[0].url = "notificationSent"
 * extension[0].extension[0].valueBoolean        = true
 * extension[0].extension[1].url = "notificationChannel"
@@ -121,7 +121,7 @@ Description: "MedicationDispense demonstrating the DispenseNotification extensio
 
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#FF "First Fill"
 
-* medicationCodeableConcept.coding[0].system  = "https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs"
+* medicationCodeableConcept.coding[0].system  = "https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs"
 * medicationCodeableConcept.coding[0].code    = #GE10002
 * medicationCodeableConcept.coding[0].display = "Metformin 500 mg Oral Tablet"
 * medicationCodeableConcept.text              = "Metformin 500 mg Oral Tablet"
