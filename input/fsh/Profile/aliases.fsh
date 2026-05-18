@@ -67,33 +67,33 @@ Alias: $VS-clinical-findings        = http://hl7.org/fhir/ValueSet/clinical-find
 
 // ── Kenya MOH Local ValueSets — now resolved to local FHIR IG ────────────────
 // MOH-PPB — codes sourced from OCL, published as local CodeSystems/ValueSets
-Alias: $KE-GenericProducts          = https://nshr-uat.sha.go.ke/ValueSet/generic-products-vs
-Alias: $KE-ActiveComponents         = https://nshr-uat.sha.go.ke/ValueSet/active-components-vs
-Alias: $KE-RouteOfAdmin             = https://nshr-uat.sha.go.ke/ValueSet/route-of-administration-vs
-Alias: $KE-Formulation              = https://nshr-uat.sha.go.ke/ValueSet/formulation-vs
-Alias: $KE-UoM                      = https://nshr-uat.sha.go.ke/ValueSet/unit-of-measure-vs
+Alias: $KE-GenericProducts          = https://nshr-uat.sha.go.ke/fhir/ValueSet/generic-products-vs
+Alias: $KE-ActiveComponents         = https://nshr-uat.sha.go.ke/fhir/ValueSet/active-components-vs
+Alias: $KE-RouteOfAdmin             = https://nshr-uat.sha.go.ke/fhir/ValueSet/route-of-administration-vs
+Alias: $KE-Formulation              = https://nshr-uat.sha.go.ke/fhir/ValueSet/formulation-vs
+Alias: $KE-UoM                      = https://nshr-uat.sha.go.ke/fhir/ValueSet/unit-of-measure-vs
 
 // MOH-KENYA — codes sourced from OCL, published as local CodeSystems/ValueSets
-Alias: $KE-MedReqStatusReason       = https://nshr-uat.sha.go.ke/ValueSet/medication-request-status-reason
-Alias: $KE-MedDispStatusReason      = https://nshr-uat.sha.go.ke/ValueSet/medication-dispense-status-reason
-Alias: $KE-MedAdminStatusReason     = https://nshr-uat.sha.go.ke/ValueSet/medication-admin-status-reason
-Alias: $KE-MedAdminRoute            = https://nshr-uat.sha.go.ke/ValueSet/med-admin-route
-Alias: $KE-MedStmtStatusReason      = https://nshr-uat.sha.go.ke/ValueSet/reason-medication-status
-Alias: $KE-ConditionCodes           = https://nshr-uat.sha.go.ke/ValueSet/condition-codes-vs
-Alias: $KE-ConditionClinicalStatus  = https://nshr-uat.sha.go.ke/ValueSet/condition-clinical-status
-Alias: $KE-ConditionVerifStatus     = https://nshr-uat.sha.go.ke/ValueSet/condition-verification-status
-Alias: $KE-ConditionCategory        = https://nshr-uat.sha.go.ke/ValueSet/condition-category
-Alias: $KE-ConditionSeverity        = https://nshr-uat.sha.go.ke/ValueSet/condition-severity
-Alias: $KE-ConditionStage           = https://nshr-uat.sha.go.ke/ValueSet/condition-stage
-Alias: $KE-Manifestation            = https://nshr-uat.sha.go.ke/ValueSet/manifestation
-Alias: $KE-ObsMethods               = https://nshr-uat.sha.go.ke/ValueSet/observation-methods
-Alias: $KE-AdditionalInstr          = https://nshr-uat.sha.go.ke/ValueSet/additional-instruction
-Alias: $KE-ApproachSite             = https://nshr-uat.sha.go.ke/ValueSet/approach-site
-Alias: $KE-CarePlanCategory         = https://nshr-uat.sha.go.ke/ValueSet/care-plan-category
-Alias: $KE-ProcedureCode            = https://nshr-uat.sha.go.ke/ValueSet/procedure-code
+Alias: $KE-MedReqStatusReason       = https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-request-status-reason
+Alias: $KE-MedDispStatusReason      = https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-dispense-status-reason
+Alias: $KE-MedAdminStatusReason     = https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-admin-status-reason
+Alias: $KE-MedAdminRoute            = https://nshr-uat.sha.go.ke/fhir/ValueSet/med-admin-route
+Alias: $KE-MedStmtStatusReason      = https://nshr-uat.sha.go.ke/fhir/ValueSet/reason-medication-status
+Alias: $KE-ConditionCodes           = https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-codes-vs
+Alias: $KE-ConditionClinicalStatus  = https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-clinical-status
+Alias: $KE-ConditionVerifStatus     = https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-verification-status
+Alias: $KE-ConditionCategory        = https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-category
+Alias: $KE-ConditionSeverity        = https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-severity
+Alias: $KE-ConditionStage           = https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-stage
+Alias: $KE-Manifestation            = https://nshr-uat.sha.go.ke/fhir/ValueSet/manifestation
+Alias: $KE-ObsMethods               = https://nshr-uat.sha.go.ke/fhir/ValueSet/observation-methods
+Alias: $KE-AdditionalInstr          = https://nshr-uat.sha.go.ke/fhir/ValueSet/additional-instruction
+Alias: $KE-ApproachSite             = https://nshr-uat.sha.go.ke/fhir/ValueSet/approach-site
+Alias: $KE-CarePlanCategory         = https://nshr-uat.sha.go.ke/fhir/ValueSet/care-plan-category
+Alias: $KE-ProcedureCode            = https://nshr-uat.sha.go.ke/fhir/ValueSet/procedure-code
 
 // WHO ICD-11 — local placeholder ValueSet; system per WHO FHIR IG
-Alias: $KE-ICD11                    = https://nshr-uat.sha.go.ke/ValueSet/icd11
+Alias: $KE-ICD11                    = https://nshr-uat.sha.go.ke/fhir/ValueSet/icd11
 
 // FHIR standard timing abbreviation ValueSet (used for dosageInstruction.timing.code)
 Alias: $KE-TimingAbbreviation       = http://hl7.org/fhir/ValueSet/timing-abbreviation

@@ -10,7 +10,7 @@ Title: "MedicationRequest – Amina Hassan Azithromycin Prescription"
 Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 days, issued by Dr. Njoroge at KNH during Amina Hassan's consultation."
 
 * id = "example-medicationrequest-amina-azithromycin"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-request"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-request"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-2025-OPD-00789"
@@ -23,7 +23,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 
 * priority = #routine
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
@@ -41,7 +41,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * dosageInstruction[0].timing.repeat.periodUnit = #d
 * dosageInstruction[0].timing.repeat.duration = 3
 * dosageInstruction[0].timing.repeat.durationUnit = #d
-* dosageInstruction[0].route = https://nshr-uat.sha.go.ke/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* dosageInstruction[0].route = https://nshr-uat.sha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.value = 500
 * dosageInstruction[0].doseAndRate[0].doseQuantity.unit = "mg"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.system = "http://unitsofmeasure.org"

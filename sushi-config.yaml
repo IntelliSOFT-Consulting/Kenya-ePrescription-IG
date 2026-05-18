@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhir.eprescription.ig
-canonical: https://nshr-uat.sha.go.ke
+canonical: https://nshr-uat.sha.go.ke/fhir
 name: Kenya-ePrescription-IG
 title: "Kenya ePrescription FHIR Implementation Guide"
 description: >-

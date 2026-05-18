@@ -24,7 +24,7 @@ Title: "Medication – INVALID: Missing identifier/form; wrong code binding"
 Description: "INVALID Medication resource. The declared profile ke-medication requires identifier (1..*), form (1..1), and medicationCodeableConcept from the $KE-GenericProducts value set. All three constraints are violated here."
 
 * id = "example-medication-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication"
 
 // INVALID: code is bound to $KE-GenericProducts (required). SNOMED is not in that value set.
 * code = http://snomed.info/sct#372687004 "Amoxicillin"
@@ -34,7 +34,7 @@ Description: "INVALID Medication resource. The declared profile ke-medication re
 // INVALID: form [1..1 MS in ke-medication] — omitted entirely
 // INVALID: identifier [1..* in ke-medication] — omitted entirely
 
-* ingredient[0].itemCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/active-components-cs#AC10746 "Azithromycin"
+* ingredient[0].itemCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/active-components-cs#AC10746 "Azithromycin"
 
 
 // ----------------------------------------------------------------------------
@@ -51,7 +51,7 @@ Title: "MedicationRequest – INVALID: Missing dispenseRequest; wrong medication
 Description: "INVALID MedicationRequest. Violations: dispenseRequest (1..1) omitted; medication coded from ICD-10 instead of $KE-GenericProducts (required binding); dosageInstruction.route uses an unknown system not in $KE-RouteOfAdmin."
 
 * id = "example-medicationrequest-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-request"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-request"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-INVALID-001"
@@ -94,7 +94,7 @@ Title: "MedicationDispense – INVALID: Missing authorizingPrescription; wrong p
 Description: "INVALID MedicationDispense. Violations: authorizingPrescription (1..*) absent; performer.actor references a Patient instead of the required Organization|PractitionerRole; medication coded from SNOMED instead of $KE-GenericProducts."
 
 * id = "example-medicationdispense-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-dispense"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-dispense"
 
 * status = #completed
 
@@ -137,11 +137,11 @@ Title: "MedicationAdministration – INVALID: Missing context; wrong route syste
 Description: "INVALID MedicationAdministration. Violations: context (Encounter, 1..1) absent; dosage.route coded from RouteOfAdministrationCS instead of the required MedAdminRouteCS ($KE-MedAdminRoute); subject references an Organization not a Patient."
 
 * id = "example-medicationadministration-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-administration"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-administration"
 
 * status = #completed
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 // subject uses a valid Patient reference (base FHIR requires Patient|Group; profile requires Patient only)
 * subject = Reference(example-patient-amina)
@@ -155,7 +155,7 @@ Description: "INVALID MedicationAdministration. Violations: context (Encounter, 
 
 // INVALID: dosage.route must use $KE-MedAdminRoute (MedAdminRouteCS: ORAL|INTRAVENOUS-IV|INHALED)
 // RT10036 is from RouteOfAdministrationCS which is NOT the required value set for this element
-* dosage.route = https://nshr-uat.sha.go.ke/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
+* dosage.route = https://nshr-uat.sha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"
@@ -176,7 +176,7 @@ Title: "MedicationStatement – INVALID: Wrong medication binding, wrong effecti
 Description: "INVALID MedicationStatement. Violations: medication coded from ICD-10 instead of $KE-GenericProducts; effective[x] uses dateTime instead of the required Period type; informationSource references an Organization not Patient|Practitioner|RelatedPerson."
 
 * id = "example-medicationstatement-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-medication-statement"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-statement"
 
 * status = #completed
 
@@ -208,7 +208,7 @@ Title: "AllergyIntolerance – INVALID: Missing recordedDate, invalid criticalit
 Description: "INVALID AllergyIntolerance. Violations: recordedDate (1..1) omitted; criticality 'extreme' is not in allergy-intolerance-criticality (valid: low|high|unable-to-assess); reaction.severity (1..1) omitted."
 
 * id = "example-allergyintolerance-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-allergy-intolerance"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-allergy-intolerance"
 
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active "Active"
 * verificationStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification#confirmed "Confirmed"
@@ -219,14 +219,14 @@ Description: "INVALID AllergyIntolerance. Violations: recordedDate (1..1) omitte
 // Valid codes: low | high | unable-to-assess
 * criticality = #extreme
 
-* code = https://nshr-uat.sha.go.ke/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* code = https://nshr-uat.sha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
 
 * patient = Reference(example-patient-amina)
 
 // INVALID: recordedDate [1..1 in ke-allergy-intolerance] — omitted
 
-* reaction[0].substance = https://nshr-uat.sha.go.ke/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
-* reaction[0].manifestation[0] = https://nshr-uat.sha.go.ke/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
+* reaction[0].substance = https://nshr-uat.sha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* reaction[0].manifestation[0] = https://nshr-uat.sha.go.ke/fhir/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
 // INVALID: reaction.severity [1..1 in ke-allergy-intolerance] — omitted
 
 
@@ -244,7 +244,7 @@ Title: "Encounter – INVALID: Missing participant/serviceProvider; wrong class 
 Description: "INVALID Encounter. Violations: participant (1..*) omitted; serviceProvider (1..1) omitted; class 'WALK-IN' is not in v3-ActEncounterCode (valid: AMB|EMER|FLD|HH|IMP|ACUTE|NONAC|SS|VR)."
 
 * id = "example-encounter-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-encounter"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-encounter"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/encounter-identifier"
 * identifier[0].value = "ENC-INVALID-001"
@@ -279,7 +279,7 @@ Title: "EpisodeOfCare – INVALID: Missing type, invalid status, wrong careManag
 Description: "INVALID EpisodeOfCare. Violations: type (1..*) omitted; status 'suspended' not in episode-of-care-status (valid: planned|waitlist|active|onhold|finished|cancelled|entered-in-error); careManager references Organization instead of Practitioner|PractitionerRole."
 
 * id = "example-episodeofcare-invalid"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/StructureDefinition/ke-episode-of-care"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-episode-of-care"
 
 // INVALID: 'suspended' is not in episode-of-care-status
 // Valid codes: planned | waitlist | active | onhold | finished | cancelled | entered-in-error
