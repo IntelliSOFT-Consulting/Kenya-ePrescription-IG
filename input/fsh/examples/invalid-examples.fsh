@@ -293,3 +293,32 @@ Description: "INVALID EpisodeOfCare. Violations: type (1..*) omitted; status 'su
 // (ke-episode-of-care requires careManager Reference(Practitioner|PractitionerRole); base FHIR only allows Practitioner)
 
 * period.start = "2025-06-10"
+
+
+// ----------------------------------------------------------------------------
+// INVALID: KEProvenance
+// Violations (detected by IG Publisher validator):
+//   • activity [1..1] (profile required) — omitted
+//   • target must reference MedicationRequest|MedicationDispense|MedicationAdministration|MedicationStatement; Encounter used
+// ----------------------------------------------------------------------------
+Instance: example-provenance-invalid
+InstanceOf: Provenance
+Usage: #example
+Title: "Provenance – INVALID: Missing activity and wrong target type"
+Description: "INVALID Provenance. Violations: activity (1..1) omitted; target references an Encounter instead of one of the medication-related resources allowed by the ke-provenance profile."
+
+* id = "example-provenance-invalid"
+* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+
+// INVALID: ke-provenance target is constrained to medication-related resources only
+* target[0] = Reference(example-encounter-amina-outpatient)
+
+* recorded = "2025-06-15T09:45:00+03:00"
+
+* location = Reference(example-location-knh-pharmacy)
+
+// INVALID: activity [1..1 in ke-provenance] — omitted
+
+* agent[0].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"
+* agent[0].who = Reference(example-practitioner-njoroge)
+* agent[0].onBehalfOf = Reference(example-organization-knh)

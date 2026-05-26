@@ -48,7 +48,7 @@ Description: "Valid provenance record capturing the verification and completion 
 
 * recorded = "2025-06-15T10:30:15+03:00"
 
-* activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#UPDATE "update"
+* activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#UPDATE "revise"
 
 * agent[0].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#performer "Performer"
 * agent[0].who = Reference(example-organization-knh)
