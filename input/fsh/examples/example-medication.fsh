@@ -11,11 +11,13 @@ Description: "Example Medication resource for Azithromycin 500 mg Film-Coated Ta
 
 * id = "example-medication-azithromycin"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Medication</b> example for Azithromycin 500 mg oral tablet, film-coated, batch LOT2025KNH001, expiring 2027-06-30.</p></div>"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/medication-identifier"
 * identifier[0].value = "KE-MED-AZI-500"
 
-* code = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* code = https://fhir.dha.go.ke/eclaims/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * status = #active
 

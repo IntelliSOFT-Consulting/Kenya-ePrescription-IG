@@ -75,7 +75,8 @@ ValueSet: GenericProductsVS
 Id: generic-products-vs
 Title: "Generic Products ValueSet"
 Description: "Generic medicinal product codes drawn from the MOH PPB generic products code system."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/generic-products-vs"
+// Temporary alignment to the terminology canonical currently deployed on UAT.
+* ^url = "https://fhir.dha.go.ke/eclaims/ValueSet/generic-products-vs"
 * ^status = #active
 * ^experimental = false
 * include codes from system GenericProductsCS

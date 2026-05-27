@@ -141,7 +141,7 @@ Description: "INVALID MedicationAdministration. Violations: context (Encounter, 
 
 * status = #completed
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/eclaims/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 // subject uses a valid Patient reference (base FHIR requires Patient|Group; profile requires Patient only)
 * subject = Reference(example-patient-amina)

@@ -3836,7 +3836,8 @@ CodeSystem: GenericProductsCS
 Id: generic-products-cs
 Title: "Generic Products CodeSystem"
 Description: "Generic medicinal product codes from MOH PPB OCL."
-* ^url = "https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs"
+// Temporary alignment to the terminology canonical currently deployed on UAT.
+* ^url = "https://fhir.dha.go.ke/eclaims/CodeSystem/generic-products-cs"
 * ^status = #active
 * ^experimental = false
 * ^content = #complete

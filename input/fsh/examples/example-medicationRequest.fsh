@@ -11,6 +11,8 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 
 * id = "example-medicationrequest-amina-azithromycin"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-request"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Medication request</b> for Amina Hassan: Azithromycin 500 mg oral tablet once daily for 3 days, prescribed by Dr. Sarah Njoroge on 2025-06-15 during an outpatient consultation at KNH.</p></div>"
 
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-2025-OPD-00789"
@@ -23,7 +25,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 
 * priority = #routine
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/eclaims/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
