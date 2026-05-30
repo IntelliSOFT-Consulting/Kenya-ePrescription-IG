@@ -12,6 +12,9 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * id = "example-medicationrequest-amina-azithromycin"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-request"
 
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Prescription RX-2025-OPD-00789</b></p><p>Azithromycin 500 mg oral tablet — 1 tablet once daily for 3 days. Prescribed by Dr. Sarah Njoroge at KNH for Amina Hassan on 15 June 2025. Dispense: 3 tablets, valid to 15 July 2025. Generic substitution permitted.</p></div>"
+
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/prescription-identifier"
 * identifier[0].value = "RX-2025-OPD-00789"
 

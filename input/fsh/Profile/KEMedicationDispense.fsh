@@ -101,14 +101,14 @@ Description: "Profile on MedicationDispense for the Kenya Electronic Prescriptio
 * dosageInstruction.additionalInstruction ^short = "Supplement instructions or warnings to the patient"
 * dosageInstruction.patientInstruction 0..1 MS
 * dosageInstruction.timing 0..1 MS
-* dosageInstruction.asNeeded[x] 0..1 MS
 * dosageInstruction.site 0..1 MS
 * dosageInstruction.site from $KE-ApproachSite (required)
 * dosageInstruction.site ^short = "Body site to administer to"
 * dosageInstruction.route 0..1 MS
 * dosageInstruction.route from $KE-RouteOfAdmin (required)
 * dosageInstruction.route ^short = "How drug should enter body"
-* dosageInstruction.method 0..1
+* dosageInstruction.method 0..1 MS
+* dosageInstruction.method from RouteOfAdministrationVS (required)
 * dosageInstruction.doseAndRate 0..* MS
 
 // ── Substitution ─────────────────────────────────────────
