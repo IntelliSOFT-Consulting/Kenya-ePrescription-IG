@@ -19,7 +19,10 @@
       "Bash(curl -s -o /dev/null -w \"med-admin-route: %{http_code}\\\\n\" \"https://nshr-uat.sha.go.ke/fhir/ValueSet/med-admin-route\")",
       "Bash(curl -s -o /dev/null -w \"SimpleQuantity: %{http_code}\\\\n\" \"https://nshr-uat.sha.go.ke/fhir/StructureDefinition/SimpleQuantity\")",
       "Bash(curl -s 'https://nshr-uat.sha.go.ke/fhir/ValueSet/route-of-administration-vs/$expand' -H 'Accept: application/fhir+json')",
-      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('expand status:', d.get\\('resourceType'\\), '| total:', d.get\\('expansion',{}\\).get\\('total','N/A'\\), '| error:', d.get\\('issue',[{}]\\)[0].get\\('diagnostics',''\\)[:100] if d.get\\('resourceType'\\)=='OperationOutcome' else 'none'\\)\")"
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('expand status:', d.get\\('resourceType'\\), '| total:', d.get\\('expansion',{}\\).get\\('total','N/A'\\), '| error:', d.get\\('issue',[{}]\\)[0].get\\('diagnostics',''\\)[:100] if d.get\\('resourceType'\\)=='OperationOutcome' else 'none'\\)\")",
+      "Bash(curl -s \"https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-episode-of-care\" -H \"Accept: application/fhir+json\")",
+      "Bash(curl -s https://nshr-uat.sha.go.ke/fhir/ValueSet?url=http://hl7.org/fhir/ValueSet/episodeofcare-type -H 'Accept: application/fhir+json')",
+      "Bash(curl -s -X POST 'https://nshr-uat.sha.go.ke/fhir/EpisodeOfCare/$validate?profile=https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-episode-of-care' -H 'Content-Type: application/fhir+json' -d @/Users/daviemukungi/SoftwareDev/FHIR/Kenya-ePrescription-IG/fsh-generated/resources/EpisodeOfCare-example-episodeofcare-otieno-oncology.json)"
     ]
   }
 }

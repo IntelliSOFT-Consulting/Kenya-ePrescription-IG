@@ -283,3 +283,14 @@ Description: "All codes from the WHO International Classification of Diseases, 1
 * ^status = #active
 * ^experimental = false
 * include codes from system http://id.who.int/icd/release/11/mms
+
+
+// Alias: $KE-EpisodeOfCareType
+ValueSet: KEEpisodeOfCareTypeVS
+Id: ke-episode-of-care-type-vs
+Title: "Kenya Episode of Care Type ValueSet"
+Description: "Episode of care type codes for the Kenya ePrescription workflow, sourced from the Kenya Episode of Care Type CodeSystem."
+* ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/ke-episode-of-care-type-vs"
+* ^status = #active
+* ^experimental = false
+* include codes from system KEEpisodeOfCareTypeCS

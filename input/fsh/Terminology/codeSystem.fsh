@@ -7320,3 +7320,27 @@ Description: "Clinical manifestations and symptoms used in allergy reactions, co
 * #HYPOTENSION "Hypotension"
 * #TACHYCARDIA "Tachycardia"
 * #RHINITIS "Rhinitis"
+
+
+// ----------------------------------------------------------------------------
+// Episode of Care Type (Kenya eRx)
+// ----------------------------------------------------------------------------
+CodeSystem: KEEpisodeOfCareTypeCS
+Id: ke-episode-of-care-type-cs
+Title: "Kenya Episode of Care Type CodeSystem"
+Description: "Clinical programme/episode categories used in the Kenya ePrescription workflow."
+* ^url = "https://nshr-uat.sha.go.ke/fhir/CodeSystem/ke-episode-of-care-type-cs"
+* ^status = #active
+* ^experimental = false
+* ^content = #complete
+* ^caseSensitive = true
+* #oncology "Oncology Management" "Systematic oncology care including chemotherapy, radiotherapy and surgical oncology programmes."
+* #chronic-disease "Chronic Disease Management" "Long-term management of non-communicable chronic conditions (diabetes, hypertension, CKD, etc.)."
+* #maternal-child "Maternal and Child Health" "Antenatal, delivery, postnatal and child health services."
+* #hiv-aids "HIV/AIDS Management" "Antiretroviral therapy and HIV-related care."
+* #palliative "Palliative Care" "Symptom management and end-of-life care."
+* #mental-health "Mental Health" "Psychiatric and psychological care including substance use disorders."
+* #emergency "Emergency Care" "Acute emergency and critical care episode."
+* #surgical "Surgical Programme" "Pre-operative assessment, surgery and post-operative recovery."
+* #tb "Tuberculosis Programme" "TB diagnosis, treatment and follow-up."
+* #nutrition "Nutritional Rehabilitation" "Severe acute malnutrition and nutrition support programmes."
