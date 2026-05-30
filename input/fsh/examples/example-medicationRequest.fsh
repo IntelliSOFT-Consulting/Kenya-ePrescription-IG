@@ -59,5 +59,5 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * dispenseRequest.quantity.system = "http://unitsofmeasure.org"
 * dispenseRequest.quantity.code = #1
 
-// Substitution: generic substitution permitted
-* substitution.allowedBoolean = true
+// Substitution: generic composition substitution permitted (v3-substanceAdminSubstitution#G)
+* substitution.allowedCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#G "equivalent generic composition"

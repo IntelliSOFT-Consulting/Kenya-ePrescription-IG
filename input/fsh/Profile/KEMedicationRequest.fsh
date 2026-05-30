@@ -132,9 +132,9 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 // ── Substitution ─────────────────────────────────────────
 * substitution 0..1 MS
 * substitution.allowed[x] 1..1
-* substitution.allowed[x] only boolean or CodeableConcept
+* substitution.allowed[x] only CodeableConcept
 * substitution.allowedCodeableConcept from $VS-subst-admin-subst (required)
-* substitution.allowedCodeableConcept ^short = "Whether generic substitution is allowed"
+* substitution.allowedCodeableConcept ^short = "Whether generic substitution is allowed (coded)"
 * substitution.reason 0..1 MS
 * substitution.reason from $VS-subst-admin-reason (required)
 * substitution.reason ^short = "Reason substitution is restricted"
