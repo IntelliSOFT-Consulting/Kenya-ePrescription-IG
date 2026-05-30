@@ -91,7 +91,7 @@ Description: "MedicationRequest for Metformin 500 mg demonstrating the Prescript
 * dispenseRequest.quantity.code   = #1
 * dispenseRequest.numberOfRepeatsAllowed = 3
 
-* substitution.allowedBoolean = true
+* substitution.allowedCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#G "equivalent generic composition"
 
 
 // ----------------------------------------------------------------------------
