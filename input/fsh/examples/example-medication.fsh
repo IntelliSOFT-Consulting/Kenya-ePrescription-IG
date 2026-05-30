@@ -12,6 +12,9 @@ Description: "Example Medication resource for Azithromycin 500 mg Film-Coated Ta
 * id = "example-medication-azithromycin"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication"
 
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Azithromycin 500 mg Film-Coated Tablet</b></p><p>Kenya MOH Generic Product: GE10015. Active ingredient: Azithromycin (AC10746), 500 mg per tablet. Formulation: Tablet, Film-Coated (DF10594). Batch: LOT2025KNH001, expires 2027-06-30.</p></div>"
+
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/medication-identifier"
 * identifier[0].value = "KE-MED-AZI-500"
 

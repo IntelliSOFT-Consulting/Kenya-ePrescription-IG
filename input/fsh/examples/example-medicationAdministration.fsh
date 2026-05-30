@@ -34,7 +34,7 @@ Description: "Intravenous administration of Azithromycin 500 mg to James Otieno 
 
 // Dosage
 // dosage.route bound to $KE-MedAdminRoute (MedAdminRouteCS): ORAL | INTRAVENOUS-IV | INHALED
-* dosage.route = https://nshr-uat.sha.go.ke/fhir/CodeSystem/med-admin-route-cs#INTRAVENOUS-IV "Intravenous"
+* dosage.route = https://nshr-uat.sha.go.ke/fhir/CodeSystem/med-admin-route-cs#RT10007 "Inhalation"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"

@@ -81,12 +81,11 @@ Description: "Profile on MedicationAdministration for the Kenya eRx Implementati
 // ── Dosage ────────────────────────────────────────────────
 * dosage 1..1 MS
 * dosage ^short = "Dosage details for this administration event"
-* dosage.site 0..1 MS
 * dosage.route 1..1 MS
-* dosage.route from $KE-MedAdminRoute (required)
+* dosage.route from MedAdminRouteVS (required)
 * dosage.route ^short = "Route of administration"
 * dosage.method 0..1 MS
-* dosage.method from http://hl7.org/fhir/ValueSet/administration-method-codes (extensible)
+* dosage.method from RouteOfAdministrationVS (required)
 * dosage.method ^short = "Method of administration (e.g. IV push, infusion, inhalation)"
 * dosage.dose 1..1 MS
 * dosage.dose only SimpleQuantity

@@ -188,7 +188,7 @@ Description: "Staging codes for oncology and staged conditions."
 ValueSet: MedAdminRouteVS
 Id: med-admin-route
 Title: "Medication Administration Route ValueSet"
-Description: "Route of administration codes for MedicationAdministration."
+Description: "Route of administration codes for MedicationAdministration, sourced from MOH PPB OCL RouteOfAdministration collection. Replaces SNOMED CT route-codes binding from base FHIR R4."
 * ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/med-admin-route"
 * ^status = #active
 * ^experimental = false

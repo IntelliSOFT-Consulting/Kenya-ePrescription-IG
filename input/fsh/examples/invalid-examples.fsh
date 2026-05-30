@@ -153,8 +153,8 @@ Description: "INVALID MedicationAdministration. Violations: context (Encounter, 
 
 * performer[0].actor = Reference(example-practitioner-njoroge)
 
-// INVALID: dosage.route must use $KE-MedAdminRoute (MedAdminRouteCS: ORAL|INTRAVENOUS-IV|INHALED)
-// RT10036 is from RouteOfAdministrationCS which is NOT the required value set for this element
+// INVALID: dosage.route must use $KE-MedAdminRoute (MedAdminRouteCS / med-admin-route-cs).
+// RT10036 is the correct code but the system URL here is route-of-administration-cs — wrong CodeSystem.
 * dosage.route = https://nshr-uat.sha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
