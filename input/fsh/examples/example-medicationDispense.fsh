@@ -12,6 +12,9 @@ Description: "First-fill dispense of Azithromycin 500 mg (3 tablets) at KNH Outp
 * id = "example-medicationdispense-amina-azithromycin"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-dispense"
 
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Dispense DISP-2025-OPD-00456</b></p><p>First-fill dispense of Azithromycin 500 mg oral tablet — 3 tablets dispensed at KNH Outpatient Pharmacy against prescription RX-2025-OPD-00789 for Amina Hassan. Dispensed: 15 June 2025. 3-day supply.</p></div>"
+
 * identifier[0].system = "https://ilm-hie.dha.go.ke/fhir/NamingSystem/dispense-identifier"
 * identifier[0].value = "DISP-2025-OPD-00456"
 

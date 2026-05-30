@@ -105,7 +105,7 @@ Description: "Profile on MedicationRequest for the Kenya Electronic Prescription
 * dosageInstruction.route ^short = "Route of administration"
 
 * dosageInstruction.method 0..1
-* dosageInstruction.method from http://hl7.org/fhir/ValueSet/administration-method-codes (extensible)
+* dosageInstruction.method from RouteOfAdministrationVS (required)
 * dosageInstruction.method ^short = "Method of administration (e.g. swallow, inject, infuse)"
 
 * dosageInstruction.doseAndRate 1..* MS

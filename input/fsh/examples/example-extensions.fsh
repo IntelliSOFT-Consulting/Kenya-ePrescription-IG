@@ -20,6 +20,9 @@ Description: "MedicationRequest for Metformin 500 mg demonstrating the Prescript
 * id = "example-medicationrequest-with-extensions"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-request"
 
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Prescription RX-2025-EXT-00001 – Extension Demonstration</b></p><p>Metformin 500 mg twice daily for James Otieno, prescribed by Dr. Sarah Njoroge. Demonstrates: digital signature, refill authorization (3 refills), controlled substance schedule (not controlled), and SHA insurance pre-authorization SHA-2025-AUTH-001234 valid 15 Jun–15 Sep 2025.</p></div>"
+
 // -- Extension 0: PrescriptionDigitalSignature --
 * extension[0].url = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/prescription-digital-signature"
 * extension[0].extension[0].url = "signatureType"
@@ -103,6 +106,9 @@ Description: "MedicationDispense demonstrating the DispenseNotification extensio
 
 * id = "example-medicationdispense-with-notification"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-dispense"
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Dispense DISP-2025-EXT-00001 – Notification Extension</b></p><p>60 tablets of Metformin 500 mg dispensed at KNH Pharmacy on 15 June 2025 (30-day supply). SMS notification sent to patient at 10:35 EAT. Authorized by prescription RX-2025-EXT-00001.</p></div>"
 
 // -- Extension 0: DispenseNotification --
 * extension[0].url = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/dispense-notification"

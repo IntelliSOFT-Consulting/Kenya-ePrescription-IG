@@ -15,6 +15,9 @@ Description: "Valid provenance record capturing the creation of Amina Hassan's A
 * id = "example-provenance-prescription-created"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
 
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Prescription Created</b></p><p>Dr. Sarah Njoroge (Author) created Amina Hassan's Azithromycin prescription at KNH on 15 June 2025 at 09:30 EAT.</p></div>"
+
 * target[0] = Reference(example-medicationrequest-amina-azithromycin)
 
 * occurredDateTime = "2025-06-15T09:30:00+03:00"
@@ -42,6 +45,9 @@ Description: "Valid provenance record capturing the verification and completion 
 * id = "example-provenance-dispense-verified"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
 
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Dispense Verified</b></p><p>KNH Pharmacy (Performer) verified and completed dispense of Azithromycin for Amina Hassan on 15 June 2025 at 10:30 EAT. Source: prescription RX-2025-OPD-00789.</p></div>"
+
 * target[0] = Reference(example-medicationdispense-amina-azithromycin)
 
 * occurredDateTime = "2025-06-15T10:30:00+03:00"
@@ -68,6 +74,9 @@ Description: "Valid provenance record capturing the recording of James Otieno's 
 
 * id = "example-provenance-administration-recorded"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Administration Recorded</b></p><p>Dr. Sarah Njoroge (Author) recorded James Otieno's IV Azithromycin administration at KNH on 15 June 2025 at 10:00 EAT. Source: prescription RX-2025-OPD-00789.</p></div>"
 
 * target[0] = Reference(example-medicationadministration-otieno-iv)
 
@@ -98,6 +107,9 @@ Description: "Valid provenance record capturing the assertion of Amina Hassan's 
 
 * id = "example-provenance-statement-recorded"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Medication Statement Asserted</b></p><p>Amina Hassan (Author) asserted her completed Azithromycin medication statement at KNH on 18 June 2025 at 11:00 EAT.</p></div>"
 
 * target[0] = Reference(example-medicationstatement-amina-azithromycin)
 
