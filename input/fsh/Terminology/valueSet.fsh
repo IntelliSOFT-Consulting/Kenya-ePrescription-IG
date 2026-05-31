@@ -282,7 +282,7 @@ Description: "All codes from the WHO International Classification of Diseases, 1
 * ^url = "https://nshr-uat.sha.go.ke/fhir/ValueSet/icd11"
 * ^status = #active
 * ^experimental = false
-* include codes from system http://id.who.int/icd/release/11/mms
+* include codes from system ICD11CodesCS
 
 
 // Alias: $KE-EpisodeOfCareType
