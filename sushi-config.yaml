@@ -3,10 +3,10 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.eprescription.ig
-canonical: https://nshr-uat.sha.go.ke/fhir
-name: Kenya-ePrescription-IG
-title: "Kenya ePrescription FHIR Implementation Guide"
+id: ke.fhir.eprescription
+canonical: https://fhir.dha.go.ke/ig/eprescription
+name: KenyaEPrescription
+title: "Kenya ePrescription Implementation Guide"
 description: >-
   The Kenya ePrescription Implementation Guide defines FHIR R4 profiles, terminology, and
   conformance requirements for the electronic prescribing and dispensing of medications
@@ -25,7 +25,7 @@ releaseLabel: ci-build
 license: CC-BY-4.0
 jurisdiction: urn:iso:std:iso:3166#KE "Kenya"
 publisher:
-  name: DHA, Kenya
+  name: Digital Health Agency (DHA), Kenya
   url: https://dha.go.ke/
   email: helpdesk@dha.go.ke
 
