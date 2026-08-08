@@ -67,7 +67,8 @@ Alias: $VS-clinical-findings        = http://hl7.org/fhir/ValueSet/clinical-find
 
 // ── Kenya MOH Local ValueSets — now resolved to local FHIR IG ────────────────
 // MOH-PPB — codes sourced from OCL, published as local CodeSystems/ValueSets
-Alias: $KE-GenericProducts          = https://nshr-uat.sha.go.ke/fhir/ValueSet/generic-products-vs
+// Temporary alignment to the terminology canonical currently deployed on UAT.
+Alias: $KE-GenericProducts          = https://fhir.dha.go.ke/eclaims/ValueSet/generic-products-vs
 Alias: $KE-ActiveComponents         = https://nshr-uat.sha.go.ke/fhir/ValueSet/active-components-vs
 Alias: $KE-RouteOfAdmin             = https://nshr-uat.sha.go.ke/fhir/ValueSet/route-of-administration-vs
 Alias: $KE-Formulation              = https://nshr-uat.sha.go.ke/fhir/ValueSet/formulation-vs

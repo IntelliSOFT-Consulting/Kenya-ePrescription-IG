@@ -69,7 +69,7 @@ Description: "MedicationRequest for Metformin 500 mg demonstrating the Prescript
 * intent   = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/medicationrequest-category#outpatient "Outpatient"
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10002 "Metformin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/eclaims/CodeSystem/generic-products-cs#GE10002 "Metformin 500 mg Oral Tablet"
 
 * subject     = Reference(example-patient-otieno)
 * authoredOn  = "2025-06-15"
@@ -127,7 +127,7 @@ Description: "MedicationDispense demonstrating the DispenseNotification extensio
 
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#FF "First Fill"
 
-* medicationCodeableConcept.coding[0].system  = "https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs"
+* medicationCodeableConcept.coding[0].system  = "https://fhir.dha.go.ke/eclaims/CodeSystem/generic-products-cs"
 * medicationCodeableConcept.coding[0].code    = #GE10002
 * medicationCodeableConcept.coding[0].display = "Metformin 500 mg Oral Tablet"
 * medicationCodeableConcept.text              = "Metformin 500 mg Oral Tablet"

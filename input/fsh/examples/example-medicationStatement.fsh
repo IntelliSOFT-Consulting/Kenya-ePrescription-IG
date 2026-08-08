@@ -11,6 +11,8 @@ Description: "Medication statement recording that Amina Hassan completed a 3-day
 
 * id = "example-medicationstatement-amina-azithromycin"
 * meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-statement"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Medication statement</b> for Amina Hassan: completed azithromycin 500 mg orally once daily from 2025-06-15 to 2025-06-17, reported by the patient on 2025-06-18.</p></div>"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Medication Statement MEDS-2025-00234</b></p><p>Amina Hassan completed a 3-day course of Azithromycin 500 mg (15–17 June 2025), recorded at KNH outpatient consultation. Status: completed. Asserted: 18 June 2025.</p></div>"
@@ -19,8 +21,9 @@ Description: "Medication statement recording that Amina Hassan completed a 3-day
 * identifier[0].value = "MEDS-2025-00234"
 
 * status = #completed
+* statusReason[0] = https://nshr-uat.sha.go.ke/fhir/CodeSystem/reason-medication-status-cs#TREATMENT-COMPLETED "Treatment completed"
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/eclaims/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
