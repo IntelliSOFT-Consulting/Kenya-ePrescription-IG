@@ -13,7 +13,7 @@ Title: "Provenance – Prescription Created by Dr. Njoroge (VALID)"
 Description: "Valid provenance record capturing the creation of Amina Hassan's Azithromycin prescription by Dr. Sarah Njoroge at KNH on 15 June 2025."
 
 * id = "example-provenance-prescription-created"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Prescription Created</b></p><p>Dr. Sarah Njoroge (Author) created Amina Hassan's Azithromycin prescription at KNH on 15 June 2025 at 09:30 EAT.</p></div>"
@@ -43,7 +43,7 @@ Title: "Provenance – Dispense Verified at KNH Pharmacy (VALID)"
 Description: "Valid provenance record capturing the verification and completion of Amina Hassan's Azithromycin dispense at KNH Outpatient Pharmacy."
 
 * id = "example-provenance-dispense-verified"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Dispense Verified</b></p><p>KNH Pharmacy (Performer) verified and completed dispense of Azithromycin for Amina Hassan on 15 June 2025 at 10:30 EAT. Source: prescription RX-2025-OPD-00789.</p></div>"
@@ -73,7 +73,7 @@ Title: "Provenance – Administration Recorded by Dr. Njoroge (VALID)"
 Description: "Valid provenance record capturing the recording of James Otieno's IV chemotherapy administration by Dr. Sarah Njoroge at KNH, linking back to the originating prescription as a source entity."
 
 * id = "example-provenance-administration-recorded"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Administration Recorded</b></p><p>Dr. Sarah Njoroge (Author) recorded James Otieno's IV Azithromycin administration at KNH on 15 June 2025 at 10:00 EAT. Source: prescription RX-2025-OPD-00789.</p></div>"
@@ -106,7 +106,7 @@ Title: "Provenance – Medication Statement Asserted by Amina Hassan (VALID)"
 Description: "Valid provenance record capturing the assertion of Amina Hassan's completed Azithromycin medication statement, as recorded in the patient's longitudinal medication history at KNH."
 
 * id = "example-provenance-statement-recorded"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+* meta.profile[0] = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-provenance"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Provenance – Medication Statement Asserted</b></p><p>Amina Hassan (Author) asserted her completed Azithromycin medication statement at KNH on 18 June 2025 at 11:00 EAT.</p></div>"

@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ke.fhir.eprescription
-canonical: https://fhir.dha.go.ke/ig/eprescription
+canonical: https://fhir.dha.go.ke/eprescription
 name: KenyaEPrescription
 title: "Kenya ePrescription Implementation Guide"
 description: >-
@@ -124,8 +124,8 @@ menu:
 # it with the correct canonical when generating the IG JSON.
 #
 # global:
-#   Patient: https://nshr-uat.sha.go.ke/fhir/StructureDefinition/my-patient-profile
-#   Encounter: https://nshr-uat.sha.go.ke/fhir/StructureDefinition/my-encounter-profile
+#   Patient: https://fhir.dha.go.ke/fhir/StructureDefinition/my-patient-profile
+#   Encounter: https://fhir.dha.go.ke/fhir/StructureDefinition/my-encounter-profile
 #
 #
 # The resources property corresponds to IG.definition.resource.

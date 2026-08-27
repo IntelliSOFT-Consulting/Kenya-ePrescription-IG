@@ -10,7 +10,7 @@ Title: "EpisodeOfCare – James Otieno Oncology Management"
 Description: "Active episode of care for James Otieno covering ongoing oncology management at KNH, from initial diagnosis through planned chemotherapy."
 
 * id = "example-episodeofcare-otieno-oncology"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-episode-of-care"
+* meta.profile[0] = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-episode-of-care"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>EpisodeOfCare EOC-2025-ONCO-00099 – Oncology Management</b></p><p>Active oncology episode for James Otieno at KNH from 10 June 2025. Managed by Dr. Sarah Njoroge. Diagnosis: lung cancer.</p></div>"
@@ -20,7 +20,7 @@ Description: "Active episode of care for James Otieno covering ongoing oncology 
 
 * status = #active
 
-* type[0] = https://nshr-uat.sha.go.ke/fhir/CodeSystem/ke-episode-of-care-type-cs#oncology "Oncology Management"
+* type[0] = https://fhir.dha.go.ke/fhir/CodeSystem/ke-episode-of-care-type-cs#oncology "Oncology Management"
 
 * diagnosis[0].condition = Reference(example-condition-otieno-lungcancer)
 

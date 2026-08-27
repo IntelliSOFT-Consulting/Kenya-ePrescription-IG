@@ -14,7 +14,7 @@ Title: "SearchParameter – MedicationRequest Identifier"
 Description: "Search MedicationRequest resources by their Kenya prescription identifier (NamingSystem: prescription-identifier)."
 
 * id          = "medicationrequest-identifier"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/medicationrequest-identifier"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/medicationrequest-identifier"
 * version     = "0.1.0"
 * name        = "MedicationRequestIdentifier"
 * status      = #active
@@ -41,7 +41,7 @@ Title: "SearchParameter – MedicationRequest AuthoredOn"
 Description: "Search MedicationRequest resources by the date the prescription was authored, supporting date range queries."
 
 * id          = "medicationrequest-authoredon"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/medicationrequest-authoredon"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/medicationrequest-authoredon"
 * version     = "0.1.0"
 * name        = "MedicationRequestAuthoredOn"
 * status      = #active
@@ -73,7 +73,7 @@ Title: "SearchParameter – MedicationRequest Medication Code"
 Description: "Search MedicationRequest resources by the PPB generic product code in medicationCodeableConcept."
 
 * id          = "medicationrequest-medication-code"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/medicationrequest-medication-code"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/medicationrequest-medication-code"
 * version     = "0.1.0"
 * name        = "MedicationRequestMedicationCode"
 * status      = #active
@@ -100,7 +100,7 @@ Title: "SearchParameter – MedicationDispense Prescription"
 Description: "Search MedicationDispense resources by the authorizing MedicationRequest (prescription) reference."
 
 * id          = "medicationdispense-prescription"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/medicationdispense-prescription"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/medicationdispense-prescription"
 * version     = "0.1.0"
 * name        = "MedicationDispensePrescription"
 * status      = #active
@@ -128,7 +128,7 @@ Title: "SearchParameter – MedicationDispense WhenHandedOver"
 Description: "Search MedicationDispense resources by the date the medication was handed to the patient."
 
 * id          = "medicationdispense-whenhandedover"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/medicationdispense-whenhandedover"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/medicationdispense-whenhandedover"
 * version     = "0.1.0"
 * name        = "MedicationDispenseWhenHandedOver"
 * status      = #active
@@ -158,7 +158,7 @@ Title: "SearchParameter – AllergyIntolerance Substance Code"
 Description: "Search AllergyIntolerance resources by the allergen substance code from ActiveComponentsVS, supporting clinical decision support alerts."
 
 * id          = "allergyintolerance-substance"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/allergyintolerance-substance"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/allergyintolerance-substance"
 * version     = "0.1.0"
 * name        = "AllergyIntoleranceSubstance"
 * status      = #active
@@ -185,7 +185,7 @@ Title: "SearchParameter – Provenance Target"
 Description: "Search Provenance records by the medication workflow resource they describe (MedicationRequest, MedicationDispense, MedicationAdministration, or MedicationStatement)."
 
 * id          = "provenance-target"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/provenance-target"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/provenance-target"
 * version     = "0.1.0"
 * name        = "ProvenanceTarget"
 * status      = #active
@@ -216,7 +216,7 @@ Title: "SearchParameter – Provenance Recorded"
 Description: "Search Provenance records by the instant they were written to the server, supporting time-bounded audit queries."
 
 * id          = "provenance-recorded"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/provenance-recorded"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/provenance-recorded"
 * version     = "0.1.0"
 * name        = "ProvenanceRecorded"
 * status      = #active
@@ -248,7 +248,7 @@ Title: "SearchParameter – Encounter ServiceProvider"
 Description: "Search Encounter resources by the managing organisation (health facility) using the MFL facility code."
 
 * id          = "encounter-service-provider"
-* url         = "https://nshr-uat.sha.go.ke/fhir/SearchParameter/encounter-service-provider"
+* url         = "https://fhir.dha.go.ke/fhir/SearchParameter/encounter-service-provider"
 * version     = "0.1.0"
 * name        = "EncounterServiceProvider"
 * status      = #active
