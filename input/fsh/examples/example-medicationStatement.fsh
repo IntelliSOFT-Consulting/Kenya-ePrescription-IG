@@ -10,7 +10,7 @@ Title: "MedicationStatement – Amina Hassan Completed Azithromycin Course"
 Description: "Medication statement recording that Amina Hassan completed a 3-day course of Azithromycin 500 mg following her outpatient consultation at KNH."
 
 * id = "example-medicationstatement-amina-azithromycin"
-* meta.profile[0] = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-statement"
+* meta.profile[0] = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-medication-statement"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Medication Statement MEDS-2025-00234</b></p><p>Amina Hassan completed a 3-day course of Azithromycin 500 mg (15–17 June 2025), recorded at KNH outpatient consultation. Status: completed. Asserted: 18 June 2025.</p></div>"
@@ -20,7 +20,7 @@ Description: "Medication statement recording that Amina Hassan completed a 3-day
 
 * status = #completed
 
-* medicationCodeableConcept = https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
@@ -39,6 +39,6 @@ Description: "Medication statement recording that Amina Hassan completed a 3-day
 * dosage[0].timing.repeat.frequency = 1
 * dosage[0].timing.repeat.period = 1
 * dosage[0].timing.repeat.periodUnit = #d
-* dosage[0].route = https://nshr-uat.sha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* dosage[0].route = https://fhir.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 
 // partOf omitted: no same-patient MedicationAdministration exists in this IG's example set

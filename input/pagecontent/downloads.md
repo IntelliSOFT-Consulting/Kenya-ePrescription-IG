@@ -62,9 +62,9 @@ To validate a FHIR resource against this IG:
 
 ```bash
 java -jar validator_cli.jar \
-  -ig https://nshr-uat.sha.go.ke/packages/fhir.eprescription.ig-0.1.0.tgz \
+  -ig https://fhir.dha.go.ke/packages/fhir.eprescription.ig-0.1.0.tgz \
   -version 4.0.1 \
-  -profile https://nshr-uat.sha.go.ke/StructureDefinition/ke-medicationrequest \
+  -profile https://fhir.dha.go.ke/StructureDefinition/ke-medicationrequest \
   my-prescription.json
 ```
 

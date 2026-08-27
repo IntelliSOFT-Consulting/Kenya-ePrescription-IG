@@ -1,7 +1,7 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
-  "url" : "https://fhir.dha.go.ke/ig/eprescription/Requirements/fromNarrative",
+  "url" : "https://fhir.dha.go.ke/eprescription/Requirements/fromNarrative",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",

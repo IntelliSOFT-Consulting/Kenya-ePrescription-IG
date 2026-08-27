@@ -11,7 +11,7 @@ Title: "Kenya ePrescription Server CapabilityStatement"
 Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescription server. Implementers must support all SHALL interactions and SHOULD support all SHOULD interactions to claim conformance with this IG."
 
 * id          = "kenya-eprescription-server"
-* url         = "https://nshr-uat.sha.go.ke/fhir/CapabilityStatement/kenya-eprescription-server"
+* url         = "https://fhir.dha.go.ke/fhir/CapabilityStatement/kenya-eprescription-server"
 * version     = "0.1.0"
 * name        = "KenyaEPrescriptionServerCapabilityStatement"
 * title       = "Kenya ePrescription Server CapabilityStatement"
@@ -96,7 +96,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // Encounter
 // ----------------------------------------------------------------------------
 * rest[0].resource[3].type = #Encounter
-* rest[0].resource[3].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-encounter"
+* rest[0].resource[3].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-encounter"
 * rest[0].resource[3].interaction[0].code = #read
 * rest[0].resource[3].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[3].interaction[0].extension[0].valueCode = #SHALL
@@ -120,7 +120,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // MedicationRequest
 // ----------------------------------------------------------------------------
 * rest[0].resource[4].type = #MedicationRequest
-* rest[0].resource[4].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-request"
+* rest[0].resource[4].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-medication-request"
 * rest[0].resource[4].documentation = "Core ePrescription resource. Servers SHALL support create, read, update, and search by patient, requester, status, and authored date."
 * rest[0].resource[4].interaction[0].code = #read
 * rest[0].resource[4].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -152,7 +152,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // Medication
 // ----------------------------------------------------------------------------
 * rest[0].resource[5].type = #Medication
-* rest[0].resource[5].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication"
+* rest[0].resource[5].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-medication"
 * rest[0].resource[5].interaction[0].code = #read
 * rest[0].resource[5].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[5].interaction[0].extension[0].valueCode = #SHALL
@@ -167,7 +167,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // MedicationDispense
 // ----------------------------------------------------------------------------
 * rest[0].resource[6].type = #MedicationDispense
-* rest[0].resource[6].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-dispense"
+* rest[0].resource[6].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-medication-dispense"
 * rest[0].resource[6].interaction[0].code = #read
 * rest[0].resource[6].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[6].interaction[0].extension[0].valueCode = #SHALL
@@ -194,7 +194,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // MedicationAdministration
 // ----------------------------------------------------------------------------
 * rest[0].resource[7].type = #MedicationAdministration
-* rest[0].resource[7].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-administration"
+* rest[0].resource[7].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-medication-administration"
 * rest[0].resource[7].interaction[0].code = #read
 * rest[0].resource[7].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[7].interaction[0].extension[0].valueCode = #SHALL
@@ -215,7 +215,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // MedicationStatement
 // ----------------------------------------------------------------------------
 * rest[0].resource[8].type = #MedicationStatement
-* rest[0].resource[8].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-medication-statement"
+* rest[0].resource[8].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-medication-statement"
 * rest[0].resource[8].interaction[0].code = #read
 * rest[0].resource[8].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[8].interaction[0].extension[0].valueCode = #SHALL
@@ -234,7 +234,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // AllergyIntolerance
 // ----------------------------------------------------------------------------
 * rest[0].resource[9].type = #AllergyIntolerance
-* rest[0].resource[9].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-allergy-intolerance"
+* rest[0].resource[9].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-allergy-intolerance"
 * rest[0].resource[9].interaction[0].code = #read
 * rest[0].resource[9].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[9].interaction[0].extension[0].valueCode = #SHALL
@@ -280,7 +280,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // // Observation (Morphology)
 // // ----------------------------------------------------------------------------
 // * rest[0].resource[11].type = #Observation
-// * rest[0].resource[11].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-morphology-observation"
+// * rest[0].resource[11].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-morphology-observation"
 // * rest[0].resource[11].interaction[0].code = #read
 // * rest[0].resource[11].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 // * rest[0].resource[11].interaction[0].extension[0].valueCode = #SHALL
@@ -301,7 +301,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // // CarePlan (Oncology)
 // // ----------------------------------------------------------------------------
 // * rest[0].resource[12].type = #CarePlan
-// * rest[0].resource[12].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-oncology-care-plan"
+// * rest[0].resource[12].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-oncology-care-plan"
 // * rest[0].resource[12].interaction[0].code = #read
 // * rest[0].resource[12].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 // * rest[0].resource[12].interaction[0].extension[0].valueCode = #SHALL
@@ -323,7 +323,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // Provenance
 // ----------------------------------------------------------------------------
 * rest[0].resource[11].type = #Provenance
-* rest[0].resource[11].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-provenance"
+* rest[0].resource[11].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-provenance"
 * rest[0].resource[11].documentation = "Audit trail resource capturing authorship and lifecycle changes to prescriptions, dispenses, and administration records. Servers SHALL support read and create; search by target is SHOULD."
 * rest[0].resource[11].interaction[0].code = #read
 * rest[0].resource[11].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -348,7 +348,7 @@ Description: "Declares the FHIR R4 capabilities of the Kenya national ePrescript
 // EpisodeOfCare
 // ----------------------------------------------------------------------------
 * rest[0].resource[12].type = #EpisodeOfCare
-* rest[0].resource[12].profile = "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-episode-of-care"
+* rest[0].resource[12].profile = "https://fhir.dha.go.ke/fhir/StructureDefinition/ke-episode-of-care"
 * rest[0].resource[12].interaction[0].code = #read
 * rest[0].resource[12].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[12].interaction[0].extension[0].valueCode = #SHALL
