@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ke.fhir.eprescription
-canonical: https://fhir.dha.go.ke/eprescription
+canonical: https://fhir.dha.go.ke/erx
 name: KenyaEPrescription
 title: "Kenya ePrescription Implementation Guide"
 description: >-
