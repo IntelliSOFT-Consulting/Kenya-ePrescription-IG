@@ -26,7 +26,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 
 * priority = #routine
 
-* medicationCodeableConcept = https://fhir.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/terminology/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
@@ -44,7 +44,7 @@ Description: "Outpatient prescription for Azithromycin 500 mg once daily for 3 d
 * dosageInstruction[0].timing.repeat.periodUnit = #d
 * dosageInstruction[0].timing.repeat.duration = 3
 * dosageInstruction[0].timing.repeat.durationUnit = #d
-* dosageInstruction[0].route = https://fhir.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* dosageInstruction[0].route = https://fhir.dha.go.ke/terminology/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.value = 500
 * dosageInstruction[0].doseAndRate[0].doseQuantity.unit = "mg"
 * dosageInstruction[0].doseAndRate[0].doseQuantity.system = "http://unitsofmeasure.org"

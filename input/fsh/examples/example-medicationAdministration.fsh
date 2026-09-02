@@ -22,7 +22,7 @@ Description: "Intravenous administration of Azithromycin 500 mg to James Otieno 
 
 * category = http://terminology.hl7.org/CodeSystem/medication-admin-category#inpatient "Inpatient"
 
-* medicationCodeableConcept = https://fhir.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/terminology/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-otieno)
 
@@ -37,7 +37,7 @@ Description: "Intravenous administration of Azithromycin 500 mg to James Otieno 
 
 // Dosage
 // dosage.route bound to $KE-MedAdminRoute (MedAdminRouteCS): ORAL | INTRAVENOUS-IV | INHALED
-* dosage.route = https://fhir.dha.go.ke/fhir/CodeSystem/med-admin-route-cs#RT10007 "Inhalation"
+* dosage.route = https://fhir.dha.go.ke/terminology/CodeSystem/med-admin-route-cs#RT10007 "Inhalation"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"

@@ -34,7 +34,7 @@ Description: "INVALID Medication resource. The declared profile ke-medication re
 // INVALID: form [1..1 MS in ke-medication] — omitted entirely
 // INVALID: identifier [1..* in ke-medication] — omitted entirely
 
-* ingredient[0].itemCodeableConcept = https://fhir.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10746 "Azithromycin"
+* ingredient[0].itemCodeableConcept = https://fhir.dha.go.ke/terminology/CodeSystem/active-components-cs#AC10746 "Azithromycin"
 
 
 // ----------------------------------------------------------------------------
@@ -141,7 +141,7 @@ Description: "INVALID MedicationAdministration. Violations: context (Encounter, 
 
 * status = #completed
 
-* medicationCodeableConcept = https://fhir.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/terminology/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 // subject uses a valid Patient reference (base FHIR requires Patient|Group; profile requires Patient only)
 * subject = Reference(example-patient-amina)
@@ -155,7 +155,7 @@ Description: "INVALID MedicationAdministration. Violations: context (Encounter, 
 
 // INVALID: dosage.route must use $KE-MedAdminRoute (MedAdminRouteCS / med-admin-route-cs).
 // RT10036 is the correct code but the system URL here is route-of-administration-cs — wrong CodeSystem.
-* dosage.route = https://fhir.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
+* dosage.route = https://fhir.dha.go.ke/terminology/CodeSystem/route-of-administration-cs#RT10036 "Intravenous"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"
@@ -219,14 +219,14 @@ Description: "INVALID AllergyIntolerance. Violations: recordedDate (1..1) omitte
 // Valid codes: low | high | unable-to-assess
 * criticality = #extreme
 
-* code = https://fhir.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* code = https://fhir.dha.go.ke/terminology/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
 
 * patient = Reference(example-patient-amina)
 
 // INVALID: recordedDate [1..1 in ke-allergy-intolerance] — omitted
 
-* reaction[0].substance = https://fhir.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
-* reaction[0].manifestation[0] = https://fhir.dha.go.ke/fhir/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
+* reaction[0].substance = https://fhir.dha.go.ke/terminology/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* reaction[0].manifestation[0] = https://fhir.dha.go.ke/terminology/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
 // INVALID: reaction.severity [1..1 in ke-allergy-intolerance] — omitted
 
 

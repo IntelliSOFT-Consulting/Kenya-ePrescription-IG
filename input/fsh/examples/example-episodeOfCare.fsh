@@ -20,7 +20,7 @@ Description: "Active episode of care for James Otieno covering ongoing oncology 
 
 * status = #active
 
-* type[0] = https://fhir.dha.go.ke/fhir/CodeSystem/ke-episode-of-care-type-cs#oncology "Oncology Management"
+* type[0] = https://fhir.dha.go.ke/terminology/CodeSystem/ke-episode-of-care-type-cs#oncology "Oncology Management"
 
 * diagnosis[0].condition = Reference(example-condition-otieno-lungcancer)
 

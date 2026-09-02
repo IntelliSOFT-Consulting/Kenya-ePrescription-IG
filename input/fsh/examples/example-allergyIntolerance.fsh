@@ -25,7 +25,7 @@ Description: "Documented high-criticality penicillin allergy for Amina Hassan, c
 
 * criticality = #high
 
-* code = https://fhir.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* code = https://fhir.dha.go.ke/terminology/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
 
 * patient = Reference(example-patient-amina)
 
@@ -42,9 +42,9 @@ Description: "Documented high-criticality penicillin allergy for Amina Hassan, c
 * note[0].text = "Patient reports severe urticarial reaction within 30 minutes of taking oral penicillin. Allergy confirmed and flagged in patient record."
 
 // Reaction details
-* reaction[0].substance = https://fhir.dha.go.ke/fhir/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
-* reaction[0].manifestation[0] = https://fhir.dha.go.ke/fhir/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
+* reaction[0].substance = https://fhir.dha.go.ke/terminology/CodeSystem/active-components-cs#AC10686 "Penicillin V potassium"
+* reaction[0].manifestation[0] = https://fhir.dha.go.ke/terminology/CodeSystem/manifestation-cs#URTICARIA "Urticaria"
 * reaction[0].description = "Widespread urticaria over trunk and limbs appearing within 30 minutes of penicillin administration."
 * reaction[0].onset = "2020-03-10T14:00:00+03:00"
 * reaction[0].severity = #moderate
-* reaction[0].exposureRoute = https://fhir.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* reaction[0].exposureRoute = https://fhir.dha.go.ke/terminology/CodeSystem/route-of-administration-cs#RT10025 "Oral"
