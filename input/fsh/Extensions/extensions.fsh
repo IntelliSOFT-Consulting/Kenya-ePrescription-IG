@@ -187,7 +187,7 @@ Id: controlled-substance-schedule
 Title: "Controlled Substance Schedule CodeSystem"
 Description: "Schedules for controlled substances under the Kenya Pharmacy and Poisons Act."
 
-* ^url           = "https://fhir.dha.go.ke/fhir/CodeSystem/controlled-substance-schedule"
+* ^url           = "https://fhir.dha.go.ke/terminology/CodeSystem/controlled-substance-schedule"
 * ^status        = #active
 * ^experimental = false
 * ^content       = #complete

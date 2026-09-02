@@ -20,7 +20,7 @@ Description: "Medication statement recording that Amina Hassan completed a 3-day
 
 * status = #completed
 
-* medicationCodeableConcept = https://fhir.dha.go.ke/fhir/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
+* medicationCodeableConcept = https://fhir.dha.go.ke/terminology/CodeSystem/generic-products-cs#GE10015 "Azithromycin 500 mg Oral Tablet"
 
 * subject = Reference(example-patient-amina)
 
@@ -39,6 +39,6 @@ Description: "Medication statement recording that Amina Hassan completed a 3-day
 * dosage[0].timing.repeat.frequency = 1
 * dosage[0].timing.repeat.period = 1
 * dosage[0].timing.repeat.periodUnit = #d
-* dosage[0].route = https://fhir.dha.go.ke/fhir/CodeSystem/route-of-administration-cs#RT10025 "Oral"
+* dosage[0].route = https://fhir.dha.go.ke/terminology/CodeSystem/route-of-administration-cs#RT10025 "Oral"
 
 // partOf omitted: no same-patient MedicationAdministration exists in this IG's example set
