@@ -176,7 +176,7 @@ Id: controlled-substance-schedule
 Title: "Controlled Substance Schedule ValueSet"
 Description: "Regulatory schedules for controlled substances as defined under the Kenya Pharmacy and Poisons Act, Cap 244."
 
-* ^url         = "https://fhir.dha.go.ke/fhir/ValueSet/controlled-substance-schedule"
+* ^url         = "https://fhir.dha.go.ke/terminology/ValueSet/controlled-substance-schedule"
 * ^status      = #active
 * ^experimental = false
 * include codes from system ControlledSubstanceScheduleCS
